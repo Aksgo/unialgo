@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-color: black;
     color: white;
+    user-select: none;
 }
 
 header.article-header {
