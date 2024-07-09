@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Rubik","sans-serif";
     margin: 0;
     padding: 0;
     background-color: black;
@@ -19,29 +19,54 @@ header.article-header {
 }
 
 .back-link {
+    background: linear-gradient(45deg, #00c3ff, #951cff, #ff0080);
     color: white;
+    border: none;
+    border-radius: 50px;
     text-decoration: none;
     font-size: 1.5rem;
+    padding: 5px 10px;
     font-weight: bold;
 }
 
 .articles {
-    padding: 20px;
+    padding: 10px 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:60px;
+    justify-content: center;
 }
 
 .article {
+    display: flex;
+    flex-direction: column;
     background-color: #333;
-    margin-bottom: 20px;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 20px;
+    max-width: 500px;
+    cursor: pointer;
 }
-
+.head-article{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    gap:30px;
+}
 .article-title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-bottom: 10px;
 }
 
 .article-description {
     font-size: 1rem;
     line-height: 1.5;
+}
+hr{
+    color : white;
+    width: 90%;
+    opacity: 0.2;
+}
+img{
+    border-radius: 20px;
 }
