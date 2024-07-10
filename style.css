@@ -11,9 +11,9 @@ body {
 }
 
 header {
-    background-color: #000000;
+    background-color: #00000000;
     color: #fff;
-    padding: 20px 30px 5px 30px;
+    padding: 20px 30px 5px 30px;    
     display: flex;
     justify-content: center; 
     align-items: center;
@@ -117,19 +117,19 @@ img{
 #start-btn{
     display: block;
     margin: 0 auto;
-    font-size: 20px;
-    background-color: rgb(0, 174, 32);
-    color:white;
+    font-size: 18px;
+    color:black;
+    background: linear-gradient(45deg, #ffb6dd, #faf4ff, #ffffff);
     border:none;
-    padding:20px 40px 20px 40px;
-    border-radius: 30px;
+    border-radius: 10px;
+    padding:15px 25px 15px 25px;
     cursor:pointer;
 }
 #start-btn:hover{
-    background-color: rgb(0, 147, 27);
+    background: linear-gradient(45deg, #ffffff, #ffffff, #fed5ff);
 }
 p{
-    font-size: 18px;
+    font-size: 26px;
     text-align: center;
     margin: 30px;
 }
