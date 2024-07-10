@@ -4,8 +4,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: black;
+    background: linear-gradient(45deg, #22000a, #000000, #290009);
     color: white;
-    background-image: url("asset/bg4.png");
+    /* background-image: url("asset/bg4.png"); */
     background-size: cover;
     background-attachment: fixed;
 }
@@ -67,9 +68,15 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: rgba(58, 58, 58, 0.4);
+    border-radius: 40px;
+    padding: 30px;
 }
 h1{
-    font-size: 90px;
+    background: linear-gradient(135deg,#849aff, #ffa3dc);
+    background-clip: text;
+    color:#00000000;
+    font-size: 60px;
     margin: 10px;
     text-align: center;
     overflow: hidden;
@@ -102,12 +109,16 @@ img{
     height: 20rem;
     /*box-shadow: 0 0 60px rgb(255, 255, 255);*/
 }
-@media (max-width: 768px) {
+@media (max-width: 650px) {
+    .about{
+        max-width: 260px;
+        padding: 15px;
+    }
     h1 {
-        font-size: 40px; /* Adjust font size for smaller screens */
+        font-size:28px;
     }
     #des{
-        font-size: 16px;
+        font-size: 18px;
     }
     img{
         width: 260px;
@@ -124,12 +135,13 @@ img{
     border-radius: 10px;
     padding:15px 25px 15px 25px;
     cursor:pointer;
+    font-weight:bold;
 }
 #start-btn:hover{
-    background: linear-gradient(45deg, #ffffff, #ffffff, #fed5ff);
+    background: linear-gradient(45deg, #ffffff, #ffffff, #ffd0f2);
 }
 p{
-    font-size: 26px;
+    font-size: 20px;
     text-align: center;
     margin: 30px;
 }

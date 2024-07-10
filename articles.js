@@ -4,11 +4,11 @@ let darkMode = localStorage.getItem('darkMode')==='true';
 const setTheme = ()=>{
     if(darkMode){
         theme.href="articlestyle.css";
-        toggleButton.innerHTML="🌙";
+        toggleButton.innerHTML="☀️";
     }
     else{
         theme.href="articlestylelight.css";
-        toggleButton.innerHTML="☀️";
+        toggleButton.innerHTML="🌙";
     }
 }
 setTheme();
