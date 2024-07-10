@@ -4,18 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>unialgo</title>
-    <link type="text/css" rel="stylesheet" href="style.css">
+    <link id="dark-theme" type="text/css" rel="stylesheet" href="style.css">
+    <link id="light-theme" type="text/css" rel="stylesheet" href="stylelight.css" disabled="true">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
 </head>
+<style>
+    #toggle-theme{
+        font-size: 30px;
+        color:white;
+        background-color: rgba(255, 255, 255, 0);
+        border: none;
+    }
+</style>
 <body>
     <header>
-        <div class="name">UniAlgo</div>
-        <div class="subscribe">
-            <!-- <input type="email" placeholder="Enter your email"> -->
-            <button>Subscribe</button>
+        <div class="centered">
+            <div class="name">UniAlgo</div>
+            <div class="subscribe">
+                <!-- <input type="email" placeholder="Enter your email"> -->
+                <button>Subscribe</button>
+            </div>
         </div>
+        <button id="toggle-theme">☀️</button>
     </header>
-    <hr id="line">
     <div class="content">
         <div class="about"><h1 class="grad-text">"Read to Improve"</h1>
             <p id="des">Small CP Articles but huge impact</p>
@@ -23,5 +34,6 @@
         </div>
         <div class="image-main"><img src="asset/coder.jpg"></div>
     </div>
+    <script src="theme.js"></script>
 </body>
 </html>

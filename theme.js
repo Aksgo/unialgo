@@ -1,13 +1,16 @@
 const toggleButton = document.getElementById("toggle-theme");
-const theme = document.getElementById("theme-sheet");
+const lightTheme = document.getElementById("light-theme")
+const darkTheme = document.getElementById("dark-theme")
 let darkMode = localStorage.getItem('darkMode')==='true';
 const setTheme = ()=>{
     if(darkMode){
-        theme.href="articlestyle.css";
+        darkTheme.removeAttribute('disabled')
+        lightTheme.setAttribute('disabled','true')
         toggleButton.innerHTML="☀️";
     }
     else{
-        theme.href="articlestylelight.css";
+        lightTheme.removeAttribute('disabled')
+        darkTheme.setAttribute('disabled','true')
         toggleButton.innerHTML="🌙";
     }
 }
