@@ -44,9 +44,10 @@ header.article-header {
     flex-direction: column;
     background-color: #333;
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 10px;
     max-width: 500px;
     cursor: pointer;
+    border-top:  10px solid rgb(181, 181, 181);
 }
 .head-article{
     display: flex;

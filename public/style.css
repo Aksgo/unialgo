@@ -59,16 +59,18 @@ header{
     flex-direction: row;
     flex-wrap: wrap;
     gap:20px;
-    margin : 30px auto;
+    margin : 30px 200px;
+    border-radius: 30px;
     justify-content: center;
     padding: 40px;
+    background-color: rgba(83, 83, 83, 0.4);
+
 
 }
 .about{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgba(58, 58, 58, 0.4);
     border-radius: 40px;
     padding: 30px;
 }
@@ -109,8 +111,12 @@ img{
     height: 20rem;
     /*box-shadow: 0 0 60px rgb(255, 255, 255);*/
 }
-@media (max-width: 650px) {
+@media (max-width: 1000px) {
+    .content{
+        background-color: #00000000;
+    }
     .about{
+        background-color: rgba(58, 58, 58, 0.4);
         max-width: 260px;
         padding: 15px;
     }
