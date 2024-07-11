@@ -12,11 +12,13 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2.3.2
+        uses: actions/checkout@v4
 
       - name: Set Up Node.js
-        run: npm install
-        
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
       - name: Install Firebase CLI
         run: npm install -g firebase-tools
 
