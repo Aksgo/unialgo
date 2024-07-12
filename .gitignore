@@ -5,4 +5,4 @@ buildDetails.txt
 generator.py
 ArticleData.txt
 firebase-debug.log
-test.html
+public/test.html
