@@ -2,8 +2,7 @@ asset/bg1.png
 asset/bg2.png
 asset/bg3.png
 buildDetails.txt
-generator.py
-ArticleData.txt
 firebase-debug.log
 pop.html
-public/SubscribePopup.html
+SubscribePopup.html
+HuffmanCoding.txt

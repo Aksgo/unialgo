@@ -85,7 +85,7 @@ header{
 }
 @media (max-width: 1200px){
   .article{
-    max-width: 600px;
+    max-width: 500px;
   }
   .content{
     font-size: 15px;
