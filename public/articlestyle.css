@@ -7,30 +7,35 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
-
-.centered a{
+header{
+    display: flex;
+    align-items: center;
+  }
+  .centered{
+    display: flex;
+    align-items: center;
+  }
+  .centered a{
     background-color: #00000000;
     color: #fff;
     padding: 20px 30px 20px 30px;    
     display: flex;
     align-items: center;
     position: relative; 
-}
-.name {
+    text-decoration: none;
+    color: white;
+  }
+  .name {
     font-size: 1.5rem;
     font-weight: bold;
     margin-right: 20px;
     padding-right: 20px;
     border-right : 2px solid rgba(255, 255, 255, 0.3);
-}
-.centered a{
-    text-decoration: none;
-    color: white;
-}
-.logo img{
+  }
+  .logo img{
     width: 60px;
     height: 60px;
-}
+  }
 .articles {
     padding: 10px 40px;
     display: flex;
@@ -65,7 +70,7 @@ body {
       opacity: 1;
       transform: translateY(0);
     }
-  }
+}
 .article:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

@@ -46,8 +46,18 @@ header{
   border-radius: 20px;
   padding-bottom: 200px;
   justify-content: center;
-  
+  animation: fadeIn 0.25s ease-in forwards;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .title{
   font-size: 32px;
   text-align: center;
