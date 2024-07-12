@@ -5,4 +5,5 @@ buildDetails.txt
 generator.py
 ArticleData.txt
 firebase-debug.log
-public/test.html
+pop.html
+public/SubscribePopup.html

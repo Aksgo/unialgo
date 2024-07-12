@@ -14,7 +14,7 @@ body {
 header{
     background-color: #00000000;
     color: #fff;
-    padding: 20px 30px 5px 30px;    
+    padding: 20px 30px 0px 30px;    
     display: flex;
     align-items: center;
     position: relative; 
@@ -31,6 +31,10 @@ header{
     margin-right: 20px;
     padding-right: 20px;
     border-right : 2px solid rgba(255, 255, 255, 0.3);
+}
+.logo img{
+    width: 60px;
+    height: 60px;
 }
 
 .subscribe {
@@ -117,7 +121,7 @@ img{
         max-width: 500px;
     }
     h1 {
-        font-size:28px;
+        font-size:40px;
     }
     #des{
         font-size: 18px;
@@ -130,6 +134,9 @@ img{
 @media (max-width: 600px) {
     .content{
         max-width: 200px;
+    }
+    h1{
+        font-size: 28px;
     }
 }
 #start-btn{
@@ -150,8 +157,4 @@ p{
     font-size: 20px;
     text-align: center;
     margin: 30px;
-}
-.logo img{
-    width: 90px;
-    height: 90px;
 }

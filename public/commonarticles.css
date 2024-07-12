@@ -1,9 +1,3 @@
-header.article-header {
-    padding: 20px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
   #toggle-theme{
     font-size: 30px;
     color:white;

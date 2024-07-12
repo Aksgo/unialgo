@@ -4,32 +4,33 @@ body {
     padding: 0;
     background: linear-gradient(180deg, #00011c, #000000, #23001a);
     color: white;
-    user-select: none;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-header.article-header {
+.centered a{
     background-color: #00000000;
-    padding: 20px 30px;
+    color: #fff;
+    padding: 20px 30px 20px 30px;    
     display: flex;
     align-items: center;
+    position: relative; 
 }
-
-.back-container {
-    display: flex;
-    align-items: center;
-}
-
-.back-link {
-    background: linear-gradient(45deg, #00c3ff, #951cff, #ff0080);
-    color: white;
-    border: none;
-    border-radius: 50px;
-    text-decoration: none;
+.name {
     font-size: 1.5rem;
-    padding: 5px 10px;
     font-weight: bold;
+    margin-right: 20px;
+    padding-right: 20px;
+    border-right : 2px solid rgba(255, 255, 255, 0.3);
 }
-
+.centered a{
+    text-decoration: none;
+    color: white;
+}
+.logo img{
+    width: 60px;
+    height: 60px;
+}
 .articles {
     padding: 10px 40px;
     display: flex;
@@ -48,7 +49,27 @@ header.article-header {
     max-width: 500px;
     cursor: pointer;
     border-top:  10px solid rgb(181, 181, 181);
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    animation: anime 1s ease backwards;
 }
+.article a{
+    color: white;
+    text-decoration: none;
+}
+@keyframes anime {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+.article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 .head-article{
     display: flex;
     flex-direction: row;
@@ -69,6 +90,19 @@ hr{
     width: 90%;
     opacity: 0.2;
 }
-img{
+.article-img{
     border-radius: 20px;
+    width: 150px;
+    height: 150px;
+}@media (max-width:1100px){
+    .article{
+        max-width: 350px;
+    }
+    .article-img{
+        width: 90px;
+        height: 90px;
+    }
+    .article-title{
+        font-size: 1.1rem;
+    }
 }
