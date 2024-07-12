@@ -87,7 +87,7 @@ header{
     font-size: 10px;
   }
 }
-@media (max-width: 720px){
+@media (max-width: 600px){
   .article{
     max-width: 250px;
   }
