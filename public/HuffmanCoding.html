@@ -36,7 +36,7 @@
    <div class="content">
     <!-- to be filled via generator -->
     <p>
-     Suppose you have wood pieces of different length (a1,a2,a3,...,an) and you want to merge to make a new stick. But there is a problem, in each operation the cost of merging is the sum of lengths of 2 sticks.
+     Suppose there is a problem in which you have wood pieces of different length (a1,a2,a3,...,an) and you want to merge to make a new stick. But there is a constraint, that is in each operation the cost of merging is the sum of lengths of 2 sticks and you need to minimize to overall cost of merging.
     </p>
     <p>
      So we need an to optimally take the sticks according to their lengths. Suppose we are given a=1, a2=4, a3=9, a4=11. Now, let's take a2 and a3 and merge them into one so their sum = 4+9=13 , and cost = 13. Then let us take a1 , since previous sticks were merged to form a stick of length 13, let us take the previous stick and a1 = 1, so new sum = 1+13=14, and cost += 14 means cost = 13 + 14 = 27. Then we are left with a4 so new stick length sum = 14+11 = 25. And total cost = becomes 27 + 25 = 52.
