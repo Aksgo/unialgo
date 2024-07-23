@@ -4,6 +4,7 @@ def main():
     inp = input("Enter as <art_name,img_name> :")
     artname, imgname = tuple(inp.split(","))
     imgname = imgname.strip(" ")
+    artname = artname.split(".")[0]
     artname = artname.strip(" ")
     data = []
     def extractArticle():
