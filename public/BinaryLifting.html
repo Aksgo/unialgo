@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   CP - Article
+  </title>
+  <link href="ArticleDataStyle.css" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet"/>
+  <link href="asset/logo.png" rel="icon" type="image"/>
+ </head>
+ <body>
+  <header>
+   <div class="centered">
+    <a href="index.html">
+     <div class="name">
+      UniAlgo
+     </div>
+     <div class="logo">
+      <img src="asset/logo.png"/>
+     </div>
+    </a>
+   </div>
+  </header>
+  <div class="article">
+   <div class="title">
+    How does Binary Lifting utilizes power of 2 jumps ?
+    <hr id="line"/>
+   </div>
+   <div>
+    <button id="back-link" onclick="location.href='article.html'">
+     Back to Articles
+    </button>
+   </div>
+   <div class="content">
+    <!-- to be filled via generator -->
+    <p>
+     Suppose you are given a tree and then Q queries. In each query we are given two nodes of the tree and are asked to find the lowest common ancestor of both of them. Now finding LCA is easy and can be done in O(N) (which is simple to understand), but for q queries the time complexity become O(Q*N). So we need to preprocess the tree and then calculate the LCA of two nodes in O(log(N)) . Whenever we need to have log(N) complexity which can be achieved if we somehow used powers of 2 (seems obvious).
+    </p>
+    <p>
+     Firstly, let us see what the algorithm do. So instead of going over every node for each query , we create a matrix of n * (log2(Depth of tree)) approximately. And for each node's row we store the 2^0 th parent (i.e 1st) , 2^1 st parent(i.e 2nd) , then 2^2 ,.., and more until the root node is crossed. Another thing we need to precompute is the depth of each of the node which can be done in O(N) and need to be done once only. And Creation matrix will take O(N*log(depth)). Generally the log(depth) would be less than 20 even.
+    </p>
+    <p>
+     NOTE: Don't worry if you feel like why are we doing this.
+    </p>
+    <p>
+     Now we can use this precomputed information for each query as - let us take two node a and b. If a has a depth d1 and b has a depth d2 (assuming d1&gt;d2), then it is intuitive that we must at least cover the difference in depth of a and b, because LCA will anyhow lie above b. So we need the (d1-d2) the parent of a which is very simple to find. If we represent (d1-d2) in binary representation say 0101 then it means the 5th parent we need can be achieved by 1st parent and then its fourth parent. Hence we can see that we are just taking the parent (some 2^j th parent) which we already precomputed. So this way we just took log2(d1-d2) to cover the difference in depth.
+    </p>
+    <p>
+     Now there may be case that the d1-d2 th parent of a is b itself, so we may check the case if a==b, else it means that the two nodes are in separate branches currently.
+    </p>
+    <p>
+     One feature of LCA we use here in tree is that above the LCA all other nodes that come above it are always their common parents. So again we will use each bit of binary representation of depth of two nodes (which is essentially the same now) and if the jumping by that power of 2 gives us a common parent , then it means that either this is the LCA or it lies below it, so we need to look below, so we reduces the power by 1 and then jump, if the parent are different then definitely the LCA lies above , so we upgrade our parent of a = mat[a][j] (where mat is the matrix we created and mat[a][j] representing the 2^j th parent of a) and similarly b = mat[b][j].
+    </p>
+    <p>
+     In this way we keep coming closer to the lowest common ancestor. The reason we will always reach the ancestor is that imagine like the difference in depth of LCA and the node is d. And we know that any number can be represented in powers of 2, so basically you take the maximum possible jump each time (less than the difference in LCA and current depth of node) and cover up the difference in log time complexity.
+    </p>
+   </div>
+  </div>
+ </body>
+</html>

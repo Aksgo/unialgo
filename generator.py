@@ -1,8 +1,8 @@
 from bs4 import BeautifulSoup as bs
 n = int(input("enter no of files : "))
-inp = input("Enter as <art_name,img_name> :")
-artname, imgname = tuple(inp.split(","))
 def main():
+    inp = input("Enter as <art_name,img_name> :")
+    artname, imgname = tuple(inp.split(","))
     data = []
     def extractArticle():
         with open(artname+".txt", "r") as f:

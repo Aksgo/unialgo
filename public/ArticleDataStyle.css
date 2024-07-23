@@ -46,6 +46,7 @@ header{
   border-radius: 20px;
   padding-bottom: 200px;
   justify-content: center;
+  margin-bottom: 50px;
   animation: fadeIn 0.25s ease-in forwards;
 }
 
