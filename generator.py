@@ -3,6 +3,8 @@ n = int(input("enter no of files : "))
 def main():
     inp = input("Enter as <art_name,img_name> :")
     artname, imgname = tuple(inp.split(","))
+    imgname = imgname.strip(" ")
+    artname = artname.strip(" ")
     data = []
     def extractArticle():
         with open(artname+".txt", "r") as f:
