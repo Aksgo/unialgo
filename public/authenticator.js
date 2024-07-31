@@ -24,7 +24,7 @@ const analytics = getAnalytics(app);
 //performing sign in
 const auth = getAuth(app);
 
-setPersistence(auth, firebase.auth.Auth.Persistence.LOCAL)
+setPersistence(auth, browserSessionPersistence)
   .then(() => {
     // Persistence set successfully
   })
