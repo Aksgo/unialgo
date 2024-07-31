@@ -1,112 +1,121 @@
-body {
-    user-select: none;
-    font-family: "Rubik",Arial, sans-serif;
+html, body {
+    height: 100%;
     margin: 0;
-    padding: 0;
-    background-color: black;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+    font-family: "Rubik", Arial, sans-serif;
     background: linear-gradient(45deg, #010027, #000000, #010027);
     color: white;
-    /* background-image: url("asset/bg4.png"); */
     background-size: cover;
     background-attachment: fixed;
 }
 
-header{
-    background-color: #00000000;
+header {
+    background-color: transparent;
     color: #fff;
-    padding: 20px 30px 0px 30px;    
+    padding: 20px 30px 0px 30px;
     display: flex;
     align-items: center;
-    position: relative; 
+    position: relative;
     justify-content: space-between;
 }
-.centered{
+
+.centered {
     display: flex;
     align-items: center;
     flex-grow: 1;
 }
+
 .name {
     font-size: 1.5rem;
     font-weight: bold;
     margin-right: 20px;
     padding-right: 20px;
-    border-right : 2px solid rgba(255, 255, 255, 0.3);
+    border-right: 2px solid rgba(255, 255, 255, 0.3);
 }
-.logo img{
+
+.logo img {
     width: 60px;
     height: 60px;
 }
 
-.subscribe {
+.signin {
     display: flex;
     align-items: center;
 }
 
-.subscribe button {
-    font-size: 20px;
+.signin button {
+    font-size: 15px;
     padding: 8px 15px;
     background: linear-gradient(45deg, #00c3ff, #951cff, #ff0080);
     color: white;
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    transition: background-color 0.3s ease;
 }
 
-.subscribe button:hover {
+.signin button:hover {
     background: linear-gradient(45deg, #ff0088, #951cff, #45b5ff);
 }
-
 
 .content {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap:20px;
-    max-width: 800px;
-    margin : 30px auto;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 30px auto;
     border-radius: 30px;
     justify-content: center;
-    padding: 40px;
+    padding: 20px;
+    align-items: center;
     background-color: rgba(83, 83, 83, 0.4);
     animation: fadeIn 0.25s ease-in forwards;
+    flex: 1; 
 }
 
 @keyframes fadeIn {
     from {
-      opacity: 0;
+        opacity: 0;
     }
     to {
-      opacity: 1;
+        opacity: 1;
     }
 }
 
-.about{
+.about {
     display: flex;
     flex-direction: column;
     justify-content: center;
     border-radius: 40px;
     padding: 30px;
+    color: #d7d7d7;
 }
-h1{
-    background: linear-gradient(135deg,#849aff, #ffa3dc);
+
+h1 {
+    background: linear-gradient(135deg, #849aff, #ffa3dc);
     background-clip: text;
-    color:#00000000;
+    color: transparent;
     font-size: 80px;
     margin: 10px;
     text-align: center;
     overflow: hidden;
     white-space: nowrap;
-    animation: typewriter 3s steps(18),blink 1000ms steps(1000) infinite;
+    animation: typewriter 3s steps(18), blink 1000ms steps(1000) infinite;
     border-right: 5px solid rgb(255, 255, 255);
 }
+
 @keyframes typewriter {
     from {
         width: 0%;
     }
-
     to {
-        width:100%;
+        width: 100%;
     }
 }
 
@@ -114,56 +123,74 @@ h1{
     from {
         border-color: rgb(255, 255, 255);
     }
-
     to {
         border-color: transparent;
     }
 }
-img{
+
+img {
     border-radius: 10%;
     width: 20rem;
     height: 20rem;
-    /*box-shadow: 0 0 60px rgb(255, 255, 255);*/
 }
-@media (max-width: 1000px) {
-    .content{
+
+@media (max-width: 1250px) {
+    .content {
         max-width: 500px;
     }
     h1 {
-        font-size:40px;
+        font-size: 40px;
     }
-    #des{
+    #des {
         font-size: 18px;
     }
-    img{
+    img {
         width: 260px;
         height: 260px;
     }
 }
+
 @media (max-width: 600px) {
-    .content{
+    .content {
         max-width: 200px;
     }
-    h1{
+    h1 {
         font-size: 28px;
     }
 }
-#start-btn{
+
+#start-btn {
     display: block;
     margin: 0 auto;
     font-size: 18px;
-    color:black;
+    color: black;
     background: linear-gradient(45deg, #ffb6dd, #faf4ff, #ffffff);
-    border:none;
+    border: none;
     border-radius: 10px;
-    padding:15px 25px 15px 25px;
-    cursor:pointer;
+    padding: 15px 25px;
+    cursor: pointer;
 }
-#start-btn:hover{
+
+#start-btn:hover {
     background: linear-gradient(45deg, #ffffff, #ffffff, #ffd0f2);
 }
-p{
+
+p {
     font-size: 20px;
     text-align: center;
     margin: 30px;
+}
+
+footer {
+    color: rgb(152, 152, 152);
+    padding: 0px;
+    text-align: center;
+}
+footer p{
+    font-size: 11px;
+}
+@media (max-width:700px) {
+    footer p{
+        font-size: 7px;
+    }
 }

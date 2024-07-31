@@ -76,8 +76,9 @@ header{
 }
 .content{
   line-height: 30px;
-  font-size : 18px;
+  font-size : 17px;
   text-align: justify;
+  color: #929292;
 }
 #line{
   opacity: 20%;

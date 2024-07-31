@@ -50,7 +50,7 @@ def main():
                 p_tag.string = line
                 para.append(p_tag)
             f.close()
-            wf = open('public/'+artname+'.html', 'w')
+            wf = open('public/ArticleList/'+artname+'.html', 'w')
             wf.write(soup.prettify())
             wf.close()
     def setMetaDescription():
@@ -60,7 +60,7 @@ def main():
         soup = bs(content, 'html.parser')
         arlist = soup.find(class_='articles')
         checkarticle =soup.find(id=artname)
-        relink = soup.new_tag('a',href=artname+'.html')
+        relink = soup.new_tag('a',href='ArticleList/'+artname+'.html')
         head_article = soup.new_tag('div', attrs={'class' : 'head-article'})
         article_img =soup.new_tag('img', src='asset/ArticleImage/'+imgname, attrs={'class':'article-img'})
         head_article.append(article_img)

@@ -84,11 +84,13 @@ header{
 .article-title {
     font-size: 1.6rem;
     margin-bottom: 10px;
+    color: #d2d2d2;
 }
 
 .article-description {
     font-size: 1rem;
     line-height: 1.5;
+    color : rgb(171, 171, 171);
 }
 hr{
     color : white;
