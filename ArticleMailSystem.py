@@ -34,12 +34,13 @@ def mailSender(username, usermail, arturl, artTitle):
             justify-content:center'>
             Learn Now
             </a>
+            
          </body>
         </html>
     """
     msg['From']=provider
     msg['To']=usermail
-    msg['Subject'] = "Hey! 🚀 New Concept for you to learn"
+    msg['Subject'] = "🚀 New Coding Concept for you to learn"
     msg.attach(MIMEText(body,'plain'))
     msg.attach(MIMEText(btn,'html'))
     s = smt.SMTP(smpt_server,smtp_port)
