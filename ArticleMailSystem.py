@@ -39,7 +39,7 @@ def mailSender(username, usermail, arturl, artTitle):
     """
     msg['From']=provider
     msg['To']=usermail
-    msg['Subject'] = "Hey! New Concept for you to learn"
+    msg['Subject'] = "Hey! 🚀 New Concept for you to learn"
     msg.attach(MIMEText(body,'plain'))
     msg.attach(MIMEText(btn,'html'))
     s = smt.SMTP(smpt_server,smtp_port)
