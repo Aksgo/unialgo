@@ -17,6 +17,7 @@
             <li>Implemented mailing system with ongoing improvements.</li>
             <li>Content is copyrighted but the source code is open for contributions.</li>
         </ul>
+        <h4>To get latest notification for newly added articles you may need to sign in.</h4>
     <footer>
         <p>&copy; 2024 Unialgo. All rights reserved.</p>
     </footer>
