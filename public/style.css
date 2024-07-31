@@ -72,7 +72,7 @@ header {
     margin: 30px auto;
     border-radius: 30px;
     justify-content: center;
-    padding: 20px;
+    padding: 70px;
     align-items: center;
     background-color: rgba(83, 83, 83, 0.4);
     animation: fadeIn 0.25s ease-in forwards;
@@ -150,7 +150,7 @@ img {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .content {
         max-width: 200px;
     }
