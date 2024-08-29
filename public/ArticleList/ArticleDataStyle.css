@@ -39,10 +39,10 @@ header{
 .article{
   display: flex;
   flex-direction: column;
-  max-width: 1000px;
-  background-color: #46464694;
+  max-width: 800px;
+  background-color: #00000054;
   margin: 0px auto;
-  padding: 20px;
+  padding: 40px;
   border-radius: 20px;
   padding-bottom: 200px;
   justify-content: center;
@@ -75,8 +75,8 @@ header{
   cursor: pointer;
 }
 .content{
-  line-height: 30px;
-  font-size : 17px;
+  line-height: 40px;
+  font-size : 20px;
   text-align: justify;
   color: #929292;
 }
@@ -90,7 +90,7 @@ header{
     max-width: 500px;
   }
   .content{
-    font-size: 15px;
+    font-size: 17px;
   }
   .title{
     font-size: 24px;
