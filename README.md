@@ -15,7 +15,7 @@
             <li>Frontend developed using HTML, CSS, and JavaScript.</li>
             <li>Backend built with Python and Firebase.</li>
             <li>Implemented mailing system with ongoing improvements.</li>
-            <li>Content is copyrighted but the source code is open for contributions.</li>
+            <li>Content in Articles is copyrighted but the source code is open for contributions.</li>
         </ul>
         <h4>To get latest notification for newly added articles you may need to sign in.</h4>
     <footer>
