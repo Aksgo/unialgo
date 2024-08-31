@@ -96,7 +96,6 @@ def extractUsers(arturl, artTitle):
     for user in page.iterate_all():
         mailSender(user.display_name, user.email, arturl, artTitle)
         print("mail sent to :",user.email)
-        break
 
 def main():
     artTitle = input("Enter article Title : ")
