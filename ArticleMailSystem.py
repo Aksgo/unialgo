@@ -60,6 +60,9 @@ def mailSender(username, usermail, arturl, artTitle):
                 font-size: 16px;
                 line-height: 1.6;
             }}
+            a{{
+                color: white;
+            }}
         </style>
     </head>
     <body>
@@ -93,6 +96,7 @@ def extractUsers(arturl, artTitle):
     for user in page.iterate_all():
         mailSender(user.display_name, user.email, arturl, artTitle)
         print("mail sent to :",user.email)
+        break
 
 def main():
     artTitle = input("Enter article Title : ")
