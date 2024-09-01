@@ -1,3 +1,4 @@
 1. add support for images in article
 2. removing old method of adding article using txt file, add a interface to add article
 3. apply theme toggle
+added a merge check
