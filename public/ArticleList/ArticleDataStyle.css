@@ -4,6 +4,7 @@ body {
   padding: 0;
   background: linear-gradient(180deg, #00011c, #000000, #23001a);
   color: white;
+  user-select: none;
   background-size: cover;
   background-attachment: fixed;
 }
