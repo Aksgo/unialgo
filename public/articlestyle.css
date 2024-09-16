@@ -38,6 +38,7 @@ header{
   }
 .articles {
     padding: 10px 40px;
+    padding-bottom: 60px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

@@ -77,6 +77,7 @@ header {
     background-color: rgba(83, 83, 83, 0.4);
     animation: fadeIn 0.25s ease-in forwards;
     flex: 1; 
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
 @keyframes fadeIn {
@@ -133,7 +134,10 @@ img {
     width: 20rem;
     height: 20rem;
 }
-
+.content:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 @media (max-width: 1250px) {
     .content {
         max-width: 500px;
@@ -187,10 +191,10 @@ footer {
     text-align: center;
 }
 footer p{
-    font-size: 11px;
+    font-size: 13px;
 }
 @media (max-width:700px) {
     footer p{
-        font-size: 7px;
+        font-size: 9px;
     }
 }
