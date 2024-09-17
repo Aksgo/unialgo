@@ -79,7 +79,8 @@ header{
   line-height: 40px;
   font-size : 20px;
   text-align: justify;
-  color: #929292;
+  color: rgb(199, 199, 199);
+
 }
 #line{
   opacity: 20%;
@@ -88,7 +89,8 @@ header{
 }
 @media (max-width: 1200px){
   .article{
-    max-width: 500px;
+    max-width: 1000px;
+    border-radius: 0px;
   }
   .content{
     font-size: 17px;
@@ -99,9 +101,10 @@ header{
   #back-link{
     font-size: 10px;
   }
-}
+} 
 @media (max-width: 600px){
   .article{
-    max-width: 250px;
+    max-width: 1000px;
+    border-radius: 0px;
   }
 }
