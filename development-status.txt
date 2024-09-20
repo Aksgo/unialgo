@@ -2,3 +2,4 @@
 2. removing old method of adding article using txt file, add a interface to add article
 3. apply theme toggle
 4. add comment option
+5. add commenting option on articles
