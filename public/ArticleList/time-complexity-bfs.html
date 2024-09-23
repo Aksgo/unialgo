@@ -25,7 +25,7 @@
   </header>
   <div class="article">
    <div class="title">
-    Is the time complexity of BFS really O(V+E) ?
+    DFS is a graph traversal technique used to explore nodes and edges of a graph. It can be implemented using recursion or an explicit stack. The algorithm works by starting from a source node, marking it as visited, and then recursively visiting all its unvisited neighbors.
     <hr id="line"/>
    </div>
    <div>
@@ -36,7 +36,21 @@
    <div class="content">
     <!-- to be filled via generator -->
     <p>
-     The upcoming article is based on DFS and analyzing how is the time complexity of BFS O(V+E). Is it due to the  visited arrays or is it somehow amortized?
+    </p>
+    <p>
+    </p>
+    <p>
+     1. Looping Through Nodes: O(V)
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+     • When you start the DFS, you typically loop through  all the vertices in the graph. This is necessary to ensure that even disconnected components of the graph are visited.
+    </p>
+    <p>
+     • For each node, you check if it has been visited.  This check is O(1) for each node, and since you do this for all V nodes, this part contributes O(V) to the time complexity.
     </p>
    </div>
   </div>
