@@ -18,6 +18,10 @@
             <li>Content in Articles is copyrighted but the source code is open for contributions.</li>
         </ul>
         <h4>To get latest notification for newly added articles you need to sign in to UniAlgo</h4>
+        <hr>
+        <h2>Contribution</h2>
+        <h4>Please check  CONTRIBUTION.md</h4>
+        <hr>
     <footer>
         <p>&copy; 2024 Unialgo. All rights reserved.</p>
     </footer>
