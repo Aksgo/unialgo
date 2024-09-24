@@ -7,4 +7,8 @@
 </ol>
 
 # To Contribute to Articles
-
+<ol>
+  <li>Raise a new issue about the article</li>
+  <li>If it is assigned to you, create a new PR for a txt file</li>
+  <li>For the txt file format reesearch a little into the code</li>
+</ol>
