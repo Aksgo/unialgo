@@ -4,7 +4,6 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import firebase_admin as fab
 from firebase_admin import auth, credentials
-import os
 def mailSender(username, usermail, arturl, artTitle):
     smpt_server = 'smtp.gmail.com'
     smtp_port = 587
@@ -96,6 +95,8 @@ def extractUsers(arturl, artTitle):
     for user in page.iterate_all():
         mailSender(user.display_name, user.email, arturl, artTitle)
         print("mail sent to :",user.email)
+        print(type(user.email))
+        break
 
 def main():
     artTitle = input("Enter article Title : ")
