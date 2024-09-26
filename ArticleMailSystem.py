@@ -77,6 +77,8 @@ def mailSender(username, usermail, arturl, artTitle):
     msg['From'] = provider
     msg['To'] = usermail
     msg['Subject'] = "🚀 New Coding Concept for You to Learn"
+    msg['Reply-To'] = provider  # Add a proper Reply-To header
+    msg['X-Mailer'] = 'Python-Mail'  # Custom header to avoid spam
     msg.attach(MIMEText(btn, 'html'))
 
     s = smt.SMTP(smpt_server,smtp_port)
