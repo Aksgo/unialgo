@@ -1,4 +1,4 @@
-1. add support for images in article
+1. add support for images in article using cells kind of feature to add the details
 2. removing old method of adding article using txt file, add a interface to add article
 3. apply theme toggle
 4. add comment option

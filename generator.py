@@ -22,7 +22,7 @@ def main():
                 else:
                     para = para + line
         gitfile = open('.gitignore','r+')
-        ignored = gitfile.readlines()
+        ignored = gitfile.readlines()   
         print(ignored)
         toignore = artname+".txt"
         if toignore not in ignored:
