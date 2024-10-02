@@ -21,3 +21,5 @@
   <li>Leave another line, then start writing your article</li>
   <li>Note that to separate the paragraphs in article (on website), you again need to leave an empty line in the txt file</li>
 </ol>
+<p>sample file below</p>
+<img src = "public/asset/sample-txt-file-format.png">
