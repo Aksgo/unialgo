@@ -1,5 +1,5 @@
 # This repository comes under hacktoberfest 2024
-### NOTE : hacktoberfest-accepted label will be added once the PR is merged
+### NOTE : hacktoberfest-accepted label will be added once the PR is merged and the issue must be completed in at most 7 days
 <b>For contribution :</b>
 <ol>
   <li>Create a fork of repository</li>
