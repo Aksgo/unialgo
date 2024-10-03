@@ -108,3 +108,8 @@ header{
     border-radius: 0px;
   }
 }
+
+.author{
+  font-style: italic;
+  color: #afafafe6;
+}

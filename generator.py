@@ -54,9 +54,8 @@ def main():
                 p_tag.string = line
                 para.append(p_tag)
             # filling the author name
-            author_div = soup.new_tag('div', attrs={'class': 'author'})
+            author_div = soup.find(class_='author')
             author_div.string = f"Written by: {author}"
-            para.append(author_div)
             f.close()
             wf = open('public/ArticleList/'+artname+'.html', 'w')
             wf.write(soup.prettify())
