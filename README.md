@@ -20,7 +20,7 @@
         <h4>To get latest notification for newly added articles you need to sign in to UniAlgo</h4>
         <hr>
         <h2>Contribution</h2>
-        <h4>Please check  CONTRIBUTION.md</h4>
+        <h4>For hacktoberfest and contribution realated queries please check  CONTRIBUTION.md</h4>
         <hr>
     <footer>
         <p>&copy; 2024 Unialgo. All rights reserved.</p>
