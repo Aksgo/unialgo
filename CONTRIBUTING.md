@@ -20,6 +20,7 @@
   <li>Leave a line and then enter the description (a small description which appear on the list of articles)</li>
   <li>Leave another line, then start writing your article</li>
   <li>Note that to separate the paragraphs in article (on website), you again need to leave an empty line in the txt file</li>
+  <li>The last line should contain the your name (as you authored it)</li>
 </ol>
 <p>sample file below</p>
 <img src = "public/asset/sample-txt-file-format.png">
