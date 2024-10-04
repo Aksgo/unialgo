@@ -1,6 +1,9 @@
 html, body {
     height: 100%;
     margin: 0;
+    font-family: "Rubik", Arial, sans-serif;
+    background: linear-gradient(45deg, #010027, #000000, #010027);
+    color: white;
 }
 
 body {
@@ -35,7 +38,7 @@ header {
 }
 
 .name {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
     margin-right: 20px;
     padding-right: 20px;
@@ -94,12 +97,9 @@ header {
 }
 
 .about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 40px;
-    padding: 30px;
-    color: #d7d7d7;
+    flex-grow: 1;
+    text-align: center;
+    flex-grow:1;
 }
 
 h1 {
@@ -197,13 +197,24 @@ footer {
     position: relative;
     bottom:0;
     width: 100%;
+    font-size: 0.9rem;
 }
 footer p{
     font-size: 13px;
+    margin: 0;
 }
-@media (max-width:700px) {
-    footer p{
-        font-size: 9px;
+@media (max-width: 900px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+
+    .name {
+        font-size: 1.5rem;
     }
 }
 .content {
@@ -253,4 +264,77 @@ footer p{
     .section h1 {
         font-size: 2rem;
     }
+}
+
+.about-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.about-page img.about-logo {
+    width: 150px;
+    margin-bottom: 20px;
+    margin-left: 40%;
+}
+
+.section h1 {
+    font-size: 2.5rem;
+    color: #ffb6dd;
+    text-align: center;
+}
+
+.section p {
+    font-size: 1.2rem;
+    color: #d7d7d7;
+    line-height: 1.6;
+    max-width: 600px;
+    text-align: center;
+}
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 10px;
+}
+
+.nav-link:hover {
+    color: #00c3ff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link-icon {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s ease;
+    font-size: 15px;
+    padding: 8px 15px;
+    background: linear-gradient(45deg, #00c3ff, #951cff, #ff0080);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link-icon:hover {
+    color: #00c3ff;
+}
+
+.image-main img {
+    border-radius: 10%;
+    width: 300px;
+    height: 300px;
 }
