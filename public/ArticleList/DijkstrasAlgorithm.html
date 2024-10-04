@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   CP - Article
+  </title>
+  <link href="ArticleDataStyle.css" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet"/>
+  <link href="../asset/logo.png" rel="icon" type="image"/>
+ </head>
+ <body>
+  <header>
+   <div class="centered">
+    <a href="../index.html">
+     <div class="name">
+      UniAlgo
+     </div>
+     <div class="logo">
+      <img src="../asset/logo.png"/>
+     </div>
+    </a>
+   </div>
+  </header>
+  <div class="article">
+   <div class="title">
+    How Dijkstra's Algorithm (Shortest Path) Works?
+    <hr id="line"/>
+   </div>
+   <div>
+    <button id="back-link" onclick="location.href='../article.html'">
+     Back to Articles
+    </button>
+   </div>
+   <div class="content">
+    <!-- to be filled via generator -->
+    <p>
+     Dijkstra's Algorithm is a famous greedy algorithm used to solve the shortest path problem for a graph with non-negative edge weights. It computes the shortest path from a starting node (the "source") to all other nodes in the graph.
+    </p>
+    <p>
+     The algorithm works by selecting the node with the smallest known distance, updating the distances of its neighbors, and repeating this process until all nodes have been visited. This ensures that the shortest path to each node is determined step by step, making it an efficient solution.
+    </p>
+    <p>
+     Steps of Dijkstra's Algorithm:
+     <ol>
+      <li>Set the distance to the source node as 0 and to all other nodes as infinity.</li>
+      <li>Mark the source node as visited. For all its neighbors, calculate the tentative distance using the current node’s distance. If this new distance is smaller than the previously known distance, update it.</li>
+      <li>Move to the unvisited node with the smallest tentative distance and repeat the process of updating distances for its neighbors.</li>
+      <li>Continue this process until all nodes are visited, ensuring that the shortest path to each node is found.</li>
+     </ol>
+    </p>
+    <p>
+     Example:
+     Consider a graph where nodes represent cities and edges represent the distance between them. Starting from city A, Dijkstra's Algorithm will calculate the shortest distance to all other cities (nodes), considering the sum of edge weights (distances) in each step.
+    </p>
+    <p>
+     Time Complexity: The time complexity of Dijkstra's Algorithm depends on the implementation. Using a priority queue (min-heap), the complexity is O((V + E) log V), where V is the number of vertices (nodes) and E is the number of edges in the graph.
+    </p>
+    <p>
+     Limitations:*
+     Dijkstra's Algorithm does not work with graphs that have negative edge weights because the greedy approach of choosing the closest node might not always lead to the optimal solution in such cases.
+    </p>
+   </div>
+   <div class="author">
+    Written by: UniAlgo Owner
+   </div>
+  </div>
+ </body>
+</html>
