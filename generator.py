@@ -1,101 +1,131 @@
-from bs4 import BeautifulSoup as bs
-n = int(input("enter no of files : "))
+import os
+from bs4 import BeautifulSoup
+import shutil
+
+n = int(input("Enter number of files: "))
+
 def main():
     inp = input("Enter as <art_name,img_name> :")
-    artname, imgname = tuple(inp.split(","))
-    imgname = imgname.strip(" ")
-    artname = artname.split(".")[0]
-    artname = artname.strip(" ")
+    artname, imgname = map(str.strip, inp.split(","))
+    base_name = os.path.splitext(artname)[0]
     author = ""
     data = []
-    def extractArticle():
+
+    # Supported image extensions
+    image_extensions = [".png", ".jpg", ".jpeg"]
+
+    # Function to check if image exists
+    def check_image_exists(imgname):
+        for ext in image_extensions:
+            img_path = f"asset/ArticleImage/{imgname}{ext}"
+            if os.path.exists(img_path):
+                return img_path
+        raise FileNotFoundError(f"Image with name {imgname} not found in supported formats ({', '.join(image_extensions)})")
+
+    
+    def extract_article():
         nonlocal author
-        with open(artname+".txt", "r") as f:
-            complete  =  f.readlines()
-            for i in range(0,len(complete)):
-                complete[i] = complete[i].replace('\n',' ')
-            author = complete[-1].strip()
-            complete = complete[:-1]
-            if(complete[-1]!=' '):
-                complete.append(' ')
-            para=""
-            for line in complete:
-                if(line==' '):
-                    data.append(para)
-                    para=""
-                else:
-                    para = para + line
-        gitfile = open('.gitignore','r+')
-        ignored = gitfile.readlines()   
-        print(ignored)
-        toignore = artname+".txt"
-        if toignore not in ignored:
-            ignored.append("\n"+toignore)
-            gitfile.seek(0)
-            gitfile.writelines(ignored)
-        gitfile.close()
-    def SetArticle():
-            '''to create the page fo reach article'''
-            f = open('public/ArticleTemplate.html','r',encoding='utf-8')
-            content = f.read()
-            soup = bs(content, 'html.parser')
-            #filling the title 
-            title = soup.find(class_='title')
-            title.string = data[0]
-            hr_tag = soup.new_tag('hr', id="line")
-            title.append(hr_tag)
-            #filling the article data
-            #txt file structure
-            #title\ndescription\nArticlePara
-            para =  soup.find(class_='content')
-            for i in range(2,len(data)):
-                line = data[i]
-                p_tag = soup.new_tag('p')
-                p_tag.string = line
-                para.append(p_tag)
-            # filling the author name
-            author_div = soup.find(class_='author')
-            author_div.string = f"Written by: {author}"
-            f.close()
-            wf = open('public/ArticleList/'+artname+'.html', 'w')
-            wf.write(soup.prettify())
-            wf.close()
-    def setMetaDescription():
-        '''function to fill small title and description on list page'''
-        f=open('public/article.html','r', encoding='utf-8')
-        content = f.read()
-        soup = bs(content, 'html.parser')
+        with open(f"{base_name}.txt", "r", encoding="utf-8") as file:
+            complete = [line.strip() for line in file.readlines()]
+        author = complete.pop().strip()
+
+        para = ""
+        for line in complete:
+            if line == "":
+                data.append(para)
+                para = ""
+            else:
+                para += line + " "
+        if para:
+            data.append(para)
+
+        gitignore_path = os.path.join(os.getcwd(), ".gitignore")
+        with open(gitignore_path, "r", encoding="utf-8") as f:
+            ignored = f.read().splitlines()
+        if f"{base_name}.txt" not in ignored:
+            with open(gitignore_path, "a", encoding="utf-8") as f:
+                f.write(f"\n{base_name}.txt")
+
+    
+    def set_article():
+        with open("public/ArticleTemplate.html", "r", encoding="utf-8") as file:
+            content = file.read()
+        soup = BeautifulSoup(content, 'html.parser')
+
+    
+        title = soup.find(class_='title')
+        title.string = data[0]
+        title.append(soup.new_tag('hr', id="line"))
+
+    
+        para_div = soup.find(class_='content')
+        for i in range(2, len(data)):
+            new_para = soup.new_tag('p')
+            new_para.string = data[i]
+            para_div.append(new_para)
+
+    
+        author_tag = soup.find(class_='author')
+        author_tag.string = f"Written by: {author}"
+
+        with open(f"public/ArticleList/{base_name}.html", "w", encoding="utf-8") as file:
+            file.write(str(soup))
+
+    
+    def set_meta_description():
+        with open("public/article.html", "r", encoding="utf-8") as file:
+            content = file.read()
+        soup = BeautifulSoup(content, 'html.parser')
         arlist = soup.find(class_='articles')
-        checkarticle =soup.find(id=artname)
-        relink = soup.new_tag('a',href='ArticleList/'+artname+'.html')
-        head_article = soup.new_tag('div', attrs={'class' : 'head-article'})
-        article_img =soup.new_tag('img', src='asset/ArticleImage/'+imgname, attrs={'class':'article-img'})
+
+        
+        check_article = soup.find(id=base_name)
+
+        # Check for existing image with different extensions
+        article_img_path = check_image_exists(imgname)
+
+        
+        relink = soup.new_tag('a', href=f"ArticleList/{base_name}.html")
+        head_article = soup.new_tag('div', **{'class': 'head-article'})
+
+        # Add image
+        article_img = soup.new_tag('img', src=article_img_path, **{'class': 'article-img'})
         head_article.append(article_img)
-        h2_tag = soup.new_tag('h2', attrs={'class':'article-title'})
+
+        
+        h2_tag = soup.new_tag('h2', **{'class': 'article-title'})
         h2_tag.string = data[0]
         head_article.append(h2_tag)
+        
         relink.append(head_article)
-        line_tag = soup.new_tag('hr')
-        relink.append(line_tag)
+        relink.append(soup.new_tag('hr'))
+
+        
         art_desc = data[1]
-        desc_tag = soup.new_tag('p', attrs={'class':'article-description'})
+        desc_tag = soup.new_tag('p', **{'class': 'article-description'})
         desc_tag.string = art_desc
         relink.append(desc_tag)
-        if checkarticle is not None:
-            checkarticle.clear()
-            checkarticle.append(relink)
-            arlist.append(checkarticle)
+
+        
+        if check_article:
+            check_article.clear()
+            check_article.append(relink)
         else:
-            article = soup.new_tag('div', attrs={'class':'article', 'id':artname})
+            article = soup.new_tag('div', id=base_name, **{'class': 'article'})
             article.append(relink)
             arlist.append(article)
-        f.close()
-        wf = open('public/article.html','w',encoding='utf-8')
-        wf.write(soup.prettify())
-        wf.close()
-    extractArticle()
-    setMetaDescription()
-    SetArticle()
-while(n>0):
-    main()
-    n-=1
+
+        
+        with open("public/article.html", "w", encoding="utf-8") as file:
+            file.write(str(soup))
+
+    extract_article()
+    set_meta_description()
+    set_article()
+
+#added the error function in the for loop 
+for i in range(n):
+    try:
+        main()
+    except Exception as error:
+        print(f"Error processing file: {error}")
