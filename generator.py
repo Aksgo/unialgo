@@ -5,6 +5,16 @@ import shutil
 n = int(input("Enter number of files: "))
 
 def main():
+    choice = input("Would you like to add a new article or update an existing one? (new/update): ").strip().lower()
+    
+    if choice == "new":
+        addNewArticle()
+    elif choice == "update":
+        modifyArticle()
+    else:
+        print("Invalid choice. Please enter 'new' or 'update'.")
+
+def addNewArticle():
     inp = input("Enter as <art_name,img_name> :")
     artname, imgname = map(str.strip, inp.split(","))
     base_name = os.path.splitext(artname)[0]

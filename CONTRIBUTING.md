@@ -5,6 +5,7 @@
   <li>Create a fork of repository</li>
   <li>Look for existing issues or create a new issue if you want to add feature or any modification</li>
   <li>Once the the issue is assigned to you, create a PR to merge the changes</li>
+  <li>Do not raise any PR without testing code on your local repository</li>
 </ol>
 
 # To Contribute to Articles
