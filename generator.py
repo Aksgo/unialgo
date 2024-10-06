@@ -1,131 +1,164 @@
+from bs4 import BeautifulSoup as bs
 import os
-from bs4 import BeautifulSoup
-import shutil
+import platform
+import subprocess
 
-n = int(input("Enter number of files: "))
+n = int(input("Enter number of operations (new/modify articles): "))
 
 def main():
-    inp = input("Enter as <art_name,img_name> :")
-    artname, imgname = map(str.strip, inp.split(","))
-    base_name = os.path.splitext(artname)[0]
+    choice = input("Would you like to add a new article or update an existing one? (new/update): ").strip().lower()
+    
+    if choice == "new":
+        addNewArticle()
+    elif choice == "update":
+        modifyArticle()
+    else:
+        print("Invalid choice. Please enter 'new' or 'update'.")
+
+# Supported image extensions
+image_extensions = [".png", ".jpg", ".jpeg"]
+
+# Function to check if image exists
+def check_image_exists(imgname):
+    for ext in image_extensions:
+        img_path = f"public/asset/ArticleImage/{imgname}{ext}"
+        if os.path.exists(img_path):
+            return imgname+ext
+    raise FileNotFoundError(f"Image with name {imgname} not found in supported formats ({', '.join(image_extensions)})")
+
+def addNewArticle():
+    inp = input("Enter as <art_name,img_name> (no extensions required) :")
+    artname, imgname = tuple(inp.split(","))
+    imgname = imgname.strip(" ")
+    artname = artname.split(".")[0]
+    artname = artname.strip(" ")
+    imgname = check_image_exists(imgname)
     author = ""
     data = []
+    # Extract and handle the new article
+    author = extractArticle(artname, data)
+    setMetaDescription(artname, data, imgname)
+    SetArticle(artname, data, author)
 
-    # Supported image extensions
-    image_extensions = [".png", ".jpg", ".jpeg"]
-
-    # Function to check if image exists
-    def check_image_exists(imgname):
-        for ext in image_extensions:
-            img_path = f"asset/ArticleImage/{imgname}{ext}"
-            if os.path.exists(img_path):
-                return img_path
-        raise FileNotFoundError(f"Image with name {imgname} not found in supported formats ({', '.join(image_extensions)})")
-
-    
-    def extract_article():
-        nonlocal author
-        with open(f"{base_name}.txt", "r", encoding="utf-8") as file:
-            complete = [line.strip() for line in file.readlines()]
-        author = complete.pop().strip()
-
+def extractArticle(artname, data):
+    ''' Extract the article data from the .txt file '''
+    with open(artname+".txt", "r") as f:
+        complete = f.readlines()
+        complete = [line.replace('\n',' ') for line in complete]
+        author = complete[-1].strip()  # Last line is the author's name
+        complete = complete[:-1]  # Remove author line from article data
+        if complete[-1] != ' ':
+            complete.append(' ')  # Ensure a space separates paragraphs
         para = ""
         for line in complete:
-            if line == "":
+            if line == ' ':
                 data.append(para)
                 para = ""
             else:
-                para += line + " "
-        if para:
-            data.append(para)
+                para += line
 
-        gitignore_path = os.path.join(os.getcwd(), ".gitignore")
-        with open(gitignore_path, "r", encoding="utf-8") as f:
-            ignored = f.read().splitlines()
-        if f"{base_name}.txt" not in ignored:
-            with open(gitignore_path, "a", encoding="utf-8") as f:
-                f.write(f"\n{base_name}.txt")
-
+    # Add txt file to .gitignore
+    with open('.gitignore', 'r+') as gitfile:
+        ignored = gitfile.readlines()
+        toignore = artname+".txt"
+        if toignore not in ignored:
+            gitfile.write("\n" + toignore)
     
-    def set_article():
-        with open("public/ArticleTemplate.html", "r", encoding="utf-8") as file:
-            content = file.read()
-        soup = BeautifulSoup(content, 'html.parser')
+    return author
 
+def SetArticle(artname, data, author):
+    ''' Create HTML page for the article '''
+    with open('public/ArticleTemplate.html', 'r', encoding='utf-8') as f:
+        content = f.read()
+        soup = bs(content, 'html.parser')
+
+    # Set title and article data in the HTML template
+    title = soup.find(class_='title')
+    title.string = data[0]
+    title.append(soup.new_tag('hr', id="line"))
+
+    para = soup.find(class_='content')
+    for i in range(2, len(data)):
+        p_tag = soup.new_tag('p')
+        p_tag.string = data[i]
+        para.append(p_tag)
+
+    # Set author name
+    author_div = soup.find(class_='author')
+    author_div.string = f"Written by: {author}"
+
+    # Save the updated HTML file
+    with open(f'public/ArticleList/{artname}.html', 'w', encoding='utf-8') as wf:
+        wf.write(soup.prettify())
+
+def setMetaDescription(artname, data, imgname):
+    ''' Add or update the article on the main article list page '''
+    with open('public/article.html', 'r', encoding='utf-8') as f:
+        content = f.read()
+        soup = bs(content, 'html.parser')
+
+    arlist = soup.find(class_='articles')
+    checkarticle = soup.find(id=artname)
+
+    relink = soup.new_tag('a', href=f'ArticleList/{artname}.html')
+    head_article = soup.new_tag('div', attrs={'class': 'head-article'})
     
-        title = soup.find(class_='title')
-        title.string = data[0]
-        title.append(soup.new_tag('hr', id="line"))
-
+    # Add image and title
+    article_img = soup.new_tag('img', src=f'asset/ArticleImage/{imgname}', attrs={'class':'article-img'})
+    head_article.append(article_img)
+    h2_tag = soup.new_tag('h2', attrs={'class':'article-title'})
+    h2_tag.string = data[0]
+    head_article.append(h2_tag)
+    relink.append(head_article)
     
-        para_div = soup.find(class_='content')
-        for i in range(2, len(data)):
-            new_para = soup.new_tag('p')
-            new_para.string = data[i]
-            para_div.append(new_para)
-
+    relink.append(soup.new_tag('hr'))
     
-        author_tag = soup.find(class_='author')
-        author_tag.string = f"Written by: {author}"
+    # Add description
+    desc_tag = soup.new_tag('p', attrs={'class':'article-description'})
+    desc_tag.string = data[1]
+    relink.append(desc_tag)
 
-        with open(f"public/ArticleList/{base_name}.html", "w", encoding="utf-8") as file:
-            file.write(str(soup))
+    if checkarticle:
+        checkarticle.clear()
+        checkarticle.append(relink)
+    else:
+        article = soup.new_tag('div', attrs={'class': 'article', 'id': artname})
+        article.append(relink)
+        arlist.append(article)
 
+    with open('public/article.html', 'w', encoding='utf-8') as wf:
+        wf.write(soup.prettify())
+
+def modifyArticle():
+    ''' Modify an existing article by opening its .txt file in a text editor '''
+    artname = input("Enter the name of the article to update (without extension): ").strip()
+    imgext = input("enter image type (png/jpg):")
+    txt_file = f'{artname}.txt'
     
-    def set_meta_description():
-        with open("public/article.html", "r", encoding="utf-8") as file:
-            content = file.read()
-        soup = BeautifulSoup(content, 'html.parser')
-        arlist = soup.find(class_='articles')
+    # Check if the article's .txt file exists
+    if not os.path.exists(txt_file):
+        print(f"Error: No .txt file found with the name '{artname}'.")
+        return
 
-        
-        check_article = soup.find(id=base_name)
+    # Open the .txt file in the default text editor (e.g., Notepad for Windows)
+    print(f"Opening {txt_file} for editing...")
+    
+    if platform.system() == 'Windows':
+        subprocess.run(["notepad.exe", txt_file])  # Waits until Notepad is closed
+    elif platform.system() == 'Darwin':  # macOS
+        subprocess.run(["open", "-t", txt_file])  # Wait for TextEdit on macOS
+    else:
+        subprocess.run(["xdg-open", txt_file])  # For Linux systems, waits for the default editor to close
 
-        # Check for existing image with different extensions
-        article_img_path = check_image_exists(imgname)
+    # After the editor is closed, regenerate the HTML article
+    data = []
+    
+    author = extractArticle(artname, data)  # Extract updated content
+    setMetaDescription(artname, data, f'{artname}.{imgext}')  # Assuming image name is same as article name and in .jpg format (change if needed)
+    SetArticle(artname, data, author)  # Update the HTML based on the new content
 
-        
-        relink = soup.new_tag('a', href=f"ArticleList/{base_name}.html")
-        head_article = soup.new_tag('div', **{'class': 'head-article'})
+    print(f"Article '{artname}' updated successfully!")
 
-        # Add image
-        article_img = soup.new_tag('img', src=article_img_path, **{'class': 'article-img'})
-        head_article.append(article_img)
-
-        
-        h2_tag = soup.new_tag('h2', **{'class': 'article-title'})
-        h2_tag.string = data[0]
-        head_article.append(h2_tag)
-        
-        relink.append(head_article)
-        relink.append(soup.new_tag('hr'))
-
-        
-        art_desc = data[1]
-        desc_tag = soup.new_tag('p', **{'class': 'article-description'})
-        desc_tag.string = art_desc
-        relink.append(desc_tag)
-
-        
-        if check_article:
-            check_article.clear()
-            check_article.append(relink)
-        else:
-            article = soup.new_tag('div', id=base_name, **{'class': 'article'})
-            article.append(relink)
-            arlist.append(article)
-
-        
-        with open("public/article.html", "w", encoding="utf-8") as file:
-            file.write(str(soup))
-
-    extract_article()
-    set_meta_description()
-    set_article()
-
-
-for i in range(n):
-    try:
-        main()
-    except Exception as error:
-        print(f"Error processing file: {error}")
+while n > 0:
+    main()
+    n -= 1
