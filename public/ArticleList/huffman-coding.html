@@ -57,6 +57,63 @@
    <div class="author">
     Written by: UniAlgo Owner
    </div>
+   <br/>
+   <hr style="color: white;"/>
+   <div class="faq-section">
+    <div class="faq-title">
+     Frequently Asked Questions
+    </div>
+    <!-- FAQ Toggle Button -->
+    <button id="faq-toggle">
+     Show FAQs
+    </button>
+    <!-- FAQ Content -->
+    <div class="faq-content" id="faq-content">
+        <div class="faq-question">
+         <strong>Q1: What is Huffman Coding?</strong>
+        </div>
+        <div class="faq-answer">
+         Huffman Coding is a compression algorithm that assigns variable-length codes to input characters based on their frequencies. Characters that occur more frequently are assigned shorter codes, while less frequent characters receive longer codes.
+        </div>
+        <div class="faq-question">
+         <strong>Q2: How does Huffman Coding minimize the cost of merging sticks?</strong>
+        </div>
+        <div class="faq-answer">
+         Huffman Coding minimizes the cost by always merging the two smallest sticks first. This strategy ensures that the larger lengths, which contribute more to the total cost, are added later in the process, thus reducing the overall merging cost.
+        </div>
+        <div class="faq-question">
+         <strong>Q3: What role do binary trees play in Huffman Coding?</strong>
+        </div>
+        <div class="faq-answer">
+         In Huffman Coding, a binary tree is used to represent the codes. Each leaf node represents a character, and the path from the root to the leaf determines the character's binary representation (0s and 1s).
+        </div>
+        <div class="faq-question">
+         <strong>Q4: Can Huffman Coding guarantee the shortest binary representation?</strong>
+        </div>
+        <div class="faq-answer">
+         Yes, Huffman Coding guarantees the shortest possible binary representation for a given set of characters and their frequencies, as long as the characters' bit representations do not prefix each other.
+        </div>
+        <div class="faq-question">
+         <strong>Q5: What is the importance of prefix-free codes?</strong>
+        </div>
+        <div class="faq-answer">
+         Prefix-free codes ensure that no code is a prefix of another. This property is essential for uniquely decodable encoding; it prevents ambiguity when decoding the compressed data back into its original form.
+        </div>
+       </div>
+   </div>
   </div>
+  <!-- JavaScript for Toggle -->
+  <script>
+   document.getElementById('faq-toggle').addEventListener('click', function() {
+            const faqContent = document.getElementById('faq-content');
+            if (faqContent.style.display === "none" || faqContent.style.display === "") {
+                faqContent.style.display = "block";
+                this.textContent = "Hide FAQs";
+            } else {
+                faqContent.style.display = "none";
+                this.textContent = "Show FAQs";
+            }
+        });
+  </script>
  </body>
 </html>

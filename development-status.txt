@@ -4,3 +4,4 @@
 4. add comment option
 5. add commenting option on articles
 6. add tages option to each article in article list
+7. add generator function to add faq questions

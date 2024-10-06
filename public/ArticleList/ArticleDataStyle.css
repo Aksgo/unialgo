@@ -51,15 +51,6 @@ header{
   animation: fadeIn 0.25s ease-in forwards;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .title{
   font-size: 32px;
   text-align: center;
@@ -114,7 +105,8 @@ header{
   color: #afafafe6;
 }
 
-/* FAQ Section Styling */
+/*  ======== FAQ Section Styling =========*/
+
 .faq {
   margin-top: 30px;
 }
@@ -128,12 +120,15 @@ header{
 
 .faq-content {
   display: none; /* Hidden by default */
-  margin-top: 20px;
+  padding: 30px;
+  padding-top: 0px;
+  text-align: justify;
+  animation: fadeIn 0.25s ease-in forwards;
 }
 
 .faq-question {
   font-weight: bold;
-  margin: 15px 0 5px 0;
+  margin: 30px 0 20px 0;
   font-size: 18px;
   color: #FFFFFF;
 }
@@ -148,18 +143,19 @@ header{
 #faq-toggle {
   display: block;
   margin: 20px auto;
+  margin-bottom: 2px;
   padding: 10px 20px;
   font-size: 16px;
-  background: linear-gradient(to right, #87CEEB, #00BFFF); /* Sky-blue gradient */
+  background: linear-gradient(to right, #cab3ff, #009dff);
   color: white;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
-  transition: background 0.3s ease;
+  border-radius: 50px;
+  animation: fadeIn 0.25s ease-in forwards;
 }
 
 #faq-toggle:hover {
-  background: linear-gradient(to right, #00BFFF, #1E90FF); /* Darker sky-blue on hover */
+  background: linear-gradient(to right, #00BFFF, #a255ff); 
 }
 
 @media (max-width: 1200px) {
@@ -189,5 +185,14 @@ header{
   #faq-toggle {
     font-size: 12px;
     padding: 6px 12px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
