@@ -56,14 +56,6 @@ def extractArticle(artname, data):
                 para = ""
             else:
                 para += line
-
-    # Add txt file to .gitignore
-    with open('.gitignore', 'r+') as gitfile:
-        ignored = gitfile.readlines()
-        toignore = artname+".txt"
-        if toignore not in ignored:
-            gitfile.write("\n" + toignore)
-    
     return author
 
 def SetArticle(artname, data, author):
@@ -90,6 +82,14 @@ def SetArticle(artname, data, author):
     # Save the updated HTML file
     with open(f'public/ArticleList/{artname}.html', 'w', encoding='utf-8') as wf:
         wf.write(soup.prettify())
+    
+     # Add txt file to .gitignore
+    with open('.gitignore', 'r+') as gitfile:
+        ignored = gitfile.readlines()
+        toignore = artname+".txt"
+        if toignore not in ignored:
+            gitfile.write("\n" + toignore)
+    
 
 def setMetaDescription(artname, data, imgname):
     ''' Add or update the article on the main article list page '''
