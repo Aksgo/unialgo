@@ -19,7 +19,12 @@
         </ul>
         <h4>To get latest notification for newly added articles you need to sign in to UniAlgo</h4>
         <hr>
-        <h2>Contribution : articles and code</h2>
+        <h2>Contribution</h2>
+        <b>What you can contribute ?</b>
+        <ul>
+            <li>coding problems given in issues or raise a new issue</li>
+            <li>new Articles related to CP</li>
+        </ul>
         <h4>For hacktoberfest and contribution realated queries please check  CONTRIBUTION.md</h4>
         <hr>
     <footer>
