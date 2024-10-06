@@ -9,7 +9,7 @@
   <link href="ArticleDataStyle.css" rel="stylesheet" type="text/css"/>
   <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet"/>
   <link href="../asset/logo.png" rel="icon" type="image"/>
-</head>
+ </head>
  <body>
   <header>
    <div class="centered">
@@ -34,7 +34,7 @@
     </button>
    </div>
    <div class="content">
-    <!-- Article content -->
+    <!-- to be filled via generator -->
     <p>
      DFS is a graph traversal technique used to explore nodes and edges of a graph. It can be implemented using recursion or an explicit stack. The algorithm works by starting from a source node, marking it as visited, and then recursively visiting all its unvisited neighbors.
     </p>
@@ -42,77 +42,26 @@
      Analyzing Time Complexity
     </p>
     <p>
+    </p>
+    <p>
+    </p>
+    <p>
      1. Looping Through Nodes: O(V)
     </p>
     <p>
-     • When you start the DFS, you typically loop through all the vertices in the graph. This is necessary to ensure that even disconnected components of the graph are visited.
     </p>
     <p>
-     • For each node, you check if it has been visited. This check is O(1) for each node, and since you do this for all V nodes, this part contributes O(V) to the time complexity.
+    </p>
+    <p>
+     â€¢ When you start the DFS, you typically loop through  all the vertices in the graph. This is necessary to ensure that even disconnected components of the graph are visited.
+    </p>
+    <p>
+     â€¢ For each node, you check if it has been visited.  This check is O(1) for each node, and since you do this for all V nodes, this part contributes O(V) to the time complexity.
     </p>
    </div>
-   
-   <!-- FAQ Section -->
-   <div class="faq">
-    <div class="faq-title">
-     Frequently Asked Questions (FAQs)
-     <hr id="line"/>
-    </div>
-    <!-- FAQ Toggle Button -->
-    <button id="faq-toggle">Show FAQs</button>
-    
-    <!-- FAQ Content -->
-    <div class="faq-content" id="faq-content">
-     <div class="faq-question">
-      <strong>Q1: How does DFS differ from BFS?</strong>
-     </div>
-     <div class="faq-answer">
-      DFS uses a depth-first approach, diving deep into a branch before exploring another, while BFS explores nodes level by level, using a queue structure.
-     </div>
-     <div class="faq-question">
-      <strong>Q2: What is the time complexity of DFS?</strong>
-     </div>
-     <div class="faq-answer">
-      The time complexity of DFS is O(V + E), where V is the number of vertices and E is the number of edges in the graph.
-     </div>
-     <div class="faq-question">
-      <strong>Q3: Can DFS be used to find connected components?</strong>
-     </div>
-     <div class="faq-answer">
-      Yes, DFS can be used to find connected components in a graph by performing DFS on each unvisited node and marking all reachable nodes from that starting node.
-     </div>
-     <div class="faq-question">
-      <strong>Q4: What are the practical applications of DFS?</strong>
-     </div>
-     <div class="faq-answer">
-      DFS is used in topological sorting, finding strongly connected components, and solving maze problems. It’s also helpful in generating paths and in algorithms like finding bridges and articulation points.
-     </div>
-     <div class="faq-question">
-      <strong>Q5: Does DFS guarantee the shortest path in an unweighted graph?</strong>
-     </div>
-     <div class="faq-answer">
-      No, DFS does not guarantee the shortest path in an unweighted graph. BFS is used to find the shortest path in such cases because it explores nodes level by level.
-     </div>
-    </div>
-   </div>
-   
    <div class="author">
     Written by: UniAlgo Owner
    </div>
   </div>
-
-  <!-- JavaScript for Toggle -->
-  <script>
-    document.getElementById('faq-toggle').addEventListener('click', function() {
-      const faqContent = document.getElementById('faq-content');
-      if (faqContent.style.display === "none" || faqContent.style.display === "") {
-        faqContent.style.display = "block";
-        this.textContent = "Hide FAQs";
-      } else {
-        faqContent.style.display = "none";
-        this.textContent = "Show FAQs";
-      }
-    });
-  </script>
  </body>
 </html>

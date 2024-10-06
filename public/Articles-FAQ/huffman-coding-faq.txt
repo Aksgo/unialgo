@@ -1,0 +1,14 @@
+Q1: What is Huffman Coding?
+Huffman Coding is a compression algorithm that assigns variable-length codes to input characters based on their frequencies. Characters that occur more frequently are assigned shorter codes, while less frequent characters receive longer codes.
+
+Q2: How does Huffman Coding minimize the cost of merging sticks?
+Huffman Coding minimizes the cost by always merging the two smallest sticks first. This strategy ensures that the larger lengths, which contribute more to the total cost, are added later in the process, thus reducing the overall merging cost.
+
+Q3: What role do binary trees play in Huffman Coding?
+In Huffman Coding, a binary tree is used to represent the codes. Each leaf node represents a character, and the path from the root to the leaf determines the character's binary representation (0s and 1s).
+
+Q4: Can Huffman Coding guarantee the shortest binary representation?
+Yes, Huffman Coding guarantees the shortest possible binary representation for a given set of characters and their frequencies, as long as the characters' bit representations do not prefix each other.
+
+Q5: What is the importance of prefix-free codes?
+Prefix-free codes ensure that no code is a prefix of another. This property is essential for uniquely decodable encoding; it prevents ambiguity when decoding the compressed data back into its original form.

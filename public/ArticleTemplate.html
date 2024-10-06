@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
+<head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
@@ -9,35 +9,56 @@
   <link href="ArticleDataStyle.css" rel="stylesheet" type="text/css"/>
   <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet"/>
   <link href="../asset/logo.png" rel="icon" type="image"/>
- </head>
- <body>
+</head>
+<body>
   <header>
-   <div class="centered">
-    <a href="../index.html">
-     <div class="name">
-      UniAlgo
-     </div>
-     <div class="logo">
-      <img src="../asset/logo.png"/>
-     </div>
-    </a>
-   </div>
+    <div class="centered">
+      <a href="../index.html">
+        <div class="name">
+          UniAlgo
+        </div>
+        <div class="logo">
+          <img src="../asset/logo.png"/>
+        </div>
+      </a>
+    </div>
   </header>
   <div class="article">
-   <div class="title">
-    <!-- to be filled via generator -->
-   </div>
-   <div>
-    <button id="back-link" onclick="location.href='../article.html'">
-     Back to Articles
-    </button>
-   </div>
-   <div class="content">
-    <!-- to be filled via generator -->
-   </div>
-   <div class="author">
-    <!-- to be filled via generator -->
-   </div>
+    <div class="title">
+      <!-- to be filled via generator -->
+    </div>
+    <div>
+      <button id="back-link" onclick="location.href='../article.html'">
+        Back to Articles
+      </button>
+    </div>
+    <div class="content">
+      <!-- to be filled via generator -->
+    </div>
+    <div class="author">
+      <!-- to be filled via generator -->
+    </div>
+    <div class="faq-section">
+      <div class="faq-title">
+        Frequently Asked Questions
+      </div>
+      <div class="faq-content">
+        <!-- FAQ content will be inserted here via generator -->
+      </div>
+    </div>
   </div>
- </body>
+    <!-- JavaScript for Toggle -->
+    <script>
+        document.getElementById('faq-toggle').addEventListener('click', function() {
+            const faqContent = document.getElementById('faq-content');
+            if (faqContent.style.display === "none" || faqContent.style.display === "") {
+                faqContent.style.display = "block";
+                this.textContent = "Hide FAQs";
+            } else {
+                faqContent.style.display = "none";
+                this.textContent = "Show FAQs";
+            }
+        });
+    </script>
+</body>
 </html>

@@ -9,7 +9,6 @@
   <link href="ArticleDataStyle.css" rel="stylesheet" type="text/css"/>
   <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet"/>
   <link href="../asset/logo.png" rel="icon" type="image"/>
- 
  </head>
  <body>
   <header>
@@ -35,88 +34,29 @@
     </button>
    </div>
    <div class="content">
-    <!-- Article content -->
+    <!-- to be filled via generator -->
     <p>
-     Suppose there is a problem in which you have wood pieces of different lengths (a1, a2, a3,...,an) and you want to merge them to make a new stick. But there is a constraint: in each operation, the cost of merging is the sum of the lengths of 2 sticks, and you need to minimize the overall cost of merging.
+     Suppose there is a problem in which you have wood pieces of different length (a1,a2,a3,...,an) and you want to merge to make a new stick. But there is a constraint, that is in each operation the cost of merging is the sum of lengths of 2 sticks and you need to minimize to overall cost of merging.
     </p>
     <p>
-     So we need to optimally take the sticks according to their lengths. Suppose we are given a1=1, a2=4, a3=9, a4=11. Now, let's take a2 and a3 and merge them into one, so their sum = 4+9=13, and cost = 13. Then let us take a1; since previous sticks were merged to form a stick of length 13, let us take the previous stick and a1 = 1, so new sum = 1+13=14, and cost += 14 means cost = 13 + 14 = 27. Then we are left with a4, so new stick length sum = 14+11 = 25. And the total cost becomes 27 + 25 = 52.
+     So we need an to optimally take the sticks according to their lengths. Suppose we are given a=1, a2=4, a3=9, a4=11. Now, let's take a2 and a3 and merge them into one so their sum = 4+9=13 , and cost = 13. Then let us take a1 , since previous sticks were merged to form a stick of length 13, let us take the previous stick and a1 = 1, so new sum = 1+13=14, and cost += 14 means cost = 13 + 14 = 27. Then we are left with a4 so new stick length sum = 14+11 = 25. And total cost = becomes 27 + 25 = 52.
     </p>
     <p>
-     But instead, if we had taken first a1 and a2, then a1+a2=5, then cost = 5. Then going in sorted order, we sum the next two smallest lengths, which are currently 5 and 9, so length = 14, and cost = 5+14 = 19. Now we are left with two sticks of length 14 and 11, so summing them, the length becomes 25 and cost = 25 + 19 = 44.
+     But instead if we had taken first a1 and a2 , then a1+a2=5, then cost = 5. Then going in sorted order we sum the next two smallest length which are currently 5 and 9, so length = 14, and cost = 5+15 = 19. Now we are left with two sticks of length 14 and 11 , so summing them the length becomes 25 and cost = 25 + 19 = 44.
     </p>
     <p>
-     So, if we observe that the greater the number we take, the earlier the cost increases. Because every time we add a new length to the current length, the big element would repeat every time. So this is the intuition behind taking the smallest elements first, which ensures that we are minimizing the immediate cost of each merge operation.
+     So, if we observe that the greater the number we take the earlier the cost increases. Because every time we add new length to current length, the big element would repeat every time. So this is the intuition behind taking the smallest elements first which ensures that we are minimizing the immediate cost of each merge operation.
     </p>
     <p>
-     Now this is actually the concept behind actual Huffman Coding, which is a way to compress a string into a segment of 0s and 1s and of the smallest length so that there would be less chance of the compressed string exceeding the integer or long range.
+     Now this is actually the concept behind actual Huffman Coding which is a way to compress a string into a segment of 0s and 1s and of the smallest length so that there would be less chance of compressed string to exceed the integer or long range.
     </p>
     <p>
-     Can you find how? A hint is to find the bits representation for each unique character, and note none of the character's bit representation should be a prefix of another!
+     Can you find how? A hint is to find the bits representation for each unique character, and note none of the character's bit representation should be a prefix of another !
     </p>
    </div>
-
-   <!-- FAQ Section -->
-   <div class="faq">
-    <div class="faq-title">
-     Frequently Asked Questions (FAQs)
-     <hr id="line"/>
-    </div>
-    <!-- FAQ Toggle Button -->
-    <button id="faq-toggle">Show FAQs</button>
-    
-    <!-- FAQ Content -->
-    <div class="faq-content" id="faq-content">
-     <div class="faq-question">
-      <strong>Q1: What is Huffman Coding?</strong>
-     </div>
-     <div class="faq-answer">
-      Huffman Coding is a compression algorithm that assigns variable-length codes to input characters based on their frequencies. Characters that occur more frequently are assigned shorter codes, while less frequent characters receive longer codes.
-     </div>
-     <div class="faq-question">
-      <strong>Q2: How does Huffman Coding minimize the cost of merging sticks?</strong>
-     </div>
-     <div class="faq-answer">
-      Huffman Coding minimizes the cost by always merging the two smallest sticks first. This strategy ensures that the larger lengths, which contribute more to the total cost, are added later in the process, thus reducing the overall merging cost.
-     </div>
-     <div class="faq-question">
-      <strong>Q3: What role do binary trees play in Huffman Coding?</strong>
-     </div>
-     <div class="faq-answer">
-      In Huffman Coding, a binary tree is used to represent the codes. Each leaf node represents a character, and the path from the root to the leaf determines the character's binary representation (0s and 1s).
-     </div>
-     <div class="faq-question">
-      <strong>Q4: Can Huffman Coding guarantee the shortest binary representation?</strong>
-     </div>
-     <div class="faq-answer">
-      Yes, Huffman Coding guarantees the shortest possible binary representation for a given set of characters and their frequencies, as long as the characters' bit representations do not prefix each other.
-     </div>
-     <div class="faq-question">
-      <strong>Q5: What is the importance of prefix-free codes?</strong>
-     </div>
-     <div class="faq-answer">
-      Prefix-free codes ensure that no code is a prefix of another. This property is essential for uniquely decodable encoding; it prevents ambiguity when decoding the compressed data back into its original form.
-     </div>
-    </div>
-   </div>
-
    <div class="author">
     Written by: UniAlgo Owner
    </div>
   </div>
-
-  <!-- JavaScript for Toggle -->
-  <script>
-    document.getElementById('faq-toggle').addEventListener('click', function() {
-      const faqContent = document.getElementById('faq-content');
-      if (faqContent.style.display === "none" || faqContent.style.display === "") {
-        faqContent.style.display = "block";
-        this.textContent = "Hide FAQs";
-      } else {
-        faqContent.style.display = "none";
-        this.textContent = "Show FAQs";
-      }
-    });
-  </script>
  </body>
 </html>
