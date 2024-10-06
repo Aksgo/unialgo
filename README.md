@@ -17,6 +17,7 @@
             <li>Implemented mailing system with ongoing improvements.</li>
             <li>Content in Articles is copyrighted but the source code is open for contributions.</li>
         </ul>
+        <p><i> =) Also, we have some random algorithmic implementations in master/Algorithms folder - please check it out</i></p>
         <h4>To get latest notification for newly added articles you need to sign in to UniAlgo</h4>
         <hr>
         <h2>Contribution</h2>
