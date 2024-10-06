@@ -1,0 +1,14 @@
+Q1: How does DFS differ from BFS?
+DFS uses a depth-first approach, diving deep into a branch before exploring another, while BFS explores nodes level by level, using a queue structure.
+
+Q2: What is the time complexity of DFS?
+The time complexity of DFS is O(V + E), where V is the number of vertices and E is the number of edges in the graph.
+
+Q3: Can DFS be used to find connected components?
+Yes, DFS can be used to find connected components in a graph by performing DFS on each unvisited node and marking all reachable nodes from that starting node.
+
+Q4: What are the practical applications of DFS?
+DFS is used in topological sorting, finding strongly connected components, and solving maze problems. It’s also helpful in generating paths and in algorithms like finding bridges and articulation points.
+
+Q5: Does DFS guarantee the shortest path in an unweighted graph?
+No, DFS does not guarantee the shortest path in an unweighted graph. BFS is used to find the shortest path in such cases because it explores nodes level by level.

@@ -1,0 +1,14 @@
+Q1: What is Binary Lifting?
+Binary Lifting is a technique used to find the Lowest Common Ancestor (LCA) of two nodes in a tree in logarithmic time. It preprocesses the tree to create a table of ancestors at different powers of two.
+
+Q2: How does Binary Lifting improve query time for LCA?
+Instead of checking all nodes, Binary Lifting allows for jumping directly to the 2^j th parent of a node, which reduces the query time to O(log N) after an initial O(N log N) preprocessing step.
+
+Q3: What is the time complexity for preprocessing the tree?
+The preprocessing of the tree takes O(N log N) time, where N is the number of nodes in the tree.
+
+Q4: What is the main limitation of Binary Lifting?
+Binary Lifting does not work efficiently for dynamic trees where nodes can be added or removed frequently, as it requires a complete reprocessing of the ancestor table.
+
+Q5: Can Binary Lifting be used in graphs other than trees?
+Binary Lifting is primarily designed for trees. However, it can be adapted for directed acyclic graphs (DAGs) under certain conditions but is not generally applicable to arbitrary graphs.

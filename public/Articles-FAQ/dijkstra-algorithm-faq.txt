@@ -1,0 +1,14 @@
+Q1: What is Dijkstra's Algorithm?
+Dijkstra's Algorithm is a graph search algorithm that finds the shortest path from a starting node to all other nodes in a weighted graph.
+
+Q2: How does Dijkstra's Algorithm work?
+The algorithm initializes distances to infinity, sets the distance of the starting node to zero, and iteratively selects the node with the smallest known distance to update the distances of its neighbors.
+
+Q3: What is the time complexity of Dijkstra's Algorithm?
+The time complexity is O((V + E) log V), where V is the number of vertices and E is the number of edges in the graph.
+
+Q4: Can Dijkstra's Algorithm handle negative edge weights?
+No, Dijkstra's Algorithm does not work with graphs that have negative edge weights as it assumes that once a node's shortest path is found, it cannot be improved.
+
+Q5: What are the practical applications of Dijkstra's Algorithm?
+Dijkstra's Algorithm is commonly used in GPS systems, network routing protocols, and other applications requiring efficient pathfinding in graphs.
