@@ -132,7 +132,8 @@ def setMetaDescription(artname, data, imgname):
 def modifyArticle():
     ''' Modify an existing article by opening its .txt file in a text editor '''
     artname = input("Enter the name of the article to update (without extension): ").strip()
-    imgext = input("enter image type (png/jpg):")
+    imgname = input("enter image name:")
+    imgname = check_image_exists(imgname)
     txt_file = f'{artname}.txt'
     
     # Check if the article's .txt file exists
@@ -154,7 +155,7 @@ def modifyArticle():
     data = []
     
     author = extractArticle(artname, data)  # Extract updated content
-    setMetaDescription(artname, data, f'{artname}.{imgext}')  # Assuming image name is same as article name and in .jpg format (change if needed)
+    setMetaDescription(artname, data, f'{imgname}')  # Assuming image name is same as article name and in .jpg format (change if needed)
     SetArticle(artname, data, author)  # Update the HTML based on the new content
 
     print(f"Article '{artname}' updated successfully!")
