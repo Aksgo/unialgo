@@ -1,9 +1,10 @@
-html, body {
+html{
     height: 100%;
     margin: 0;
     font-family: "Rubik", Arial, sans-serif;
     background: linear-gradient(45deg, #010027, #000000, #010027);
     color: white;
+    
 }
 
 body {
@@ -23,12 +24,13 @@ body {
 header {
     background-color: transparent;
     color: #fff;
-    padding: 10px 0;
     display: flex;
+    flex-direction: row;
     align-items: center;
     position: relative;
     justify-content: space-between;
     text-align: center;
+    padding: 20px 30px 20px 30px;
 }
 
 .centered {
@@ -38,7 +40,7 @@ header {
 }
 
 .name {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     font-weight: bold;
     margin-right: 20px;
     padding-right: 20px;
@@ -46,7 +48,7 @@ header {
 }
 
 .logo img {
-    width: 100px;
+    width: 60px;
     height: auto;
 }
 
