@@ -9,8 +9,13 @@ body {
     background-attachment: fixed;
 }
 header{
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  position: sticky; /* Make the header sticky */
+  top: 0;          /* Stick the header to the top */
+  background: rgba(0, 0, 0, 0.8); /* Optional: add a background for better visibility */
+  z-index: 1000;  /* Ensure the header is above other content */
+  padding: 10px;  /* Optional: add some padding */
   }
   .centered{
     display: flex;
