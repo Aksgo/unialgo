@@ -10,7 +10,12 @@ body {
 }
 header{
   display: flex;
-  align-items: center;
+    align-items: center;
+    position: sticky;
+    top: 0;  
+    background: rgba(0, 0, 0, 0); 
+    z-index: 1000; 
+    backdrop-filter: blur(2px); 
 }
 .centered{
   display: flex;
@@ -19,12 +24,13 @@ header{
 .centered a{
   background-color: #00000000;
   color: #fff;
-  padding: 20px 30px 20px 30px;    
+  padding: 10px 30px 10px 30px;    
   display: flex;
   align-items: center;
   position: relative; 
   text-decoration: none;
   color: white;
+
 }
 .name {
   font-size: 1.5rem;
