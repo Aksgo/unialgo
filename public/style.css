@@ -118,14 +118,14 @@ header {
     animation: blink 1s steps(1000) infinite;
 }
 
-@keyframes blink {
+/* @keyframes blink {
     0%, 100% {
         border-color: transparent;
     }
     50% {
         border-color: rgb(255, 255, 255);
     }
-}
+} */
 
 
 @keyframes blink {
@@ -146,6 +146,7 @@ img {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
+
 @media (max-width: 1250px) {
     .content {
         max-width: 500px;
@@ -210,15 +211,41 @@ footer p{
 @media (max-width: 900px) {
     .content {
         flex-direction: column;
-        align-items: center;
+        align-items: center;  
     }
-
     .nav-link {
         font-size: 1rem;
     }
 
     .name {
         font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .grad-text{
+        font-size: 65px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .grad-text{
+        font-size: 60px;
+    }
+}
+@media (max-width: 1000px) {
+    .grad-text{
+        font-size: 55px;
+    }
+}
+@media (max-width: 800px) {
+    .grad-text{
+        font-size: 50px;
+    }
+}
+@media (max-width: 500px) {
+    .grad-text{
+        font-size: 30px;
     }
 }
 .content {
@@ -236,6 +263,9 @@ footer p{
 }
 
 .section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     flex: 2;
     color: #d7d7d7;
     padding: 20px;
@@ -269,6 +299,22 @@ footer p{
         font-size: 2rem;
     }
 }
+
+@media (max-width: 500px) {
+    .section h1 {
+        font-size: 1rem;
+    }
+    .section p{
+        font-size: 0.5rem;
+    }
+    .about-logo{
+        width: 80px;
+    }
+    .section{
+        padding: 0px;
+    }
+}
+
 
 .about-page {
     display: flex;
