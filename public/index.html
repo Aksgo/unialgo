@@ -1,44 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>unialgo</title>
     <link rel="icon" href="asset/logo.png" type="image">
     <link id="dark-theme" type="text/css" rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
-</head>
-<style>
+  </head>
+  <style>
     #toggle-theme{
-        font-size: 30px;
-        color:white;
-        background-color: rgba(255, 255, 255, 0);
-        border: none;
+      font-size: 30px;
+      color:white;
+      background-color: rgba(255, 255, 255, 0);
+      border: none;
     }
-</style>
-<body>
+  </style>  
+  <body>
     <header>
-        <div class="centered">
-            <div class="name">UniAlgo</div>
-            <nav class="header-nav">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link">About Us</a>
-                <button id="signin-btn" aria-label="Sign In" class="nav-link-icon">👤</button>
-            </nav>
-        </div>
-        <div class="logo"><img src="asset/logo.png"></div>
-        <!-- <button id="toggle-theme">☀️</button> -->
-         
+      <div class="centered">
+        <div class="name">UniAlgo</div>
+        <nav class="menu-nav">
+          <div id="menu-icon" onclick="toggleMenu();">Menu <img class="menu-plus-image" src="asset/menu-plus-image.png" alt=""></div>
+          <div class="menu">
+						<a href="index.html">Home</a>
+						<a href="about.html">About Us</a>
+						<a href="">Sign In</a>
+					</div>
+        </nav>
+        <nav class="header-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About Us</a>
+          <button id="signin-btn" aria-label="Sign In" class="nav-link-icon">👤</button>
+        </nav>
+      </div>
+      <div class="logo"><img src="asset/logo.png"></div>
+      <!-- <button id="toggle-theme">☀️</button> -->
+
     </header>
     <div class="content">
-        <div class="about"><h1 class="grad-text">"Read to Improve"</h1>
-            <p id="des">Know the intuition behind CP Algorithms</p>
-            <button id="start-btn" onclick="location.href='article.html'">Get Started</button>
-            
-        </div>
-        <div class="image-main"><img src="asset/file.png"></div>
+      <div class="about"><h1 class="grad-text">"Read to Improve"</h1>
+        <p id="des">Know the intuition behind CP Algorithms</p>
+        <button id="start-btn" onclick="location.href='article.html'">Get Started</button>
+
+      </div>
+      <div class="image-main"><img src="asset/file.png"></div>
     </div>
     <footer><p>By signing up you will get acess to extra content and email notifications, UniAlgo©️2024</p></footer>
     <script src="authenticator.js" type="module"></script>
-</body>
+		<script src="script.js"></script>
+  </body>
 </html>

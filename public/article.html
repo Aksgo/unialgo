@@ -10,6 +10,7 @@
   <link href="articlestyle.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet"/>
   <link href="asset/logo.png" rel="icon" type="image"/>
+	<link rel="stylesheet" href="style.css">
  </head>
  <body>
   <header>
@@ -22,6 +23,14 @@
       <img src="asset/logo.png"/>
      </div>
     </a>
+		<nav class="menu-nav">
+			<div id="menu-icon" onclick="toggleMenu();">Menu <img class="menu-plus-image" src="asset/menu-plus-image.png" alt=""></div>
+			<div class="menu">
+				<a href="index.html">Home</a>
+				<a href="about.html">About Us</a>
+				<a href="">Sign In</a>
+			</div>
+		</nav>
    </div>
    <!-- <button id="toggle-theme">☀️</button> -->
   </header>
@@ -85,5 +94,6 @@
   </div>
   <script src="theme.js">
   </script>
+	<script src="script.js"></script>
  </body>
 </html>

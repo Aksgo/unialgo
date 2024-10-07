@@ -1,342 +1,407 @@
 html{
-    height: 100%;
-    margin: 0;
-    font-family: "Rubik", Arial, sans-serif;
-    background: linear-gradient(45deg, #010027, #000000, #010027);
-    color: white;
-    
+  height: 100%;
+  margin: 0;
+  font-family: "Rubik", Arial, sans-serif;
+  background: linear-gradient(45deg, #010027, #000000, #010027);
+  color: white;
+
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    user-select: none;
-    font-family: "Rubik", Arial, sans-serif;
-    background: linear-gradient(45deg, #010027, #000000, #010027);
-    color: white;
-    background-size: cover;
-    background-attachment: fixed;
-    margin: 0;
-    padding:0;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  font-family: "Rubik", Arial, sans-serif;
+  background: linear-gradient(45deg, #010027, #000000, #010027);
+  color: white;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding:0;
 
 }
 
 header {
-    background-color: transparent;
-    color: #fff;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: relative;
-    justify-content: space-between;
-    text-align: center;
-    padding: 20px 30px 20px 30px;
+  background-color: transparent;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  text-align: center;
+  padding: 20px 30px 20px 30px;
 }
 
 .centered {
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
 }
 
 .name {
-    font-size: 1.7rem;
-    font-weight: bold;
-    margin-right: 20px;
-    padding-right: 20px;
-    border-right: 2px solid rgba(255, 255, 255, 0.3);
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-right: 20px;
+  padding-right: 20px;
+  border-right: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .logo img {
-    width: 60px;
-    height: auto;
+  width: 60px;
+  height: auto;
 }
 
 .signin {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .signin button {
-    font-size: 15px;
-    padding: 8px 15px;
-    background: linear-gradient(45deg, #00c3ff, #951cff, #ff0080);
-    color: white;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  font-size: 15px;
+  padding: 8px 15px;
+  background: linear-gradient(45deg, #00c3ff, #951cff, #ff0080);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .signin button:hover {
-    background: linear-gradient(45deg, #ff0088, #951cff, #45b5ff);
+  background: linear-gradient(45deg, #ff0088, #951cff, #45b5ff);
 }
 
 .content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 30px auto;
-    border-radius: 30px;
-    justify-content: center;
-    padding: 20px;
-    align-items: center;
-    background-color: rgba(83, 83, 83, 0.4);
-    animation: fadeIn 0.25s ease-in forwards;
-    flex: 1; 
-    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 30px auto;
+  border-radius: 30px;
+  justify-content: center;
+  padding: 20px;
+  align-items: center;
+  background-color: rgba(83, 83, 83, 0.4);
+  animation: fadeIn 0.25s ease-in forwards;
+  flex: 1;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .about {
-    flex-grow: 1;
-    text-align: center;
-    flex-grow:1;
+  flex-grow: 1;
+  text-align: center;
+  flex-grow:1;
 }
 
 h1 {
-    background: linear-gradient(135deg, #849aff, #ffa3dc);
-    background-clip: text;
-    color: transparent;
-    font-size: 80px;
-    margin: 10px;
-    text-align: center;
-    overflow: hidden;
-    white-space: nowrap;
-    animation: typewriter 3s steps(18), blink 1000ms steps(1000) infinite;
-    border-right: 5px solid rgb(255, 255, 255);
+  background: linear-gradient(135deg, #849aff, #ffa3dc);
+  background-clip: text;
+  color: transparent;
+  font-size: 80px;
+  margin: 10px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typewriter 3s steps(18), blink 1000ms steps(1000) infinite;
+  border-right: 5px solid rgb(255, 255, 255);
 }
 
 @keyframes typewriter {
-    from {
-        width: 0%;
-    }
-    to {
-        width: 100%;
-    }
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes blink {
-    from {
-        border-color: rgb(255, 255, 255);
-    }
-    to {
-        border-color: transparent;
-    }
+  from {
+    border-color: rgb(255, 255, 255);
+  }
+  to {
+    border-color: transparent;
+  }
 }
 
 img {
-    border-radius: 10%;
-    width: 20rem;
-    height: 20rem;
+  border-radius: 10%;
+  width: 20rem;
+  height: 20rem;
 }
 .content:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 @media (max-width: 1250px) {
-    .content {
-        max-width: 500px;
-    }
-    h1 {
-        font-size: 40px;
-    }
-    #des {
-        font-size: 18px;
-    }
-    img {
-        width: 260px;
-        height: 260px;
-    }
+  .content {
+    max-width: 500px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  #des {
+    font-size: 18px;
+  }
+  img {
+    width: 260px;
+    height: 260px;
+  }
 }
 
 @media (max-width: 700px) {
-    .content {
-        max-width: 200px;
-    }
-    h1 {
-        font-size: 28px;
-    }
+  .content {
+    max-width: 200px;
+  }
+  h1 {
+    font-size: 28px;
+  }
 }
 
 #start-btn {
-    display: block;
-    margin: 0 auto;
-    font-size: 18px;
-    color: black;
-    background: linear-gradient(45deg, #ffb6dd, #faf4ff, #ffffff);
-    border: none;
-    border-radius: 10px;
-    padding: 15px 25px;
-    cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  font-size: 18px;
+  color: black;
+  background: linear-gradient(45deg, #ffb6dd, #faf4ff, #ffffff);
+  border: none;
+  border-radius: 10px;
+  padding: 15px 25px;
+  cursor: pointer;
 }
 
 #start-btn:hover {
-    background: linear-gradient(45deg, #ffffff, #ffffff, #ffd0f2);
+  background: linear-gradient(45deg, #ffffff, #ffffff, #ffd0f2);
 }
 
 p {
-    font-size: 20px;
-    text-align: center;
-    margin: 30px;
+  font-size: 20px;
+  text-align: center;
+  margin: 30px;
 }
 
 footer {
-    color: rgb(152, 152, 152);
-    padding: 0px;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom:0;
-    width: 100%;
-    font-size: 0.9rem;
+  color: rgb(152, 152, 152);
+  padding: 0px;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom:0;
+  width: 100%;
+  font-size: 0.9rem;
 }
 footer p{
-    font-size: 13px;
-    margin: 0;
+  font-size: 13px;
+  margin: 0;
 }
 @media (max-width: 900px) {
-    .content {
-        flex-direction: column;
-        align-items: center;
-    }
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .nav-link {
-        font-size: 1rem;
-    }
+  .nav-link {
+    font-size: 1rem;
+  }
 
-    .name {
-        font-size: 1.5rem;
-    }
+  .name {
+    font-size: 1.5rem;
+  }
 }
 .content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 50px;
-    background-color: rgba(83, 83, 83, 0.4);
-    border-radius: 30px;
-    animation: fadeIn 0.25s ease-in forwards;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 50px;
+  background-color: rgba(83, 83, 83, 0.4);
+  border-radius: 30px;
+  animation: fadeIn 0.25s ease-in forwards;
+  justify-content: space-around;
 }
 
 .section {
-    flex: 2;
-    color: #d7d7d7;
-    padding: 20px;
-    border-radius: 20px;
+  flex: 2;
+  color: #d7d7d7;
+  padding: 20px;
+  border-radius: 20px;
 }
 
 .section h1 {
-    font-size: 2.5rem;
-    color: #ffb6dd;
-    text-align: center;
+  font-size: 2.5rem;
+  color: #ffb6dd;
+  text-align: center;
 }
 
 .section h2 {
-    font-size: 1.8rem;
-    color: #ffffff;
+  font-size: 1.8rem;
+  color: #ffffff;
 }
 
 .section p, ul {
-    font-size: 1.1rem;
-    color: #d7d7d7;
-    line-height: 1.6;
+  font-size: 1.1rem;
+  color: #d7d7d7;
+  line-height: 1.6;
 }
 
 @media (max-width: 900px) {
-    .content {
-        flex-direction: column;
-        align-items: center;
-    }
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .section h1 {
-        font-size: 2rem;
-    }
+  .section h1 {
+    font-size: 2rem;
+  }
 }
 
 .about-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
 }
 
 .about-page img.about-logo {
-    width: 150px;
-    margin-bottom: 20px;
-    margin-left: 40%;
+  width: 150px;
+  margin-bottom: 20px;
+  margin-left: 40%;
 }
 
 .section h1 {
-    font-size: 2.5rem;
-    color: #ffb6dd;
-    text-align: center;
+  font-size: 2.5rem;
+  color: #ffb6dd;
+  text-align: center;
 }
 
 .section p {
-    font-size: 1.2rem;
-    color: #d7d7d7;
-    line-height: 1.6;
-    max-width: 600px;
-    text-align: center;
+  font-size: 1.2rem;
+  color: #d7d7d7;
+  line-height: 1.6;
+  max-width: 600px;
+  text-align: center;
 }
 .header-nav {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .nav-link {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    padding: 10px;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 10px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 10px;
 }
 
 .nav-link:hover {
-    color: #00c3ff;
-    background-color: rgba(255, 255, 255, 0.1);
+  color: #00c3ff;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .nav-link-icon {
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: white;
-    transition: color 0.3s ease;
-    font-size: 15px;
-    padding: 8px 15px;
-    background: linear-gradient(45deg, #00c3ff, #951cff, #ff0080);
-    color: white;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s ease;
+  font-size: 15px;
+  padding: 8px 15px;
+  background: linear-gradient(45deg, #00c3ff, #951cff, #ff0080);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .nav-link-icon:hover {
-    color: #00c3ff;
+  color: #00c3ff;
 }
 
 .image-main img {
-    border-radius: 10%;
-    width: 300px;
-    height: 300px;
+  border-radius: 10%;
+  width: 300px;
+  height: 300px;
+}
+
+.menu-plus-image {
+  height: 13px;
+  width: 13px;
+  transition: transform 0.35s ease;
+}
+
+.menu-plus-image.rotate {
+  transform: rotate(45deg);
+}
+
+#menu-icon {
+  position: relative;
+  z-index: 1001;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: -60%;
+  height: 100vh;
+  width: 60%;
+  background: linear-gradient(45deg, #010027, #000000, #010027);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  overflow-y: auto;
+  transition: right 0.35s ease-in;
+  padding-top: 55px;
+  z-index: 1000;
+}
+
+.menu a {
+  text-decoration: none;
+  font-size: 1.7rem;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.menu.active {
+  right: 0px;
+}
+
+@media screen and (max-width: 900px) {
+  .centered {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .menu-nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .header-nav {
+    display: none;
+  }
+
+  .logo {
+    display: none;
+  }
 }
