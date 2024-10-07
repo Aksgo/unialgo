@@ -21,7 +21,7 @@
         <h4>To get latest notification for newly added articles you need to sign in to UniAlgo</h4>
         <hr>
         <h2>Contribution</h2>
-        <b>What you can contribute ?</b>
+        <b>What can you contribute to UniAlgo?</b>
         <ul>
             <li>coding problems given in issues or raise a new issue</li>
             <li>new Articles related to CP</li>
