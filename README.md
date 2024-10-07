@@ -9,7 +9,7 @@
         <h1>Unialgo</h1>
         <h2>Overview</h2>
         <p>Unialgo is a platform for understanding competitive programming (CP) with collection of unique concepts that takes time to understand</p>
-        <h2>Features: From a developers views, our aim is to use simple technologies which majority people can understand</h2>
+        <h2>Features:</h2>
         <ul>
             <li>Articles for learning competitive programming.</li>
             <li>Frontend developed using HTML, CSS, and JavaScript.</li>
@@ -26,6 +26,7 @@
             <li>coding problems given in issues or raise a new issue</li>
             <li>new Articles related to CP</li>
         </ul>
+        <h3>From a developers views, our aim is to use simple tech stack which majority people can understand</h3>
         <h4>For hacktoberfest and contribution realated queries please check  CONTRIBUTION.md</h4>
         <hr>
     <footer>

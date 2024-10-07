@@ -17,8 +17,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
-    padding:0;
-
+    padding: 0;    
 }
 
 header {
@@ -31,6 +30,7 @@ header {
     justify-content: space-between;
     text-align: center;
     padding: 20px 30px 20px 30px;
+    position: relative;
 }
 
 .centered {
@@ -104,27 +104,29 @@ header {
     flex-grow:1;
 }
 
-h1 {
+.grad-text {
     background: linear-gradient(135deg, #849aff, #ffa3dc);
     background-clip: text;
     color: transparent;
     font-size: 80px;
     margin: 10px;
+    display: inline-block;
     text-align: center;
     overflow: hidden;
     white-space: nowrap;
-    animation: typewriter 3s steps(18), blink 1000ms steps(1000) infinite;
     border-right: 5px solid rgb(255, 255, 255);
+    animation: blink 1s steps(1000) infinite;
 }
 
-@keyframes typewriter {
-    from {
-        width: 0%;
+@keyframes blink {
+    0%, 100% {
+        border-color: transparent;
     }
-    to {
-        width: 100%;
+    50% {
+        border-color: rgb(255, 255, 255);
     }
 }
+
 
 @keyframes blink {
     from {
@@ -339,4 +341,8 @@ footer p{
     border-radius: 10%;
     width: 300px;
     height: 300px;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
