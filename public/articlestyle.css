@@ -11,11 +11,11 @@ body {
 header{
   display: flex;
   align-items: center;
-  position: sticky; /* Make the header sticky */
-  top: 0;          /* Stick the header to the top */
-  background: rgba(0, 0, 0, 0.8); /* Optional: add a background for better visibility */
-  z-index: 1000;  /* Ensure the header is above other content */
-  padding: 10px;  /* Optional: add some padding */
+  position: sticky; 
+  top: 0;         
+  background: rgba(0, 0, 0, 0); 
+  z-index: 1000;  
+  padding: 10px; 
   }
   .centered{
     display: flex;
