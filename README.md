@@ -20,6 +20,10 @@
         <p><i> =) Also, we have some random algorithmic implementations in master/Algorithms folder - please check it out</i></p>
         <h4>To get latest notification for newly added articles you need to sign in to UniAlgo</h4>
         <hr>
+        <h2>Future Release</h2>
+        <p>We are shifting from our original way of creating individual html files to using our own server for rendring the articles.</p>
+        <p>This work may take time, anyone having any suggestion may raise it under issues with label 'server'</p>
+        <hr>
         <h2>Contribution</h2>
         <b>What can you contribute to UniAlgo?</b>
         <ul>
