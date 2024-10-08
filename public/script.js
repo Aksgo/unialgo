@@ -64,3 +64,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }               
     loop();
 });
+
+function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('active');
+
+    const plusImage = document.querySelector('.menu-plus-image');
+    plusImage.classList.toggle('rotate');
+}
