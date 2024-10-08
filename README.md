@@ -32,9 +32,10 @@
         </ul>
         <h3>From a developers views, our aim is to use simple tech stack which majority people can understand</h3>
         <h4>For hacktoberfest and contribution realated queries please check  CONTRIBUTION.md</h4>
-        <br><h2>Swags</h2>
+        <h2>Swags</h2>
         <p>We respect out contributors and to recognize their work, the contributors will be awarded digital badges based on their contribution which they can showcase on their social profiles</p>
-        <div align=center><img src = "contributor/CONTRIBUTOR-BADGE.png" width="500px" height="500px"></div>
+        <b>NOTE: we are developing the platform to deliver the badges, so it may take some time to receive them :) Please hang on</b>
+        <div align=center><br><img src = "contributor/CONTRIBUTOR-BADGE.png" width="500px" height="500px"></div>
         <br>
         <ol>
             <li>For all the first time contributors , we award a single star badge</li>
