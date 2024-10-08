@@ -393,6 +393,15 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+.bars-image {
+	position: fixed;
+	height: 30px;
+	width: 30px;
+	top: 35px;
+	right: 30px;
+	z-index: 1001;
+}
+
 .menu-plus-image {
     height: 13px;
     width: 13px;
