@@ -1,0 +1,148 @@
+How Graph Algorithm works?
+
+Graph algorithms are essential in competitive programming because they provide solutions to problems that involve modeling and analyzing networks, such as road maps, social networks, or dependencies in tasks. Understanding the various graph algorithms helps solve a wide range of problems, from finding shortest paths to detecting cycles in graphs.
+
+Here is a breakdown of the most commonly used graph algorithms in competitive programming:
+
+1.Graph Representations
+
+Before diving into specific algorithms, it's essential to understand how graphs are represented:
+
+Adjacency Matrix: A 2D array where matrix[i][j] represents the edge weight from node i to node j. It is used when graphs are dense (many edges).
+Adjacency List: A list where each index represents a node and contains a list of its neighbors. It is more efficient for sparse graphs (fewer edges).
+Edge List: A list of all edges, each represented as a pair (or triplet) of nodes (with weights if the graph is weighted).
+
+2.Graph Traversal Algorithms
+
+These algorithms are used to visit all the vertices of a graph systematically.
+
+. Breadth-First Search (BFS)
+
+Use: Finding the shortest path in an unweighted graph, level-order traversal, and connectivity.
+
+Approach: BFS uses a queue to explore all nodes at the present "depth" level before moving on to nodes at the next depth level.
+
+Time Complexity: 
+
+O(V+E), where 
+𝑉
+V is the number of vertices and 
+𝐸
+E is the number of edges.
+
+. Depth-First Search (DFS)
+
+Use: Path finding, cycle detection, checking connectivity, and topological sorting.
+
+Approach: DFS uses a stack (or recursion) to explore nodes as far as possible before backtracking.
+
+Time Complexity: O(V+E)
+
+3. Shortest Path Algorithms
+
+These algorithms are used to find the minimum distance or minimum cost path between nodes in a graph.
+
+. Dijkstra's Algorithm
+
+Use: Finding the shortest path in a graph with non-negative edge weights.
+
+Approach: Uses a priority queue (min-heap) to greedily select the nearest vertex.
+
+Time Complexity: 
+
+O(E+VlogV) using a Fibonacci heap or priority queue.
+
+. Bellman-Ford Algorithm
+
+Use: Shortest path in graphs that may have negative weights, detects negative cycles.
+
+Approach: Iteratively relaxes all edges up to 
+
+V−1 times, where V is the number of vertices.
+
+Time Complexity: O(V×E).
+
+. Floyd-Warshall Algorithm
+
+Use: Finds shortest paths between all pairs of vertices (All-Pairs Shortest Path).
+
+Approach: Uses dynamic programming to update the distance matrix.
+
+Time Complexity: O(V ^3 ).
+
+4.Minimum Spanning Tree (MST) Algorithms
+
+MST algorithms find the subset of edges that connects all vertices in a graph with the minimum possible total edge weight.
+
+. Kruskal's Algorithm
+
+Use: Builds the MST of a graph using a greedy approach.
+
+Approach: Sorts all edges by weight and adds them to the MST if they do not form a cycle.
+
+Data Structure: Disjoint Set Union (DSU) or Union-Find.
+
+Time Complexity: O(ElogE).
+
+. Prim's Algorithm
+
+Use: Finds the MST starting from any vertex, adding the smallest edge to the tree.
+
+Approach: Uses a priority queue to select the next smallest edge.
+
+Time Complexity: O(E+VlogV).
+
+5.Topological Sorting
+
+Use: Ordering of vertices in a Directed Acyclic Graph (DAG) such that for every directed edge 
+UV, vertex U comes before vertex V.
+
+Approach: Can be implemented using DFS or Kahn's algorithm (using BFS).
+
+Time Complexity: O(V+E).
+
+Applications: Task scheduling, dependency resolution.
+
+6.Strongly Connected Components (SCC)
+
+Use: Finds all strongly connected components in a directed graph.
+
+Algorithms:
+
+. Kosaraju's Algorithm: Runs two DFS passes; first to get the finishing order of vertices, and then to explore SCCs in reverse order.
+
+. Tarjan's Algorithm: Uses DFS with low-link values to find SCCs efficiently.
+
+ Time Complexity: O(V+E).
+
+7. Cycle Detection
+
+. Undirected Graphs: DFS can detect cycles by checking back edges (visited nodes that are not the direct parent).
+
+. Directed Graphs: Detect cycles using DFS with a "recursion stack" or via the graph's topological sort.
+
+8. Advanced Graph Algorithms
+
+These algorithms are used for more complex graph problems, such as flow networks and bipartite matching.
+
+.Maximum Flow Algorithms
+
+Ford-Fulkerson Method: Finds the maximum flow in a flow network using augmenting paths.
+
+Edmonds-Karp Algorithm: A specific implementation of Ford-Fulkerson using BFS to find augmenting paths.
+
+Time Complexity: O(VE^ 2 ).
+
+.Bipartite Graph Check
+
+Use: Determines if a graph's vertices can be divided into two disjoint sets.
+
+Approach: Use BFS/DFS to check for alternate coloring in the graph.
+
+9.Graph Coloring
+
+Use: Assigning colors to graph vertices so that no two adjacent vertices share the same color.
+
+Approach: Used for solving problems like the map coloring problem and register allocation.
+
+
