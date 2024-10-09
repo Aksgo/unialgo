@@ -40,7 +40,7 @@
         <ol>
             <li>For all the first time contributors , we award a single star badge</li>
             <li>For a contributor with 3 succesful MR we reward them 3 star badge</li>
-            <li>Any contributor with more successful MR will be given a trophy badge</li>
+            <li>Any contributor with more than 5 successful MR will be given a trophy badge</li>
         </ol>
         <hr>
     <footer>
