@@ -51,7 +51,6 @@ header{
   margin: 0px auto;
   padding: 40px;
   border-radius: 20px;
-  padding-bottom: 200px;
   justify-content: center;
   margin-bottom: 50px;
   animation: fadeIn 0.25s ease-in forwards;
@@ -120,13 +119,16 @@ header{
 .faq-title {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  text-align: center;
+  text-align: left;
   color: #ffffff;
 }
 
+.faq-section {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 10px;
+}
 .faq-content {
   display: none; /* Hidden by default */
-  padding: 30px;
   padding-top: 0px;
   text-align: justify;
   animation: fadeIn 0.25s ease-in forwards;
@@ -156,8 +158,10 @@ header{
   color: white;
   border: none;
   cursor: pointer;
-  border-radius: 50px;
+  border-radius: 5px;
   animation: fadeIn 0.25s ease-in forwards;
+  display: block;
+  margin: initial;
 }
 
 #faq-toggle:hover {
@@ -206,9 +210,9 @@ header{
 /* =========== Comment Section Styling =========== */
 
 .comment-section {
-  margin-top: 40px;
-  padding: 20px;
-  border-radius: 10px;
+  margin-top: 10px;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 10px;
 }
 
 .comments-title {
@@ -216,7 +220,7 @@ header{
   font-weight: 500;
   margin-bottom: 20px;
   color: #fff;
-  text-align: center;
+  text-align: left;
 }
 
 .comments-content {
