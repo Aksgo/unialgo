@@ -1,100 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   List
-  </title>
-  <link href="commonarticles.css" rel="stylesheet"/>
-  <link href="articlestyle.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet"/>
-  <link href="asset/logo.png" rel="icon" type="image"/>
-	<link rel="stylesheet" href="style.css">
- </head>
- <body>
-  <header>
-   <div class="centered">
-    <a href="index.html">
-     <div class="name">
-      UniAlgo
-     </div>
-     <div class="logo">
-      <img src="asset/logo.png"/>
-     </div>
-    </a>
-    <nav class="menu-nav">
-			<div class="menu-icon" onclick="toggleMenu();">
-				<img class="bars-image" src="asset/3-bars.png">
-			</div>
-			<div class="menu">
-				<a href="index.html">Home</a>
-				<a href="">Sign In</a>
-			</div>
-    </nav>
-   </div>
-   <!-- <button id="toggle-theme">☀️</button> -->
-  </header>
-  <div class="articles">
-   <div class="article" id="huffman-coding">
-    <a href="ArticleList/huffman-coding.html">
-     <div class="head-article">
-      <img class="article-img" src="asset/ArticleImage/huffman-coding.png"/>
-      <h2 class="article-title">
-       How Huffman Coding works?
-      </h2>
-     </div>
-     <hr/>
-     <p class="article-description">
-      An algorithm to find most optimal way to combines things...
-     </p>
-    </a>
-   </div>
-   <div class="article" id="time-complexity-bfs">
-    <a href="ArticleList/time-complexity-bfs.html">
-     <div class="head-article">
-      <img class="article-img" src="asset/ArticleImage/time-complexity-bfs.png"/>
-      <h2 class="article-title">
-       Time Complexity of Depth First Search
-      </h2>
-     </div>
-     <hr/>
-     <p class="article-description">
-      Do you know how you is TC O(Nodes + edges) even when we run two nested loop
-     </p>
-    </a>
-   </div>
-   <div class="article" id="binary-lifting">
-    <a href="ArticleList/binary-lifting.html">
-     <div class="head-article">
-      <img class="article-img" src="asset/ArticleImage/binary-lifting.jpg"/>
-      <h2 class="article-title">
-       How does Binary Lifting utilizes power of 2 jumps?
-      </h2>
-     </div>
-     <hr/>
-     <p class="article-description">
-      If you have studied to find the Lowest Common Ancestor in a tree, then you must have found the binary lifting method confusing
-     </p>
-    </a>
-   </div>
-   <div class="article" id="dijkstra-algorithm">
-    <a href="ArticleList/dijkstra-algorithm.html">
-     <div class="head-article">
-      <img class="article-img" src="asset/ArticleImage/dijkstra-algorithm.png"/>
-      <h2 class="article-title">
-       How Dijkstra's Algorithm Works
-      </h2>
-     </div>
-     <hr/>
-     <p class="article-description">
-      Dijkstra's Algorithm is a famous greedy algorithm used to solve the shortest path problem for a graph with non-negative edge weights.
-     </p>
-    </a>
-   </div>
-  </div>
-  <script src="theme.js">
-  </script>
-	<script src="script.js"></script>
- </body>
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>List</title>
+        <link href="commonarticles.css" rel="stylesheet" />
+        <link href="articlestyle.css" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Rubik"
+            rel="stylesheet"
+        />
+        <link href="asset/logo.png" rel="icon" type="image" />
+    </head>
+    <body>
+        <header>
+            <div class="centered">
+                <a href="index.html">
+                    <div class="name">UniAlgo</div>
+                    <div class="logo">
+                        <img src="asset/logo.png" />
+                    </div>
+                </a>
+            </div>
+            <!-- <button id="toggle-theme">☀️</button> -->
+        </header>
+        <div class="content">
+            <div id="navbar"></div>
+            <div id="article-content">
+                <h2>Article Title</h2>
+                <h4>Subtitle</h4>
+                <img
+                    id="article-image"
+                    src=""
+                    alt=""
+                    style="max-width: 100%; height: auto"
+                />
+                <p id="article-description"></p>
+                <p id="article-writtenBy"></p>
+            </div>
+        </div>
+        <script src="./article.js"></script>
+        <script src="theme.js"></script>
+    </body>
 </html>
