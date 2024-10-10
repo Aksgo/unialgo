@@ -11,6 +11,8 @@
   <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet"/>
   <link href="asset/logo.png" rel="icon" type="image"/>
 	<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="sidebar.css">
+  <script src="./sidebar.js"></script>
  </head>
  <body>
   <header>
@@ -35,6 +37,22 @@
    </div>
    <!-- <button id="toggle-theme">☀️</button> -->
   </header>
+
+
+  <button id="sidebar-toggle" onclick="toggleSidebar()">Show Articles</button>
+  <div class="sidebar" id="sidebar">
+    <br>
+    <br>
+    <h3>All Articles</h3>
+    <ul class="article-list">
+      <li><a href="./ArticleList/huffman-coding.html">How Huffman Coding works?</a></li>
+      <li><a href="./ArticleList/time-complexity-bfs.html">Time Complexity of Depth First Search</a></li>
+      <li><a href="./ArticleList/binary-lifting.html">How does Binary Lifting utilize power of 2 jumps?</a></li>
+      <li><a href="./ArticleList/dijkstra-algorithm.html">How Dijkstra's Algorithm Works</a></li>
+      <!-- Add more article links as needed -->
+    </ul>
+  </div>
+
   <div class="articles">
    <div class="article" id="huffman-coding">
     <a href="ArticleList/huffman-coding.html">

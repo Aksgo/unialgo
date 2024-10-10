@@ -9,6 +9,8 @@
   <link href="ArticleDataStyle.css" rel="stylesheet" type="text/css"/>
   <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet"/>
   <link href="../asset/logo.png" rel="icon" type="image"/>
+  <link rel="stylesheet" href="../sidebar.css">
+  <script src="../sidebar.js"></script>
  </head>
  <body>
   <header>
@@ -23,6 +25,22 @@
     </a>
    </div>
   </header>
+
+  <button id="sidebar-toggle" onclick="toggleSidebar()">Show Articles</button>
+<div class="sidebar" id="sidebar">
+    <br>
+    <br>
+    <h3>All Articles</h3>
+    <ul class="article-list">
+      <li><a href="./huffman-coding.html">How Huffman Coding works?</a></li>
+      <li><a href="./time-complexity-bfs.html">Time Complexity of Depth First Search</a></li>
+      <li><a href="./binary-lifting.html">How does Binary Lifting utilize power of 2 jumps?</a></li>
+      <li><a href="./dijkstra-algorithm.html">How Dijkstra's Algorithm Works</a></li>
+
+    </ul>
+</div>
+
+
   <div class="article">
    <div class="title">
     Time Complexity of Depth First Search
