@@ -1,0 +1,74 @@
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    right: -250px; /* Hide sidebar by positioning it outside the view on the right */
+    top: 80px;
+    width: 200px;
+    height: calc(100% - 80px);
+    background-color: #f4f4f4;
+    padding: 15px;
+    overflow-y: auto;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Shadow on the left */
+    transition: right 0.3s ease; /* Smooth transition */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50px;
+  }
+
+  .sidebar h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar .article-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar .article-list li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar .article-list li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .sidebar .article-list li a:hover {
+    color: #007bff;
+  }
+  
+  /* Show sidebar when toggled */
+  .sidebar.show {
+    right: 0;
+  }
+  
+  /* Sidebar Toggle Button */
+  #sidebar-toggle {
+    position: fixed;
+    top: 90px;
+    right: 20px; /* Align button to the right */
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10;
+    z-index: 1000;
+  }
+  
+  #sidebar-toggle:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Adjust main content to make room for the sidebar when it is visible */
+  .faq-section, .comment-section, .more-articles-section {
+    margin-right: 20px;
+    padding: 20px;
+    transition: margin-right 0.3s ease;
+  }
+  
+  .article.expanded, .faq-section.expanded, .comment-section.expanded, .more-articles-section.expanded {
+    margin-right: 220px; /* Adjust margin when sidebar is shown */
+  }
