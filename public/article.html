@@ -10,7 +10,7 @@
   <link href="articlestyle.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet"/>
   <link href="asset/logo.png" rel="icon" type="image"/>
-	<link rel="stylesheet" href="style.css">
+  <link href="style.css" rel="stylesheet"/>
  </head>
  <body>
   <header>
@@ -24,13 +24,17 @@
      </div>
     </a>
     <nav class="menu-nav">
-			<div class="menu-icon" onclick="toggleMenu();">
-				<img class="bars-image" src="asset/3-bars.png">
-			</div>
-			<div class="menu">
-				<a href="index.html">Home</a>
-				<a href="">Sign In</a>
-			</div>
+     <div class="menu-icon" onclick="toggleMenu();">
+      <img class="bars-image" src="asset/3-bars.png"/>
+     </div>
+     <div class="menu">
+      <a href="index.html">
+       Home
+      </a>
+      <a href="">
+       Sign In
+      </a>
+     </div>
     </nav>
    </div>
    <!-- <button id="toggle-theme">☀️</button> -->
@@ -92,9 +96,38 @@
      </p>
     </a>
    </div>
+   <div class="article" id="dp">
+    <a href="ArticleList/dp.html">
+     <div class="head-article">
+      <img class="article-img" src="asset/ArticleImage/dp.png"/>
+      <h2 class="article-title">
+       How DP Algorithm works?
+      </h2>
+     </div>
+     <hr/>
+     <p class="article-description">
+      Dynamic Programming (DP) is an optimization technique used to solve complex problems by breaking them down into simpler subproblems. It is particularly effective for problems that have overlapping subproblems and optimal substructure. The core idea of DP is to store the results of already solved subproblems so that they don't have to be recomputed, which significantly reduces the computational time.
+     </p>
+    </a>
+   </div>
+   <div class="article" id="searching-sorting">
+    <a href="ArticleList/searching-sorting.html">
+     <div class="head-article">
+      <img class="article-img" src="asset/ArticleImage/searching-sorting.jpg"/>
+      <h2 class="article-title">
+       How Searching and Sorting Algorithms work and explain their time complexity?
+      </h2>
+     </div>
+     <hr/>
+     <p class="article-description">
+      Searching and sorting are fundamental operations in computer science and are often associated with specific algorithms. Understanding these algorithms, along with their time complexities, is crucial for designing efficient software. Let's look at both concepts in detail, with examples.
+     </p>
+    </a>
+   </div>
   </div>
   <script src="theme.js">
   </script>
-	<script src="script.js"></script>
+  <script src="script.js">
+  </script>
  </body>
 </html>
