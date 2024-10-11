@@ -95,10 +95,11 @@ def extractUsers(arturl, artTitle):
     app = fab.initialize_app(cred)
     page = auth.list_users()
     for user in page.iterate_all():
+        if user.email=='ujef.kelawala123@gmail.com' :continue
         mailSender(user.display_name, user.email, arturl, artTitle)
         print("mail sent to :",user.email)
-        print(type(user.email))
-        break
+        #print(type(user.email))
+        
 
 def main():
     artTitle = input("Enter article Title : ")

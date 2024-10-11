@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   CP - Article
+  </title>
+  <link href="ArticleDataStyle.css" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet"/>
+  <link href="../asset/logo.png" rel="icon" type="image"/>
+ </head>
+ <body>
+  <header>
+   <div class="centered">
+    <a href="../index.html">
+     <div class="name">
+      UniAlgo
+     </div>
+     <div class="logo">
+      <img src="../asset/logo.png"/>
+     </div>
+    </a>
+   </div>
+  </header>
+  <div class="article">
+   <div class="title">
+    How DP Algorithm works?
+    <hr id="line"/>
+   </div>
+   <div>
+    <button id="back-link" onclick="location.href='../article.html'">
+     Back to Articles
+    </button>
+   </div>
+   <div class="content">
+    <!-- to be filled via generator -->
+    <p>
+     Key Concepts in Dynamic Programming:
+    </p>
+    <p>
+     1.Overlapping Subproblems: Problems can be broken down into smaller, repetitive subproblems. If a problem can be divided into overlapping subproblems, it is suitable for dynamic programming. Instead of solving the same subproblems repeatedly, DP stores the results of these subproblems in a data structure like an array or a table.
+    </p>
+    <p>
+     2.Optimal Substructure: A problem has an optimal substructure if its optimal solution can be constructed efficiently from the optimal solutions of its subproblems. In other words, the best solution to the problem depends on the best solutions to its smaller subproblems.
+    </p>
+    <p>
+     DP Approach
+    </p>
+    <p>
+     Dynamic programming can be approached in two main ways:
+    </p>
+    <p>
+     1.Top-Down Approach:
+    </p>
+    <p>
+     Start solving the problem recursively. Store the results of each subproblem in a data structure (like an array or dictionary). If the same subproblem appears again, return the stored result instead of recalculating it. This approach involves using recursion and storing results to avoid redundant calculations.
+    </p>
+    <p>
+     2.Bottom-Up Approach (Tabulation):
+    </p>
+    <p>
+     Solve all the smaller subproblems first. Use their results to build up the solution to the larger problem iteratively. This approach usually involves creating a table or grid where you fill in the solution to subproblems starting from the smallest ones.
+    </p>
+    <p>
+     .Characteristics of DP Problems
+    </p>
+    <p>
+     Choice: Identify the decisions you need to make at each step.
+    </p>
+    <p>
+     State: Define the state that represents a subproblem.
+    </p>
+    <p>
+     Transition: Formulate how to move from one state to another.
+    </p>
+    <p>
+     Base Case: Specify the base cases that terminate the recursion or iteration.
+    </p>
+    <p>
+     .Common Applications of DP:
+    </p>
+    <p>
+     Knapsack problems
+    </p>
+    <p>
+     Longest Common Subsequence (LCS)
+    </p>
+    <p>
+     Longest Increasing Subsequence (LIS)
+    </p>
+    <p>
+     Shortest path problems
+    </p>
+    <p>
+     Coin change problem
+    </p>
+    <p>
+     Steps to Solve a Problem Using DP
+    </p>
+    <p>
+     1.Define the State:
+    </p>
+    <p>
+     .The state represents the answer to a subproblem. Identify what variables define a state and what information is needed to calculate the answer for a given subproblem.
+    </p>
+    <p>
+     .For example, if you are solving the Fibonacci sequence, the state could be represented as f(n), where n is the position in the sequence.
+    </p>
+    <p>
+     2.Formulate the Recurrence Relation:
+    </p>
+    <p>
+     .The recurrence relation expresses the relationship between the current state and its previous states.
+    </p>
+    <p>
+     .This is a formula that shows how the solution to a larger problem can be obtained using the solutions to smaller subproblems.
+    </p>
+    <p>
+     .Example: In the Fibonacci sequence, the recurrence relation is f(n) = f(n-1) + f(n-2).
+    </p>
+    <p>
+     3.Initialize the Base Cases:
+    </p>
+    <p>
+     .Set up the base cases with their initial values, which are the smallest subproblems that cannot be broken down further.
+    </p>
+    <p>
+     .These base cases help in stopping the recursive calls or in starting the iterative approach.
+    </p>
+    <p>
+     .Example: In the Fibonacci sequence, the base cases are f(0) = 0 and f(1) = 1.
+    </p>
+    <p>
+     4.Implement the Solution Using Memoization or Tabulation:
+    </p>
+    <p>
+     .Memoization: Use a dictionary or array to store the results of the subproblems in a recursive approach.
+    </p>
+    <p>
+     .Tabulation: Build the solution iteratively by filling up a table (array or matrix) from the base cases to the required solution.
+    </p>
+    <p>
+     5.Compute the Result Efficiently:
+    </p>
+    <p>
+     .Using either approach, the computation time is reduced to O(n) since each subproblem is only solved once.
+    </p>
+    <p>
+     .Space complexity also depends on the size of the table or the depth of recursion in memoization.
+    </p>
+    <p>
+     When to Use Dynamic Programming
+    </p>
+    <p>
+     Dynamic Programming is most useful when:
+    </p>
+    <p>
+     .Problems exhibit overlapping subproblems: The problem can be broken down into subproblems that repeat multiple times.
+    </p>
+    <p>
+     .Optimal substructure is present: The solution to a problem can be constructed efficiently from solutions to its subproblems.
+    </p>
+    <p>
+     Common DP Problems
+    </p>
+    <p>
+     Some classic problems that can be solved using DP include:
+    </p>
+    <p>
+     .Fibonacci Sequence .Knapsack Problem .Longest Common Subsequence (LCS) .Coin Change Problem .Edit Distance .Matrix Chain Multiplication
+    </p>
+    <p>
+     Advantages of DP:
+    </p>
+    <p>
+     .Efficiency: It significantly reduces the time complexity by eliminating redundant calculations.
+    </p>
+    <p>
+     .Clear Structure: Problems are easier to understand when broken into smaller subproblems.
+    </p>
+    <p>
+     .Versatility: Can handle both recursive and iterative approaches.
+    </p>
+    <p>
+     .Shortest Path Problems (like Floyd-Warshall)
+    </p>
+    <p>
+     Disadvantages of DP:
+    </p>
+    <p>
+     .Space Complexity: It often requires additional memory to store intermediate results.
+    </p>
+    <p>
+     .Problem Formulation: Requires a good understanding of the problem to define states and recurrence relations.
+    </p>
+   </div>
+   <div class="author">
+    Written by: CodeWithIshu
+   </div>
+  </div>
+  <div class="faq-section">
+   <div class="faq-title">
+    Frequently Asked Questions
+   </div>
+   <!-- FAQ Toggle Button -->
+   <button id="faq-toggle">
+    Show FAQs
+   </button>
+   <div class="faq-content">
+    <!-- FAQ content will be inserted here via generator -->
+   </div>
+  </div>
+  <div class="comment-section">
+   <div class="comments-title">
+    Comments
+   </div>
+   <div class="comments-content">
+    <!-- Comment content will be inserted here via generator -->
+   </div>
+   <div class="comment-form">
+    <form id="comment-form">
+     <input class="comment-name" id="name" placeholder="Your Name" type="text"/>
+     <textarea class="comment-textarea" id="comment" placeholder="Your Comment"></textarea>
+     <button class="submit-comment" type="submit">
+      Submit
+     </button>
+    </form>
+   </div>
+  </div>
+  <div class="more-articles-section">
+   More Articles You Might Like
+   <div class="more-articles-list" id="more-articles-list">
+    <!-- More articles will be auto inserted by the generator -->
+   </div>
+  </div>
+  <!-- JavaScript for Toggle -->
+  <script>
+   document.getElementById('faq-toggle').addEventListener('click', function() {
+            const faqContent = document.getElementById('faq-content');
+            if (faqContent.style.display === "none" || faqContent.style.display === "") {
+                faqContent.style.display = "block";
+                this.textContent = "Hide FAQs";
+            } else {
+                faqContent.style.display = "none";
+                this.textContent = "Show FAQs";
+            }
+        });
+  </script>
+ </body>
+</html>
