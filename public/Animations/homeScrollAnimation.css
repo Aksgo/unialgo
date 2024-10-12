@@ -1,0 +1,133 @@
+/* Animation for navbar */
+
+.name,
+.menu-nav,
+.header-nav {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.name.scroll-animate {
+  transition-delay: 0.2s;
+}
+
+.menu-nav.scroll-animate {
+  transition-delay: 0.4s;
+}
+
+.header-nav.scroll-animate {
+  transition-delay: 0.6s;
+}
+
+.logo {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.logo.scroll-animate {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Home section animation */
+.about h1,
+.about p,
+#start-btn {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.about.scroll-animate h1 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.about.scroll-animate p {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+
+.about.scroll-animate #start-btn {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s;
+}
+
+/* Image animation */
+.image-main {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.image-main.scroll-animate {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.4s;
+}
+
+/* about section animation */
+
+/* About section animations */
+.section h1,
+.section .about-logo,
+.section p {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.section.scroll-animate h1 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.section.scroll-animate .about-logo {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+
+.section.scroll-animate p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animate paragraphs sequentially */
+.section.scroll-animate p:nth-of-type(1) {
+  transition-delay: 0.6s;
+}
+
+.section.scroll-animate p:nth-of-type(2) {
+  transition-delay: 0.8s;
+}
+
+/* Footer animation */
+footer {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+footer.scroll-animate {
+  opacity: 1;
+  transform: translateY(0);
+}

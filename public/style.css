@@ -30,7 +30,41 @@ header {
     justify-content: space-between;
     text-align: center;
     padding: 20px 30px 20px 30px;
+    gap: 2rem;
     position: relative;
+}
+
+.search-bar{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 0.5rem;
+}
+.search-input > input{
+    background: transparent;
+    border:none;
+    height: 30px;
+    width: 100%;
+    outline: none;
+    color: white;
+    font-size: large;
+    
+}
+.search-input{
+    border-bottom: 1px solid white;
+    height: fit-content;
+    width: 0px;
+    padding: none;
+    transition: all 500ms ease-in-out;
+    
+    
+}
+.search-icon{
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    flex-shrink: 0;
 }
 
 .centered {
