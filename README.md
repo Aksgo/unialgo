@@ -32,7 +32,7 @@
             <li>coding problems given in issues or raise a new issue</li>
             <li>new Articles related to CP</li>
         </ul>
-        <h3>From a developers views, our aim is to use simple tech stack which majority people can understand</h3>
+        <h4>From a developers views, our aim is to use simple tech stack which majority people can understand</h4>
         <h4>For hacktoberfest and contribution realated queries please check  CONTRIBUTION.md</h4>
         <h2>Swags</h2>
         <p>We respect out contributors and to recognize their work, the contributors will be awarded digital badges based on their contribution which they can showcase on their social profiles</p>
