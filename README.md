@@ -8,7 +8,7 @@
     <div class="container">
         <h1>Unialgo</h1>
         <h2>News</h2>
-        <i>We are applying some major changes, so we won't be accepting the PR's till 14 October 2024</i>
+        <i>We are applying some major changes, so we won't be accepting the PR's till 17 October 2024</i>
         <h2>Overview</h2>
         <p>Unialgo is a platform for understanding competitive programming (CP) with collection of unique concepts that takes time to understand</p>
         <h2>Features:</h2>
