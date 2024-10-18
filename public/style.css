@@ -508,27 +508,82 @@ border: none;
 }
 
 #start-btn {
-    animation: colorAnimation 3s infinite; /* Adjust duration as needed */
-    color: white; /* Text color */
-    border: none; /* Remove border */
-    padding: 10px 20px; /* Add some padding */
-    border-radius: 5px; /* Round corners */
-    cursor: pointer; /* Change cursor on hover */
-    transition: opacity 0.3s; /* Smooth transition for hover effect */
+    animation: colorAnimation 3s infinite;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer; 
+    transition: opacity 0.3s;
 }
 
 @keyframes colorAnimation {
     0% {
-        background-color: #beffc0; /* Back to initial color */
+        background-color: #be1aff; 
+    }
+    5% {
+        background-color: #d91aff; 
+    }
+    10% {
+        background-color: #e81aff; 
+    }
+    15% {
+        background-color: #ff1ae8; 
+    }
+    20% {
+        background-color: #ff1ad5; 
+    }
+    25% {
+        background-color: #ff1aaf; 
+    }
+    30% {
+        background-color: #ff1a9c; 
+    }
+    35% {
+        background-color: #ff1a85; 
+    }
+    40% {
+        background-color: #ff1a53; 
+    }
+    45% {
+        background-color: #ff1a2d; 
     }
     50% {
-        background-color: #01a106; /* Back to initial color */
+        background-color: #ff1a25; 
+    }
+    55% {
+        background-color: #ff1a25; 
+    }
+    60% {
+        background-color: #ff1a2d; 
+    }
+    65% {
+        background-color: #ff1a53; 
+    }
+    70% {
+        background-color: #ff1a85; 
+    }
+    75% {
+        background-color: #ff1a9c; 
+    }
+    80% {
+        background-color: #ff1aaf; 
+    }
+    85% {
+        background-color: #ff1ad5; 
+    }
+    90% {
+        background-color: #ff1ae8; 
+    }
+    95% {
+        background-color: #e81aff; 
     }
     100% {
-        background-color: #4CAF50; /* Back to initial color */
+        background-color: #d91aff; 
     }
+    
 }
 
 #start-btn:hover {
-    opacity: 0.8; /* Slightly dim on hover */
+    opacity: 0.8;
 }
