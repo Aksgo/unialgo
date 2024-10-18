@@ -511,10 +511,11 @@ border: none;
     animation: colorAnimation 3s infinite;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 20px 30px;
+    border-radius: 50px;
     cursor: pointer; 
     transition: opacity 0.3s;
+    font-size: 17px;
 }
 
 @keyframes colorAnimation {
@@ -582,8 +583,4 @@ border: none;
         background-color: #d91aff; 
     }
     
-}
-
-#start-btn:hover {
-    opacity: 0.8;
 }
