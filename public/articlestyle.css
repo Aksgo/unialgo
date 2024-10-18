@@ -8,15 +8,6 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
-header{
-    display: flex;
-    align-items: center;
-    position: sticky; 
-    top: 0;         
-    background: rgba(0, 0, 0, 0); 
-    z-index: 1000;  
-    backdrop-filter: blur(2px); 
-  }
   .centered{
     display: flex;
     align-items: center;

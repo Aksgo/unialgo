@@ -36,11 +36,9 @@ header {
     background: rgba(0, 0, 0, 0); 
     z-index: 1000; 
     backdrop-filter: blur(2px); 
-
-}
-header {
     transition: height 0.3s ease, padding 0.3s ease;
     height: 80px; 
+
 }
 
 header.collapsed {
@@ -50,8 +48,13 @@ header.collapsed {
     justify-content: center;
     align-items: center;
 }
-
-
+.header-nav {
+    transition: opacity 0.3s ease;
+}
+header.collapsed .header-nav {
+    opacity: 0; 
+    pointer-events: none;
+}
 .search-bar{
     width: 20%;
     display: flex;
