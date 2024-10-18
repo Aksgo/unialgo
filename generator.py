@@ -42,7 +42,7 @@ def addNewArticle():
 
 def extractArticle(artname, data):
     ''' Extract the article data from the .txt file '''
-    with open(artname+".txt", "r") as f:
+    with open("RawFiles/"+artname+".txt", "r") as f:
         complete = f.readlines()
         complete = [line.replace('\n',' ') for line in complete]
         author = complete[-1].strip()  # Last line is the author's name
@@ -134,7 +134,7 @@ def modifyArticle():
     artname = input("Enter the name of the article to update (without extension): ").strip()
     imgname = input("enter image name:")
     imgname = check_image_exists(imgname)
-    txt_file = f'{artname}.txt'
+    txt_file = f'RawFiles/{artname}.txt'
     
     # Check if the article's .txt file exists
     if not os.path.exists(txt_file):

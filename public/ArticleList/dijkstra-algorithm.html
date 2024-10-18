@@ -71,6 +71,54 @@
    <div class="author">
     Written by: Yeshwanth DS
    </div>
+   <div class="faq-section">
+    <div class="faq-title">
+     Frequently Asked Questions
+    </div>
+    <!-- FAQ Toggle Button -->
+    <button id="faq-toggle">
+     Show FAQs
+    </button>
+    <div class="faq-content">
+     <!-- FAQ content will be inserted here via generator -->
+    </div>
+   </div>
+   <div class="comment-section">
+    <div class="comments-title">
+     Comments
+    </div>
+    <div class="comments-content">
+     <!-- Comment content will be inserted here via generator -->
+    </div>
+    <div class="comment-form">
+     <form id="comment-form">
+      <input class="comment-name" id="name" placeholder="Your Name" type="text"/>
+      <textarea class="comment-textarea" id="comment" placeholder="Your Comment"></textarea>
+      <button class="submit-comment" type="submit">
+       Submit
+      </button>
+     </form>
+    </div>
+   </div>
+   <div class="more-articles-section">
+    More Articles You Might Like
+    <div class="more-articles-list" id="more-articles-list">
+     <!-- More articles will be auto inserted by the generator -->
+    </div>
+   </div>
   </div>
+  <!-- JavaScript for Toggle -->
+  <script>
+   document.getElementById('faq-toggle').addEventListener('click', function() {
+            const faqContent = document.getElementById('faq-content');
+            if (faqContent.style.display === "none" || faqContent.style.display === "") {
+                faqContent.style.display = "block";
+                this.textContent = "Hide FAQs";
+            } else {
+                faqContent.style.display = "none";
+                this.textContent = "Show FAQs";
+            }
+        });
+  </script>
  </body>
 </html>

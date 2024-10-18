@@ -72,3 +72,12 @@ function toggleMenu() {
     const plusImage = document.querySelector('.menu-plus-image');
     plusImage.classList.toggle('rotate');
 }
+
+
+const searchIcon=document.querySelector('.search-icon');
+
+searchIcon.addEventListener('click',(e)=>{
+    const searchInput=document.querySelector(".search-input")
+    searchInput.style.width="100%"
+})
+

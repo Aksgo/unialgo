@@ -8,7 +8,7 @@
     <div class="container">
         <h1>Unialgo</h1>
         <h2>News</h2>
-        <i>We are applying some major changes, so we won't be accepting the PR's till 14 October 2024</i>
+        <i>We are applying some major changes, so we won't be accepting the PR's till 17 October 2024. The project is not offline</i>
         <h2>Overview</h2>
         <p>Unialgo is a platform for understanding competitive programming (CP) with collection of unique concepts that takes time to understand</p>
         <h2>Features:</h2>
@@ -32,7 +32,7 @@
             <li>coding problems given in issues or raise a new issue</li>
             <li>new Articles related to CP</li>
         </ul>
-        <h3>From a developers views, our aim is to use simple tech stack which majority people can understand</h3>
+        <h4>From a developers views, our aim is to use simple tech stack which majority people can understand</h4>
         <h4>For hacktoberfest and contribution realated queries please check  CONTRIBUTION.md</h4>
         <h2>Swags</h2>
         <p>We respect out contributors and to recognize their work, the contributors will be awarded digital badges based on their contribution which they can showcase on their social profiles</p>
