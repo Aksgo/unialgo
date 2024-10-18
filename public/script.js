@@ -73,17 +73,14 @@ searchIcon.addEventListener('click',(e)=>{
 })
 
 const header = document.querySelector('header');
-let lastScrollTop = 0;
+let lastScrollTop = 50;
 
 window.addEventListener('scroll', () => {
     const scrollTop = window.scrollY;
 
     if (scrollTop > lastScrollTop) {
-        // Scrolling down
         header.classList.add('collapsed');
     } else {
-        // Scrolling up
         header.classList.remove('collapsed');
     }
-    lastScrollTop = scrollTop;
 });

@@ -39,13 +39,16 @@ header {
 
 }
 header {
-    transition: height 0.3s ease, padding 0.3s ease; /* Smooth transition for height and padding */
-    height: 80px; /* Height when expanded */
+    transition: height 0.3s ease, padding 0.3s ease;
+    height: 80px; 
 }
 
 header.collapsed {
-    height: 50px; /* Height when collapsed */
-    padding: 10px 30px; /* Reduced padding */
+    height: 50px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -191,10 +194,6 @@ img {
     width: 20rem;
     height: 20rem;
 }
-.content:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
 
 @media (max-width: 1250px) {
     h1 {
@@ -507,80 +506,44 @@ background-color: rgba(255, 255, 255, 0);
 border: none;
 }
 
+
+
+@keyframes lightMove {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translateX(100%);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
 #start-btn {
-    animation: colorAnimation 3s infinite;
+    position: relative;
     color: white;
+    background: linear-gradient(45deg, #040075, #2f0050, #570069);
     border: none;
     padding: 20px 30px;
     border-radius: 50px;
     cursor: pointer; 
     transition: opacity 0.3s;
     font-size: 17px;
+    overflow: hidden; 
 }
 
-@keyframes colorAnimation {
-    0% {
-        background-color: #be1aff; 
-    }
-    5% {
-        background-color: #d91aff; 
-    }
-    10% {
-        background-color: #e81aff; 
-    }
-    15% {
-        background-color: #ff1ae8; 
-    }
-    20% {
-        background-color: #ff1ad5; 
-    }
-    25% {
-        background-color: #ff1aaf; 
-    }
-    30% {
-        background-color: #ff1a9c; 
-    }
-    35% {
-        background-color: #ff1a85; 
-    }
-    40% {
-        background-color: #ff1a53; 
-    }
-    45% {
-        background-color: #ff1a2d; 
-    }
-    50% {
-        background-color: #ff1a25; 
-    }
-    55% {
-        background-color: #ff1a25; 
-    }
-    60% {
-        background-color: #ff1a2d; 
-    }
-    65% {
-        background-color: #ff1a53; 
-    }
-    70% {
-        background-color: #ff1a85; 
-    }
-    75% {
-        background-color: #ff1a9c; 
-    }
-    80% {
-        background-color: #ff1aaf; 
-    }
-    85% {
-        background-color: #ff1ad5; 
-    }
-    90% {
-        background-color: #ff1ae8; 
-    }
-    95% {
-        background-color: #e81aff; 
-    }
-    100% {
-        background-color: #d91aff; 
-    }
-    
+#start-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.66);
+    animation: lightMove 2.4s infinite;
+    pointer-events: none;
 }
