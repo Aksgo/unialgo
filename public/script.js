@@ -65,15 +65,6 @@ document.addEventListener("DOMContentLoaded", function () {
     loop();
 });
 
-function toggleMenu() {
-    const menu = document.querySelector('.menu');
-    menu.classList.toggle('active');
-
-    const plusImage = document.querySelector('.menu-plus-image');
-    plusImage.classList.toggle('rotate');
-}
-
-
 const searchIcon=document.querySelector('.search-icon');
 
 searchIcon.addEventListener('click',(e)=>{
@@ -81,3 +72,18 @@ searchIcon.addEventListener('click',(e)=>{
     searchInput.style.width="100%"
 })
 
+const header = document.querySelector('header');
+let lastScrollTop = 0;
+
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+
+    if (scrollTop > lastScrollTop) {
+        // Scrolling down
+        header.classList.add('collapsed');
+    } else {
+        // Scrolling up
+        header.classList.remove('collapsed');
+    }
+    lastScrollTop = scrollTop;
+});

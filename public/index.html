@@ -8,36 +8,17 @@
     <link id="dark-theme" type="text/css" rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
     <script src="./script.js" defer></script>
-    <style>
-        #toggle-theme {
-            font-size: 30px;
-            color: white;
-            background-color: rgba(255, 255, 255, 0);
-            border: none;
-        }
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
+
 </head>
 <body>
     <header>
+      
       <div class="centered">
         <div class="name">UniAlgo</div>
-        <nav class="menu-nav">
-          <div id="menu-icon" onclick="toggleMenu();">
-            Menu <img src="asset/plus-image.png" class="menu-plus-image" />
-          </div>
-          <div class="menu">
-            <a href="index.html">Home</a>
-            <a href="">Sign In</a>
-          </div>
-        </nav>
         <nav class="header-nav">
           <a href="#home" class="nav-link">Home</a>
           <a href="#about" class="nav-link">About Us</a>
-          <button id="signin-btn" aria-label="Sign In" class="nav-link-icon">
+          <button id="signin-btn" aria-label="Sign In" class="nav-link-icon nav-link">
             Sign in
           </button>
         </nav>
@@ -74,7 +55,6 @@
             <div class="about">
                 <h1 class="grad-text" id="typewriter"></h1>
                 <p id="des">Your path to competitive programming mastery begins here </p>
-                <img src="./asset/down_arrow.png" style="height: 30px; width: 60px;" alt="">
                 <button id="start-btn" onclick="location.href='article.html'">Get Started</button>
             </div>
             <div class="image-main">

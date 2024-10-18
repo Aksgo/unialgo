@@ -55,7 +55,7 @@ header{
 .article {
     display: flex;
     flex-direction: column;
-    background-color: #333;
+    background-color: #222222;
     padding: 20px;
     border-radius: 10px;
     max-width: 500px;

@@ -4,7 +4,7 @@ html{
     font-family: "Rubik", Arial, sans-serif;
     background: linear-gradient(45deg, #010027, #000000, #010027);
     color: white;
-    
+    scroll-behavior: smooth;
 }
 
 body {
@@ -12,7 +12,8 @@ body {
     flex-direction: column;
     user-select: none;
     font-family: "Rubik", Arial, sans-serif;
-    background: linear-gradient(45deg, #010027, #000000, #010027);
+    /* background: linear-gradient(45deg, #010027, #000000, #010027); */
+    background-image: url('./asset/HomePageBackground.jpg');
     color: white;
     background-size: cover;
     background-attachment: fixed;
@@ -26,13 +27,27 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    position: relative;
     justify-content: space-between;
     text-align: center;
     padding: 20px 30px 20px 30px;
     gap: 2rem;
-    position: relative;
+    position: sticky;
+    top: 0; 
+    background: rgba(0, 0, 0, 0); 
+    z-index: 1000; 
+    backdrop-filter: blur(2px); 
+
 }
+header {
+    transition: height 0.3s ease, padding 0.3s ease; /* Smooth transition for height and padding */
+    height: 80px; /* Height when expanded */
+}
+
+header.collapsed {
+    height: 50px; /* Height when collapsed */
+    padding: 10px 30px; /* Reduced padding */
+}
+
 
 .search-bar{
     width: 20%;
@@ -111,13 +126,13 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
-    max-width: 1200px;
     margin: 30px auto;
     border-radius: 30px;
+    max-width: 1200px;
     justify-content: center;
     padding: 20px;
     align-items: center;
-    background-color: rgba(83, 83, 83, 0.4);
+    background-color: rgba(20, 20, 20, 0.892);
     animation: fadeIn 0.25s ease-in forwards;
     flex: 1; 
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
@@ -182,9 +197,6 @@ img {
   }
 
 @media (max-width: 1250px) {
-    .content {
-        max-width: 500px;
-    }
     h1 {
         font-size: 40px;
     }
@@ -198,14 +210,11 @@ img {
 }
 
 @media (max-width: 700px) {
-    .content {
-        max-width: 200px;
-    }
     h1 {
         font-size: 28px;
     }
 }
-
+/* 
 #start-btn {
     display: block;
     margin: 0 auto;
@@ -220,7 +229,7 @@ img {
 
 #start-btn:hover {
     background: linear-gradient(45deg, #ffffff, #ffffff, #ffd0f2);
-}
+} */
 
 p {
     font-size: 20px;
@@ -282,28 +291,16 @@ footer p{
         font-size: 30px;
     }
 }
-.content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 50px;
-    background-color: rgba(83, 83, 83, 0.4);
-    border-radius: 30px;
-    animation: fadeIn 0.25s ease-in forwards;
-    justify-content: space-around;
-}
 
 .section {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    justify-content: center;
     flex: 2;
     color: #d7d7d7;
-    padding: 20px;
     border-radius: 20px;
+    margin: auto;
 }
 
 .section h1 {
@@ -358,9 +355,8 @@ footer p{
 }
 
 .about-page img.about-logo {
-    width: 150px;
     margin-bottom: 20px;
-    margin-left: 40%;
+    margin:auto;
 }
 
 .section h1 {
@@ -373,8 +369,7 @@ footer p{
     font-size: 1.2rem;
     color: #d7d7d7;
     line-height: 1.6;
-    max-width: 600px;
-    text-align: center;
+    text-align: justify;
 }
 .header-nav {
     display: flex;
@@ -484,20 +479,56 @@ body::-webkit-scrollbar {
       justify-content: space-between;
     }
   }
-  
-  @media screen and (min-width: 900px) {
-    .menu-nav {
-      display: none;
-    }
-  }
+
   
   @media screen and (max-width: 900px) {
-    .header-nav {
-      display: none;
+    .content{
+        margin:10px;
     }
-  
     .logo {
       display: none;
     }
+    .name{
+        font-size: 20px;
+    }
+    .nav-link{
+        font-size: 12px;
+    }
+    .search-bar{
+        display: none;
+    }
   }
 
+
+#toggle-theme {
+font-size: 30px;
+color: white;
+background-color: rgba(255, 255, 255, 0);
+border: none;
+}
+
+#start-btn {
+    animation: colorAnimation 3s infinite; /* Adjust duration as needed */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add some padding */
+    border-radius: 5px; /* Round corners */
+    cursor: pointer; /* Change cursor on hover */
+    transition: opacity 0.3s; /* Smooth transition for hover effect */
+}
+
+@keyframes colorAnimation {
+    0% {
+        background-color: #beffc0; /* Back to initial color */
+    }
+    50% {
+        background-color: #01a106; /* Back to initial color */
+    }
+    100% {
+        background-color: #4CAF50; /* Back to initial color */
+    }
+}
+
+#start-btn:hover {
+    opacity: 0.8; /* Slightly dim on hover */
+}
