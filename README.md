@@ -20,7 +20,7 @@
             <li>🗂️ Algorithm Implementations available in the master/Algorithms folder for you to explore.</li>
             <li>🔒 Content in Articles is copyrighted,but the source code is open for contributions.</li>
         </ul>
-        <h2>🔔 Stay Updated</h2>
+        <h2>🔔 Stay Updated!</h2>
         <h4>To get latest notification for newly added articles you need to sign in to UniAlgo</h4>
         <hr>
         <h2>🚀 Future Release</h2>
