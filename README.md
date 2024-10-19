@@ -36,9 +36,9 @@
         </ul>
         <h4>For Hacktoberfest and contribution realated queries please check out our <b>CONTRIBUTION.md<b></h4>
         <h2>🎁 Swags & Recognition</h2>
-        <p>We respect out contributors and to recognize their work, the contributors will be awarded <b>Digital Badges<b> based on their contribution which they can showcase on their social profiles</p>
-        <b>NOTE: we are developing the platform to deliver the badges, so it may take some time to receive them :) Please hang on</b>
-        <div align=center><br><img src = "contributor/CONTRIBUTOR-BADGE.png" width="500px" height="500px"></div>
+        <p>We respect out contributors and to recognize their work, the contributors will be awarded <b>Digital Badges<b> based on their contribution which they can showcase on their social profiles 🏅</p>
+        <b>⚠️  Note: We are currently developing the platform to deliver badges. 🕒 Please be patient as it may take some time to receive them.</b>
+        <div align=center><br><img src = "contributor/CONTRIBUTOR-BADGE.png" width="450px" height="450px"></div>
         <br>
         <ol>
             <li>⭐ First-time contributors will receive a single star badge.</li>
