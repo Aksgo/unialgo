@@ -8,7 +8,7 @@
     <div class="container">
         <h1>🏆 Unialgo</h1>
         <h2>📢 News</h2>
-        <i>🚧 We are applying some major changes, so we won't be accepting PRs until 17 October 2024. However, the project is still active and not offline.</i>
+        <i>🚧 No new updates for now. Feel free to explore !</i>
         <h2>🌐 Overview</h2>
         <p><b>UniAlgo</b> is a platform designed to help users understand <b>competitive programming (CP)</b>. It features a curated collection of unique CP concepts, algorithms, and articles that take time and effort to master.</p>
         <h2>🌟 Key Features:</h2>
