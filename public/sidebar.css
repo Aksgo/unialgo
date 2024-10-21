@@ -2,22 +2,25 @@
 .sidebar {
     position: fixed;
     right: -250px; /* Hide sidebar by positioning it outside the view on the right */
-    top: 80px;
+    top: 150px;
     width: 200px;
-    height: calc(100% - 80px);
+    height: calc(100% - 200px);
     background-color: #f4f4f4;
     padding: 15px;
     overflow-y: auto;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Shadow on the left */
     transition: right 0.3s ease; /* Smooth transition */
     backdrop-filter: blur(10px); /* Apply blur effect */
-    background-color: rgba(255, 255, 255, 0.8);
+    /* background-color: rgba(144, 143, 148, 1); */
+    background-color: rgb(193, 187, 187);
     border-radius: 50px;
   }
 
   .sidebar h3 {
     font-size: 18px;
     margin-bottom: 10px;
+    color: black;
+    font-weight: bold; /* Change text color to white for glowing effect */
   }
   
   .sidebar .article-list {
@@ -31,11 +34,12 @@
   
   .sidebar .article-list li a {
     text-decoration: none;
-    color: #333;
+    color: black;
   }
   
   .sidebar .article-list li a:hover {
-    color: #007bff;
+    color: rgba(255, 255, 255, 1);
+    font-weight: bold;
   }
   
   /* Show sidebar when toggled */
