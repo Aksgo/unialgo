@@ -81,5 +81,4 @@ window.addEventListener('scroll', () => {
     } else {
         header.classList.remove('collapsed');
     }
-    lastScrollTop = scrollTop;
 });
