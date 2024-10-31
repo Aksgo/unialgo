@@ -1,74 +1,140 @@
-/* Sidebar styles */
-.sidebar {
-    position: fixed;
-    right: -250px; /* Hide sidebar by positioning it outside the view on the right */
-    top: 80px;
-    width: 200px;
-    height: calc(100% - 80px);
-    background-color: #f4f4f4;
-    padding: 15px;
-    overflow-y: auto;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Shadow on the left */
-    transition: right 0.3s ease; /* Smooth transition */
-    backdrop-filter: blur(10px); /* Apply blur effect */
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 50px;
-  }
 
-  .sidebar h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .sidebar .article-list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .sidebar .article-list li {
-    margin-bottom: 10px;
-  }
-  
-  .sidebar .article-list li a {
-    text-decoration: none;
-    color: #333;
-  }
-  
-  .sidebar .article-list li a:hover {
-    color: #007bff;
-  }
-  
-  /* Show sidebar when toggled */
-  .sidebar.show {
-    right: 0;
-  }
-  
-  /* Sidebar Toggle Button */
-  #sidebar-toggle {
-    position: fixed;
-    top: 90px;
-    right: 20px; /* Align button to the right */
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 10;
-    z-index: 1000;
-  }
-  
-  #sidebar-toggle:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Adjust main content to make room for the sidebar when it is visible */
-  .faq-section, .comment-section, .more-articles-section {
-    margin-right: 20px;
-    padding: 20px;
-    transition: margin-right 0.3s ease;
-  }
-  
-  .article.expanded, .faq-section.expanded, .comment-section.expanded, .more-articles-section.expanded {
-    margin-right: 220px; /* Adjust margin when sidebar is shown */
-  }
+#backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  z-index: 5;
+  display: none;
+}
+
+
+.sidebar {
+  position: fixed;
+  right: -100%; 
+  top: 60px;
+  width: 350px; 
+  height: calc(100% - 80px);
+  padding: 50px 20px; 
+  overflow-y: auto;
+  background-color: rgba(255, 255, 255, 0.97);
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 20px 0 0 20px;
+  transition: right 0.4s ease;
+  z-index: 10;
+}
+
+
+.sidebar.show {
+  right: 0;
+}
+
+
+.sidebar h3 {
+  font-size: 1.7rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px; 
+}
+
+/* Sidebar Article List */
+.sidebar .article-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar .article-list li {
+  margin: 15px 0;
+}
+
+
+.sidebar .article-list li a {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  padding: 12px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #f9f9f9;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .article-list li a:hover {
+  background-color: #007bff; 
+  color: #fff; 
+}
+
+
+.sidebar-search {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sidebar-search input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.sidebar-search input::placeholder {
+  color: #888;
+}
+
+
+#sidebar-toggle {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #007bff; 
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 15;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#sidebar-toggle:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.sidebar.show #sidebar-toggle {
+  background-color: #0056b3;
+}
+
+body.sidebar-opened {
+  filter: blur(4px);
+  transition: filter 0.3s ease;
+}
+
+
+.sidebar .article-list li {
+  margin: 20px 0; 
+}
+
+.sidebar .article-list li a {
+  font-weight: bold;
+  background-color: #f3f3f3; 
+  border-left: 4px solid #007bff;
+  padding-left: 16px; 
+}
+
+.sidebar .article-list li a:hover {
+  background-color: #007bff;
+  color: white;
+  transform: translateX(5px); 
+}
