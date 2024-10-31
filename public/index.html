@@ -1,115 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UniAlgo</title>
-    <link rel="icon" href="asset/logo.png" type="image/png" />
-    <link id="dark-theme" type="text/css" rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Rubik"
-    />
-    <script src="./script.js" defer></script>
-  </head>
-  <body>
-    <header>
-      <div class="centered">
-        <div class="name">UniAlgo</div>
-        <nav class="header-nav">
-          <a href="#home" class="nav-link">Home</a>
-          <a href="#about" class="nav-link">About Us</a>
-          <a class="nav-link" onclick="location.href='contribution.html'"
-            >Contribution</a
-          >
-          <button
-            id="signin-btn"
-            aria-label="Sign In"
-            class="nav-link-icon nav-link"
-          >
-            Sign in
-          </button>
-        </nav>
-      </div>
-      <div class="search-bar">
-        <div class="search-input">
-          <input type="text" placeholder="Search" />
-        </div>
-        <div class="search-icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="size-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-            />
-          </svg>
-        </div>
-      </div>
-      <div class="logo">
-        <img src="asset/logo.png" alt="UniAlgo Logo" />
-      </div>
-    </header>
-    <!-- Home Section -->
-    <section id="home">
-      <div class="content">
-        <div class="about">
-          <h1 class="grad-text" id="typewriter"></h1>
-          <p id="des">
-            Your path to competitive programming mastery begins here
-          </p>
-          <button id="start-btn" onclick="location.href='article.html'">
-            Get Started
-          </button>
-        </div>
-        <div class="image-main">
-          <img src="asset/file.png" alt="Main Image" />
-        </div>
-      </div>
-    </section>
 
-    <!-- About Section -->
-    <main class="content about-page" id="about">
-      <section class="section">
-        <h1>About UniAlgo</h1>
-        <img
-          src="asset/logo.png"
-          class="about-logo"
-          alt="UniAlgo Logo"
-          style="width: 150px; height: auto"
-        />
-        <p>
-          UniAlgo is your go-to platform for mastering competitive programming
-          algorithms. Our mission is to provide deep, intuitive explanations of
-          complex concepts, complete with real-world examples and coding
-          challenges. Whether you're just starting out or you're an experienced
-          coder, UniAlgo offers a step-by-step guide to boost your
-          problem-solving skills.
-        </p>
-        <p>
-          With a focus on clarity and simplicity, UniAlgo ensures that you grasp
-          the underlying intuition behind each algorithm, helping you apply them
-          confidently in coding competitions and real-world scenarios. Join us
-          and take the next step in your coding journey.
-        </p>
-      </section>
-    </main>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UniAlgo</title>
+  <link rel="icon" href="asset/logo.png" type="image/png" />
+  <link id="dark-theme" type="text/css" rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <!-- Footer -->
-    <footer>
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="centered">
+      <div class="name">UniAlgo</div>
+      <nav class="header-nav">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About Us</a>
+        <a class="nav-link" onclick="location.href='contribution.html'">Contribution</a>
+        <button id="signin-btn" aria-label="Sign In" class="nav-link-icon nav-link">
+          Sign in
+        </button>
+      </nav>
+    </div>
+    <div class="search-bar">
+      <div class="search-input">
+        <input type="text" placeholder="Search" />
+      </div>
+      <div class="search-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+        </svg>
+      </div>
+    </div>
+    <div class="logo">
+      <img src="asset/logo.png" alt="UniAlgo Logo" />
+    </div>
+  </header>
+  <!-- Home Section -->
+  <section id="home">
+    <div class="content">
+      <div class="about">
+        <h1 class="grad-text" id="typewriter"></h1>
+        <p id="des">
+          Your path to competitive programming mastery begins here
+        </p>
+        <button id="start-btn" onclick="location.href='article.html'">
+          Get Started
+        </button>
+      </div>
+      <div class="image-main">
+        <img src="asset/file.png" alt="Main Image" />
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <main class="content about-page" id="about">
+    <section class="section">
+      <h1>About UniAlgo</h1>
+      <img src="asset/logo.png" class="about-logo" alt="UniAlgo Logo" style="width: 150px; height: auto" />
       <p>
-        By signing up, you will get access to extra content and email
-        notifications. UniAlgo©️2024
+        UniAlgo is your go-to platform for mastering competitive programming
+        algorithms. Our mission is to provide deep, intuitive explanations of
+        complex concepts, complete with real-world examples and coding
+        challenges. Whether you're just starting out or you're an experienced
+        coder, UniAlgo offers a step-by-step guide to boost your
+        problem-solving skills.
       </p>
-    </footer>
+      <p>
+        With a focus on clarity and simplicity, UniAlgo ensures that you grasp
+        the underlying intuition behind each algorithm, helping you apply them
+        confidently in coding competitions and real-world scenarios. Join us
+        and take the next step in your coding journey.
+      </p>
+    </section>
+  </main>
 
-    <!-- Additional Scripts -->
-    <script src="authenticator.js" type="module"></script>
-  </body>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-content">
+        <div class="footer-logo-container">
+          <img src="asset/logo.png" alt="Logo" />
+          <span>Unialgo</span>
+        </div>
+        <div class="footer-description">
+          <p>Unialgo is your go-to solution for mastering algorithms and enhancing your tech skills.</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="contribution.html">Contribution</a></li>
+          <li><a href="article.html">Get Started</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>UniAlgo © 2024. All rights reserved.</p>
+    </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- Additional Scripts -->
+  <script src="authenticator.js" type="module"></script>
+</body>
+
 </html>
