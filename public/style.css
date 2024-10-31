@@ -553,7 +553,7 @@ body::-webkit-scrollbar {
 
 
 footer {
-  background-color: #000000
+  background-color: #000000;
   color: rgb(152, 152, 152);
   padding: 20px 30px;
   position: relative;
