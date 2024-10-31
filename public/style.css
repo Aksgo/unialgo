@@ -235,6 +235,7 @@ p {
 }
 
 footer {
+  background-color: #000000;
   color: rgb(152, 152, 152);
   padding: 0px;
   text-align: center;
@@ -552,7 +553,7 @@ body::-webkit-scrollbar {
 
 
 footer {
-  background-color: transparent;
+  background-color: #000000
   color: rgb(152, 152, 152);
   padding: 20px 30px;
   position: relative;
