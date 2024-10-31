@@ -6,7 +6,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Unialgo</h1>
+        <h1>UniAlgo</h1>
         <h2>📢 News</h2>
         <i>🚧 No new updates for now. Feel free to explore !</i>
         <h2>🌐 Overview</h2>
