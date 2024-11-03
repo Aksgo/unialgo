@@ -234,17 +234,6 @@ p {
   margin: 30px;
 }
 
-footer {
-  background-color: #000000;
-  color: rgb(152, 152, 152);
-  padding: 0px;
-  text-align: center;
-  padding: 10px 0;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  font-size: 0.9rem;
-}
 footer p {
   font-size: 13px;
   margin: 0;
@@ -553,7 +542,7 @@ body::-webkit-scrollbar {
 
 
 footer {
-  background-color: #000000;
+  background:url("asset/footer-map.png");
   color: rgb(152, 152, 152);
   padding: 20px 30px;
   position: relative;
