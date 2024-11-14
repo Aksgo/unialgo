@@ -1,7 +1,5 @@
 1. add support for images in article using cells kind of feature to add the details
 2. removing old method of adding article using txt file, add a interface to add article
 3. apply theme toggle
-4. add comment option
-5. add commenting option on articles
 6. add tages option to each article in article list
 7. add generator function to add faq questions
