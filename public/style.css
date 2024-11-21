@@ -71,7 +71,7 @@ header.collapsed .header-nav {
   height: 30px;
   width: 100%;
   outline: none;
-  color: white;
+  color: #ccc;
   font-size: large;
 }
 
@@ -217,6 +217,7 @@ p {
   font-size: 20px;
   text-align: center;
   margin: 30px;
+  letter-spacing: 1px;
 }
 
 footer p {
@@ -522,7 +523,7 @@ body::-webkit-scrollbar {
   padding: 20px 30px;
   border-radius: 50px;
   cursor: pointer;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s, transform 0.3s ease;
   font-size: 17px;
   overflow: hidden;
 }
@@ -539,10 +540,14 @@ body::-webkit-scrollbar {
   pointer-events: none;
 }
 
+#start-btn:hover {
+  transform: scale(1.05);
+}
+
 footer {
   background: url("asset/footer-map.png");
   color: rgb(152, 152, 152);
-  padding: 20px 30px;
+  padding: 20px 30px 0 30px;
   position: relative;
   width: 100%;
   font-size: 0.9rem;
@@ -631,7 +636,7 @@ footer {
   color: #f0f0f0;
   text-decoration: none;
   font-size: 1rem;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .footer-links ul li a:hover {
@@ -642,6 +647,7 @@ footer {
 .footer-social .social-icons {
   display: flex;
   gap: 15px;
+  margin-top: 10px;
 }
 
 .footer-social .social-icons a {
@@ -658,9 +664,11 @@ footer {
 /* Bottom Footer */
 .footer-bottom {
   border-top: 1px solid #333;
-  padding-top: 30px;
   color: #c0c0c0;
-  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 35px;
 }
 
 .footer-bottom p {
