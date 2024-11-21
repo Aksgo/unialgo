@@ -1,113 +1,130 @@
 body {
-    font-family: "Rubik","sans-serif";
-    margin: 0;
-    padding: 0;
-    user-select: none;
-    background: linear-gradient(180deg, #00011c, #000000, #23001a);
-    color: white;
-    background-size: cover;
-    background-attachment: fixed;
+  font-family: "Rubik", "sans-serif";
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  background: linear-gradient(180deg, #00011c, #000000, #23001a);
+  color: white;
+  background-size: cover;
+  background-attachment: fixed;
 }
-  .centered{
-    display: flex;
-    align-items: center;
-  }
-  .centered a{
-    background-color: #00000000;
-    color: #fff;
-    padding: 20px 30px 20px 30px;    
-    display: flex;
-    align-items: center;
-    position: relative; 
-    text-decoration: none;
-    color: white;
-  }
-  .name {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-right: 20px;
-    padding-right: 20px;
-    border-right : 2px solid rgba(255, 255, 255, 0.3);
-  }
-  .logo img{
-    width: 60px;
-    height: 60px;
-  }
+
+.centered {
+  display: flex;
+  align-items: center;
+}
+
+.centered a {
+  background-color: #00000000;
+  color: #fff;
+  padding: 20px 30px 20px 30px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  color: white;
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 20px;
+  padding-right: 20px;
+  border-right: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+}
+
 .articles {
-    padding: 10px 40px;
-    padding-bottom: 60px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap:60px;
-    justify-content: center;
+  padding: 10px 40px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: center;
 }
 
 .article {
-    display: flex;
-    flex-direction: column;
-    background-color: #222222;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 500px;
-    cursor: pointer;
-    border-top:  10px solid rgb(181, 181, 181);
-    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
-    animation: anime 1s ease backwards;
+  display: flex;
+  flex-direction: column;
+  background-color: #222222;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  cursor: pointer;
+  border-top: 10px solid rgb(181, 181, 181);
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  animation: anime 1s ease backwards;
 }
-.article a{
-    color: white;
-    text-decoration: none;
+
+.article a {
+  color: white;
+  text-decoration: none;
 }
+
 @keyframes anime {
-    from {
-      opacity: 0;
-      transform: translateY(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-}
-.article:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  from {
+    opacity: 0;
+    transform: translateY(50px);
   }
-.head-article{
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 20px;
-    gap:30px;
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
+.article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.head-article {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  gap: 30px;
+}
+
 .article-title {
-    font-size: 1.6rem;
-    margin-bottom: 10px;
-    color: #d2d2d2;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #d2d2d2;
 }
 
 .article-description {
-    font-size: 1rem;
-    line-height: 1.5;
-    color : rgb(171, 171, 171);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: rgb(171, 171, 171);
 }
-hr{
-    color : white;
-    width: 90%;
-    opacity: 0.2;
+
+hr {
+  color: white;
+  width: 90%;
+  opacity: 0.2;
 }
-.article-img{
-    border-radius: 20px;
-    width: 150px;
-    height: 150px;
-}@media (max-width:1100px){
-    .article{
-        max-width: 350px;
-    }
-    .article-img{
-        width: 90px;
-        height: 90px;
-    }
-    .article-title{
-        font-size: 1.1rem;
-    }
+
+.article-img {
+  border-radius: 20px;
+  width: 150px;
+  height: 150px;
+}
+
+@media (max-width:1100px) {
+  .article {
+    max-width: 350px;
+  }
+
+  .article-img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .article-title {
+    font-size: 1.1rem;
+  }
 }

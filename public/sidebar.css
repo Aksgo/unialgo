@@ -1,4 +1,3 @@
-
 #backdrop {
   position: fixed;
   top: 0;
@@ -11,14 +10,13 @@
   display: none;
 }
 
-
 .sidebar {
   position: fixed;
-  right: -100%; 
+  right: -100%;
   top: 60px;
-  width: 350px; 
+  width: 350px;
   height: calc(100% - 80px);
-  padding: 50px 20px; 
+  padding: 50px 20px;
   overflow-y: auto;
   background-color: rgba(255, 255, 255, 0.97);
   box-shadow: -4px 0 10px rgba(0, 0, 0, 0.3);
@@ -27,17 +25,15 @@
   z-index: 10;
 }
 
-
 .sidebar.show {
   right: 0;
 }
-
 
 .sidebar h3 {
   font-size: 1.7rem;
   color: #333;
   text-align: center;
-  margin-bottom: 30px; 
+  margin-bottom: 30px;
 }
 
 /* Sidebar Article List */
@@ -50,7 +46,6 @@
 .sidebar .article-list li {
   margin: 15px 0;
 }
-
 
 .sidebar .article-list li a {
   text-decoration: none;
@@ -66,10 +61,9 @@
 }
 
 .sidebar .article-list li a:hover {
-  background-color: #007bff; 
-  color: #fff; 
+  background-color: #007bff;
+  color: #fff;
 }
-
 
 .sidebar-search {
   display: flex;
@@ -90,13 +84,12 @@
   color: #888;
 }
 
-
 #sidebar-toggle {
   position: fixed;
   top: 90px;
   right: 20px;
   padding: 10px 20px;
-  background-color: #007bff; 
+  background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 20px;
@@ -121,20 +114,19 @@ body.sidebar-opened {
   transition: filter 0.3s ease;
 }
 
-
 .sidebar .article-list li {
-  margin: 20px 0; 
+  margin: 20px 0;
 }
 
 .sidebar .article-list li a {
   font-weight: bold;
-  background-color: #f3f3f3; 
+  background-color: #f3f3f3;
   border-left: 4px solid #007bff;
-  padding-left: 16px; 
+  padding-left: 16px;
 }
 
 .sidebar .article-list li a:hover {
   background-color: #007bff;
   color: white;
-  transform: translateX(5px); 
+  transform: translateX(5px);
 }

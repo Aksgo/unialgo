@@ -1,5 +1,5 @@
 body {
-  font-family: "Rubik","sans-serif";
+  font-family: "Rubik", "sans-serif";
   margin: 0;
   padding: 0;
   background: linear-gradient(180deg, #00011c, #000000, #23001a);
@@ -8,42 +8,47 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
-header{
+
+header {
   display: flex;
   align-items: center;
   position: sticky;
-  top: 0;  
-  background: rgba(0, 0, 0, 0); 
-  z-index: 1000; 
-  backdrop-filter: blur(2px); 
+  top: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: 1000;
+  backdrop-filter: blur(2px);
 }
-.centered{
+
+.centered {
   display: flex;
   align-items: center;
 }
-.centered a{
+
+.centered a {
   background-color: #00000000;
   color: #fff;
-  padding: 10px 30px 10px 30px;    
+  padding: 10px 30px 10px 30px;
   display: flex;
   align-items: center;
-  position: relative; 
+  position: relative;
   text-decoration: none;
   color: white;
-
 }
+
 .name {
   font-size: 1.5rem;
   font-weight: bold;
   margin-right: 20px;
   padding-right: 20px;
-  border-right : 2px solid rgba(255, 255, 255, 0.3);
+  border-right: 2px solid rgba(255, 255, 255, 0.3);
 }
-.logo img{
+
+.logo img {
   width: 60px;
   height: 60px;
 }
-.article{
+
+.article {
   display: flex;
   flex-direction: column;
   max-width: 800px;
@@ -56,56 +61,64 @@ header{
   animation: fadeIn 0.25s ease-in forwards;
 }
 
-.title{
+.title {
   font-size: 32px;
   text-align: center;
 }
-#back-link{
-  font-family: "Rubik","sans-serif";
+
+#back-link {
+  font-family: "Rubik", "sans-serif";
   color: rgb(255, 255, 255);
   font-size: 15px;
   padding: 8px 8px;
   border-radius: 30px;
   border: none;
-  background: linear-gradient(135deg,#315aff, #570035);
+  background: linear-gradient(135deg, #315aff, #570035);
   text-align: left;
   cursor: pointer;
 }
-.content{
+
+.content {
   line-height: 40px;
-  font-size : 20px;
+  font-size: 20px;
   text-align: justify;
   color: rgb(199, 199, 199);
 
 }
-#line{
+
+#line {
   opacity: 20%;
   color: white;
   max-width: 70%;
 }
-@media (max-width: 1200px){
-  .article{
+
+@media (max-width: 1200px) {
+  .article {
     max-width: 1000px;
     border-radius: 0px;
   }
-  .content{
+
+  .content {
     font-size: 17px;
   }
-  .title{
+
+  .title {
     font-size: 24px;
   }
-  #back-link{
+
+  #back-link {
     font-size: 10px;
   }
-} 
-@media (max-width: 600px){
-  .article{
+}
+
+@media (max-width: 600px) {
+  .article {
     max-width: 1000px;
     border-radius: 0px;
   }
 }
 
-.author{
+.author {
   font-style: italic;
   color: #afafafe6;
 }
@@ -127,8 +140,10 @@ header{
   border-top: 1px solid #e0e0e0;
   padding-top: 10px;
 }
+
 .faq-content {
-  display: none; /* Hidden by default */
+  display: none;
+  /* Hidden by default */
   padding-top: 0px;
   text-align: justify;
   animation: fadeIn 0.25s ease-in forwards;
@@ -165,7 +180,7 @@ header{
 }
 
 #faq-toggle:hover {
-  background: linear-gradient(to right, #00BFFF, #a255ff); 
+  background: linear-gradient(to right, #00BFFF, #a255ff);
 }
 
 @media (max-width: 1200px) {
@@ -202,6 +217,7 @@ header{
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -253,7 +269,8 @@ header{
   flex-direction: column;
 }
 
-.comment-name, .comment-textarea {
+.comment-name,
+.comment-textarea {
   align-self: stretch;
   padding: 10px;
   margin-bottom: 10px;
@@ -266,11 +283,12 @@ header{
   outline: none;
 }
 
-.comment-textarea { 
+.comment-textarea {
   height: 100px;
 }
 
-.comment-name::placeholder, .comment-textarea::placeholder {
+.comment-name::placeholder,
+.comment-textarea::placeholder {
   color: #310000;
 }
 
@@ -301,7 +319,8 @@ header{
     font-size: 14px;
   }
 
-  .comment-name, .comment-textarea {
+  .comment-name,
+  .comment-textarea {
     font-size: 14px;
   }
 
@@ -313,5 +332,5 @@ header{
 @media (max-width: 640px) {
   .comment-section {
     padding: 0;
-  }  
+  }
 }
