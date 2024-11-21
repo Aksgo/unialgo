@@ -15,7 +15,7 @@ header {
   position: sticky;
   top: 0;
   background: rgba(0, 0, 0, 0);
-  z-index: 1000;
+  z-index: 2;
   backdrop-filter: blur(2px);
 }
 
@@ -48,6 +48,10 @@ header {
   height: 60px;
 }
 
+#sidebar-toggle {
+  z-index: 3;
+}
+
 .article {
   display: flex;
   flex-direction: column;
@@ -76,6 +80,11 @@ header {
   background: linear-gradient(135deg, #315aff, #570035);
   text-align: left;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#back-link:hover {
+  transform: scale(1.05);
 }
 
 .content {
@@ -83,7 +92,6 @@ header {
   font-size: 20px;
   text-align: justify;
   color: rgb(199, 199, 199);
-
 }
 
 #line {
@@ -121,6 +129,7 @@ header {
 .author {
   font-style: italic;
   color: #afafafe6;
+  margin-bottom: 5px;
 }
 
 /*  ======== FAQ Section Styling =========*/
@@ -166,7 +175,7 @@ header {
 #faq-toggle {
   display: block;
   margin: 20px auto;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
   padding: 10px 20px;
   font-size: 16px;
   background: linear-gradient(to right, #cab3ff, #009dff);
@@ -299,6 +308,7 @@ header {
   color: white;
   border: none;
   border-radius: 5px;
+  margin-bottom: 10px;
   font-size: 16px;
   cursor: pointer;
   font-family: Rubik;
@@ -306,7 +316,7 @@ header {
 }
 
 .submit-comment:hover {
-  background-color: #2980b9;
+  background: linear-gradient(to right, #00BFFF, #a255ff);
 }
 
 /* Responsive Design */
