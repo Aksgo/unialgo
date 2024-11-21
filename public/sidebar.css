@@ -13,7 +13,7 @@
 .sidebar {
   position: fixed;
   right: -100%;
-  top: 60px;
+  top: 20px;
   width: 350px;
   height: calc(100% - 80px);
   padding: 50px 20px;
@@ -86,8 +86,8 @@
 
 #sidebar-toggle {
   position: fixed;
-  top: 90px;
-  right: 20px;
+  top: 50px;
+  right: 30px;
   padding: 10px 20px;
   background-color: #007bff;
   color: #fff;
@@ -123,6 +123,7 @@ body.sidebar-opened {
   background-color: #f3f3f3;
   border-left: 4px solid #007bff;
   padding-left: 16px;
+  transition: all 0.3s ease;
 }
 
 .sidebar .article-list li a:hover {
