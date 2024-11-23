@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>
-   List
+    List
   </title>
-  <link href="commonarticles.css" rel="stylesheet"/>
-  <link href="articlestyle.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet"/>
-  <link href="asset/logo.png" rel="icon" type="image"/>
-	<link rel="stylesheet" href="style.css">
+  <link href="commonarticles.css" rel="stylesheet" />
+  <link href="articlestyle.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet" />
+  <link href="asset/logo.png" rel="icon" type="image" />
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="sidebar.css">
   <script src="./sidebar.js"></script>
- </head>
- <body>
+</head>
+
+<body>
+
   <header>
-   <div class="centered">
-    <a href="index.html">
-     <div class="name">
-      UniAlgo
-     </div>
-     <div class="logo">
-      <img src="asset/logo.png"/>
-     </div>
-    </a>
-    <button id="sidebar-toggle" onclick="toggleSidebar()">Show Articles</button>
-   </div>
-   <!-- <button id="toggle-theme">☀️</button> -->
+    <div class="centered">
+      <a href="index.html">
+        <div class="name">
+          UniAlgo
+        </div>
+        <div class="logo">
+          <img src="asset/logo.png" />
+        </div>
+      </a>
+      <button id="sidebar-toggle" onclick="toggleSidebar()">Show Articles</button>
+    </div>
+    <!-- <button id="toggle-theme">☀️</button> -->
   </header>
 
   <div id="backdrop"></div>
@@ -40,100 +43,117 @@
       <li><a href="./ArticleList/time-complexity-bfs.html">Time Complexity of Depth First Search</a></li>
       <li><a href="./ArticleList/binary-lifting.html">How does Binary Lifting utilize power of 2 jumps?</a></li>
       <li><a href="./ArticleList/dijkstra-algorithm.html">How Dijkstra's Algorithm Works</a></li>
-      
+
       <!-- Add more article links as needed -->
     </ul>
   </div>
 
   <div class="articles">
-   <div class="article" id="huffman-coding">
-    <a href="ArticleList/huffman-coding.html">
-     <div class="head-article">
-      <img class="article-img" src="asset/ArticleImage/huffman-coding.png"/>
-      <h2 class="article-title">
-       How Huffman Coding works?
-      </h2>
-     </div>
-     <hr/>
-     <p class="article-description">
-      An algorithm to find most optimal way to combines things...
-     </p>
-    </a>
-   </div>
-   <div class="article" id="time-complexity-bfs">
-    <a href="ArticleList/time-complexity-bfs.html">
-     <div class="head-article">
-      <img class="article-img" src="asset/ArticleImage/time-complexity-bfs.png"/>
-      <h2 class="article-title">
-       Time Complexity of Depth First Search
-      </h2>
-     </div>
-     <hr/>
-     <p class="article-description">
-      Do you know how you is TC O(Nodes + edges) even when we run two nested loop
-     </p>
-    </a>
-   </div>
-   <div class="article" id="binary-lifting">
-    <a href="ArticleList/binary-lifting.html">
-     <div class="head-article">
-      <img class="article-img" src="asset/ArticleImage/binary-lifting.jpg"/>
-      <h2 class="article-title">
-       How does Binary Lifting utilizes power of 2 jumps?
-      </h2>
-     </div>
-     <hr/>
-     <p class="article-description">
-      If you have studied to find the Lowest Common Ancestor in a tree, then you must have found the binary lifting method confusing
-     </p>
-    </a>
-   </div>
-   <div class="article" id="dijkstra-algorithm">
-    <a href="ArticleList/dijkstra-algorithm.html">
-     <div class="head-article">
-      <img class="article-img" src="asset/ArticleImage/dijkstra-algorithm.png"/>
-      <h2 class="article-title">
-       How Dijkstra's Algorithm Works
-      </h2>
-     </div>
-     <hr/>
-     <p class="article-description">
-      Dijkstra's Algorithm is a famous greedy algorithm used to solve the shortest path problem for a graph with non-negative edge weights.
-     </p>
-    </a>
-   </div>
-   <div class="article" id="dp">
-    <a href="ArticleList/dp.html">
-     <div class="head-article">
-      <img class="article-img" src="asset/ArticleImage/dp.png"/>
-      <h2 class="article-title">
-       How DP Algorithm works?
-      </h2>
-     </div>
-     <hr/>
-     <p class="article-description">
-      Dynamic Programming (DP) is an optimization technique used to solve complex problems by breaking them down into simpler subproblems. It is particularly effective for problems that have overlapping subproblems and optimal substructure. The core idea of DP is to store the results of already solved subproblems so that they don't have to be recomputed, which significantly reduces the computational time.
-     </p>
-    </a>
-   </div>
-   <div class="article" id="searching-sorting">
-    <a href="ArticleList/searching-sorting.html">
-     <div class="head-article">
-      <img class="article-img" src="asset/ArticleImage/searching-sorting.jpg"/>
-      <h2 class="article-title">
-       How Searching and Sorting Algorithms work and explain their time complexity?
-      </h2>
-     </div>
-     <hr/>
-     <p class="article-description">
-      Searching and sorting are fundamental operations in computer science and are often associated with specific algorithms. Understanding these algorithms, along with their time complexities, is crucial for designing efficient software. Let's look at both concepts in detail, with examples.
-     </p>
-    </a>
-   </div>
+    <div class="article" id="huffman-coding">
+      <a href="ArticleList/huffman-coding.html">
+        <div class="head-article">
+          <img class="article-img" src="asset/ArticleImage/huffman-coding.png" />
+          <h2 class="article-title">
+            How Huffman Coding works?
+          </h2>
+        </div>
+        <hr />
+        <p class="article-description">
+          An algorithm to find most optimal way to combines things...
+        </p>
+      </a>
+    </div>
+
+    <div class="article" id="time-complexity-bfs">
+      <a href="ArticleList/time-complexity-bfs.html">
+        <div class="head-article">
+          <img class="article-img" src="asset/ArticleImage/time-complexity-bfs.png" />
+          <h2 class="article-title">
+            Time Complexity of Depth First Search
+          </h2>
+        </div>
+        <hr />
+        <p class="article-description">
+          Do you know how you is TC O(Nodes + edges) even when we run two nested loop
+        </p>
+      </a>
+    </div>
+
+    <div class="article" id="binary-lifting">
+      <a href="ArticleList/binary-lifting.html">
+        <div class="head-article">
+          <img class="article-img" src="asset/ArticleImage/binary-lifting.jpg" />
+          <h2 class="article-title">
+            How does Binary Lifting utilizes power of 2 jumps?
+          </h2>
+        </div>
+        <hr />
+        <p class="article-description">
+          If you have studied to find the Lowest Common Ancestor in a tree, then you must have found the binary lifting
+          method confusing
+        </p>
+      </a>
+    </div>
+
+    <div class="article" id="dijkstra-algorithm">
+      <a href="ArticleList/dijkstra-algorithm.html">
+        <div class="head-article">
+          <img class="article-img" src="asset/ArticleImage/dijkstra-algorithm.png" />
+          <h2 class="article-title">
+            How Dijkstra's Algorithm Works
+          </h2>
+        </div>
+        <hr />
+        <p class="article-description">
+          Dijkstra's Algorithm is a famous greedy algorithm used to solve the shortest path problem for a graph with
+          non-negative edge weights.
+        </p>
+      </a>
+    </div>
+
+    <div class="article" id="dp">
+      <a href="ArticleList/dp.html">
+        <div class="head-article">
+          <img class="article-img" src="asset/ArticleImage/dp.png" />
+          <h2 class="article-title">
+            How DP Algorithm works?
+          </h2>
+        </div>
+        <hr />
+        <p class="article-description">
+          Dynamic Programming (DP) is an optimization technique used to solve complex problems by breaking them down
+          into simpler subproblems. It is particularly effective for problems that have overlapping subproblems and
+          optimal substructure. The core idea of DP is to store the results of already solved subproblems so that they
+          don't have to be recomputed, which significantly reduces the computational time.
+        </p>
+      </a>
+    </div>
+
+    <div class="article" id="searching-sorting">
+      <a href="ArticleList/searching-sorting.html">
+        <div class="head-article">
+          <img class="article-img" src="asset/ArticleImage/searching-sorting.jpg" />
+          <h2 class="article-title">
+            How Searching and Sorting Algorithms work and explain their time complexity?
+          </h2>
+        </div>
+        <hr />
+        <p class="article-description">
+          Searching and sorting are fundamental operations in computer science and are often associated with specific
+          algorithms. Understanding these algorithms, along with their time complexities, is crucial for designing
+          efficient software. Let's look at both concepts in detail, with examples.
+        </p>
+      </a>
+    </div>
+
   </div>
+
   <script src="theme.js">
   </script>
+
   <script src="./script.js">
   </script>
- </body>
+
+</body>
+
 </html>

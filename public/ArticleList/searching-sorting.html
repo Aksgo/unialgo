@@ -1,137 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   CP - Article
-  </title>
-  <link href="ArticleDataStyle.css" rel="stylesheet" type="text/css"/>
-  <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet"/>
-  <link href="../asset/logo.png" rel="icon" type="image"/>
- </head>
- <body>
-  <header>
-   <div class="centered">
-    <a href="../index.html">
-     <div class="name">
-      UniAlgo
-     </div>
-     <div class="logo">
-      <img src="../asset/logo.png"/>
-     </div>
-    </a>
-   </div>
-  </header>
-  <div class="article">
-   <div class="title">
-    How Searching and Sorting Algorithms work and explain their time complexity?
-    <hr id="line"/>
-   </div>
-   <div>
-    <button id="back-link" onclick="location.href='../article.html'">
-     Back to Articles
-    </button>
-   </div>
-   <div class="content">
-    <!-- to be filled via generator -->
-    <p>
-     Searching algorithms are used to find an element in a collection (like an array or a list). Two common searching algorithms are:
-    </p>
-    <p>
-     1. Linear Search
-    </p>
-    <p>
-     Description: Linear search is the simplest searching algorithm. It works by checking each element in the list one by one until it finds the target element or reaches the end of the list.
-    </p>
-    <p>
-     Time Complexity:
-    </p>
-    <p>
-     Best case: O(1) (when the target element is at the beginning). Worst case: O(n) (when the target element is at the end or not present at all). Example: Given a list [3, 8, 4, 1, 7], to find the number 4, the algorithm will check each element in the list until it reaches 4.
-    </p>
-    <p>
-     2. Binary Search
-    </p>
-    <p>
-     Description: Binary search is more efficient but requires the list to be sorted. It works by repeatedly dividing the search interval in half. If the middle element is equal to the target value, the search is complete. Otherwise, it continues to search in either the left or right half.
-    </p>
-    <p>
-     Time Complexity:
-    </p>
-    <p>
-     Best case: O(1) (when the target element is at the middle). Worst case: O(log n) (since it halves the search space with each step). Example: Given a sorted list [1, 3, 4, 7, 8], to find the number 4, the algorithm will start by checking the middle element. If the middle is not 4, it will then search in the left half or right half based on the comparison.
-    </p>
-    <p>
-     Sorting algorithms are used to arrange the elements of a list in a specific order (ascending or descending). Here are a couple of commonly used sorting algorithms:
-    </p>
-    <p>
-     1.Bubble Sort
-    </p>
-    <p>
-     Description: Bubble sort repeatedly compares adjacent elements in the list and swaps them if they are in the wrong order. This process continues until no more swaps are needed.
-    </p>
-    <p>
-     Time Complexity:
-    </p>
-    <p>
-     Best case: O(n) (if the list is already sorted). Worst case: O(nÂ²) (when the list is sorted in reverse order). Example: Given a list [5, 2, 4, 6, 1], bubble sort will go through multiple iterations to compare and swap elements until the list becomes [1, 2, 4, 5, 6].
-    </p>
-    <p>
-     2.Merge Sort
-    </p>
-    <p>
-     Description: Merge sort is a divide-and-conquer algorithm that divides the list into two halves, recursively sorts each half, and then merges the two sorted halves back together.
-    </p>
-    <p>
-     Time Complexity:
-    </p>
-    <p>
-     Best case: O(n log n). Worst case: O(n log n) (since it consistently divides and merges the list in logarithmic time). Example: Given a list [38, 27, 43, 3, 9], merge sort will divide it into smaller parts until it has individual elements, then merge them back in the correct order, resulting in [3, 9, 27, 38, 43].
-    </p>
-   </div>
-   <div class="author">
-    Written by: CodeWithIshu
-   </div>
-   <div class="faq-section">
-    <div class="faq-title">
-     Frequently Asked Questions
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        CP - Article
+    </title>
+    <link href="ArticleDataStyle.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet" />
+    <link href="../asset/logo.png" rel="icon" type="image" />
+</head>
+
+<body>
+
+    <header>
+        <div class="centered">
+            <a href="../index.html">
+                <div class="name">
+                    UniAlgo
+                </div>
+                <div class="logo">
+                    <img src="../asset/logo.png" />
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <div class="article">
+        <div class="title">
+            How Searching and Sorting Algorithms work and explain their time complexity?
+            <hr id="line" />
+        </div>
+
+        <div>
+            <button id="back-link" onclick="location.href='../article.html'">
+                Back to Articles
+            </button>
+        </div>
+
+        <div class="content">
+            <!-- to be filled via generator -->
+            <p>
+                Searching algorithms are used to find an element in a collection (like an array or a list). Two common
+                searching algorithms are:
+            </p>
+            <p>
+                1. Linear Search
+            </p>
+            <p>
+                Description: Linear search is the simplest searching algorithm. It works by checking each element in the
+                list one by one until it finds the target element or reaches the end of the list.
+            </p>
+            <p>
+                Time Complexity:
+            </p>
+            <p>
+                Best case: O(1) (when the target element is at the beginning). Worst case: O(n) (when the target element
+                is at the end or not present at all). Example: Given a list [3, 8, 4, 1, 7], to find the number 4, the
+                algorithm will check each element in the list until it reaches 4.
+            </p>
+            <p>
+                2. Binary Search
+            </p>
+            <p>
+                Description: Binary search is more efficient but requires the list to be sorted. It works by repeatedly
+                dividing the search interval in half. If the middle element is equal to the target value, the search is
+                complete. Otherwise, it continues to search in either the left or right half.
+            </p>
+            <p>
+                Time Complexity:
+            </p>
+            <p>
+                Best case: O(1) (when the target element is at the middle). Worst case: O(log n) (since it halves the
+                search space with each step). Example: Given a sorted list [1, 3, 4, 7, 8], to find the number 4, the
+                algorithm will start by checking the middle element. If the middle is not 4, it will then search in the
+                left half or right half based on the comparison.
+            </p>
+            <p>
+                Sorting algorithms are used to arrange the elements of a list in a specific order (ascending or
+                descending). Here are a couple of commonly used sorting algorithms:
+            </p>
+            <p>
+                1.Bubble Sort
+            </p>
+            <p>
+                Description: Bubble sort repeatedly compares adjacent elements in the list and swaps them if they are in
+                the wrong order. This process continues until no more swaps are needed.
+            </p>
+            <p>
+                Time Complexity:
+            </p>
+            <p>
+                Best case: O(n) (if the list is already sorted). Worst case: O(nÂ²) (when the list is sorted in reverse
+                order). Example: Given a list [5, 2, 4, 6, 1], bubble sort will go through multiple iterations to
+                compare and swap elements until the list becomes [1, 2, 4, 5, 6].
+            </p>
+            <p>
+                2.Merge Sort
+            </p>
+            <p>
+                Description: Merge sort is a divide-and-conquer algorithm that divides the list into two halves,
+                recursively sorts each half, and then merges the two sorted halves back together.
+            </p>
+            <p>
+                Time Complexity:
+            </p>
+            <p>
+                Best case: O(n log n). Worst case: O(n log n) (since it consistently divides and merges the list in
+                logarithmic time). Example: Given a list [38, 27, 43, 3, 9], merge sort will divide it into smaller
+                parts until it has individual elements, then merge them back in the correct order, resulting in [3, 9,
+                27, 38, 43].
+            </p>
+        </div>
+
+        <div class="author">
+            Written by: CodeWithIshu
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-title">
+                Frequently Asked Questions
+            </div>
+            <!-- FAQ Toggle Button -->
+            <button id="faq-toggle">
+                Show FAQs
+            </button>
+            <div class="faq-content">
+                <!-- FAQ content will be inserted here via generator -->
+            </div>
+        </div>
+
+        <div class="comment-section">
+            <div class="comments-title">
+                Comments
+            </div>
+            <div class="comments-content">
+                <!-- Comment content will be inserted here via generator -->
+            </div>
+            <div class="comment-form">
+                <form id="comment-form">
+                    <input class="comment-name" id="name" placeholder="Your Name" type="text" />
+                    <textarea class="comment-textarea" id="comment" placeholder="Your Comment"></textarea>
+                    <button class="submit-comment" type="submit">
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="more-articles-section">
+            More Articles You Might Like
+            <div class="more-articles-list" id="more-articles-list">
+                <!-- More articles will be auto inserted by the generator -->
+            </div>
+        </div>
+
     </div>
-    <!-- FAQ Toggle Button -->
-    <button id="faq-toggle">
-     Show FAQs
-    </button>
-    <div class="faq-content">
-     <!-- FAQ content will be inserted here via generator -->
-    </div>
-   </div>
-   <div class="comment-section">
-    <div class="comments-title">
-     Comments
-    </div>
-    <div class="comments-content">
-     <!-- Comment content will be inserted here via generator -->
-    </div>
-    <div class="comment-form">
-     <form id="comment-form">
-      <input class="comment-name" id="name" placeholder="Your Name" type="text"/>
-      <textarea class="comment-textarea" id="comment" placeholder="Your Comment"></textarea>
-      <button class="submit-comment" type="submit">
-       Submit
-      </button>
-     </form>
-    </div>
-   </div>
-   <div class="more-articles-section">
-    More Articles You Might Like
-    <div class="more-articles-list" id="more-articles-list">
-     <!-- More articles will be auto inserted by the generator -->
-    </div>
-   </div>
-  </div>
-  <!-- JavaScript for Toggle -->
-  <script>
-   document.getElementById('faq-toggle').addEventListener('click', function() {
+
+    <!-- JavaScript for Toggle -->
+    <script>
+        document.getElementById('faq-toggle').addEventListener('click', function () {
             const faqContent = document.getElementById('faq-content');
             if (faqContent.style.display === "none" || faqContent.style.display === "") {
                 faqContent.style.display = "block";
@@ -141,6 +170,8 @@
                 this.textContent = "Show FAQs";
             }
         });
-  </script>
- </body>
+    </script>
+    
+</body>
+
 </html>

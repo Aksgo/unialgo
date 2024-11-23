@@ -3,15 +3,13 @@ function toggleSidebar() {
   const backdrop = document.getElementById('backdrop');
   const toggleButton = document.getElementById('sidebar-toggle');
 
-
   sidebar.classList.toggle('show');
-  
 
   if (sidebar.classList.contains('show')) {
-      toggleButton.textContent = 'Hide Articles';
-      backdrop.style.display = 'block'; 
+    toggleButton.textContent = 'Hide Articles';
+    backdrop.style.display = 'block';
   } else {
-      toggleButton.textContent = 'Show Articles';
-      backdrop.style.display = 'none'; 
+    toggleButton.textContent = 'Show Articles';
+    backdrop.style.display = 'none';
   }
 }

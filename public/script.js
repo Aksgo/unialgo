@@ -61,15 +61,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Continue the loop
         setTimeout(loop, speed);
-    }               
+    }
     loop();
 });
 
-const searchIcon=document.querySelector('.search-icon');
+const searchIcon = document.querySelector('.search-icon');
 
-searchIcon.addEventListener('click',(e)=>{
-    const searchInput=document.querySelector(".search-input")
-    searchInput.style.width="100%"
+searchIcon.addEventListener('click', (e) => {
+    const searchInput = document.querySelector(".search-input")
+    searchInput.style.width = "100%"
 })
 
 const header = document.querySelector('header');
