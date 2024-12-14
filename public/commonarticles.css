@@ -1,6 +1,6 @@
-  #toggle-theme{
-    font-size: 30px;
-    color:white;
-    background-color: rgba(255, 255, 255, 0);
-    border: none;
-  }
+#toggle-theme {
+  font-size: 30px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+}
