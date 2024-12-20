@@ -473,11 +473,6 @@ body::-webkit-scrollbar {
   .content {
     margin: 10px;
   }
-
-  .logo {
-    display: none;
-  }
-
   .name {
     font-size: 20px;
   }
@@ -486,9 +481,6 @@ body::-webkit-scrollbar {
     font-size: 12px;
   }
 
-  .search-bar {
-    display: none;
-  }
 }
 
 #toggle-theme {
