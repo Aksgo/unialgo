@@ -175,7 +175,11 @@ header.collapsed .header-nav {
   border-right: 5px solid rgb(255, 255, 255);
   animation: blink 1s steps(1000) infinite;
 }
-
+#greet{
+  color:rgb(0, 194, 0);
+  font-family: cursive;
+  text-align: center;
+}
 @keyframes blink {
   from {
     border-color: rgb(255, 255, 255);
