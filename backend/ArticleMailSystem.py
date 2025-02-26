@@ -95,7 +95,6 @@ def extractUsers(arturl, artTitle):
     app = fab.initialize_app(cred)
     page = auth.list_users()
     for user in page.iterate_all():
-        if user.email=='ujef.kelawala123@gmail.com' :continue
         mailSender(user.display_name, user.email, arturl, artTitle)
         print("mail sent to :",user.email)
         #print(type(user.email))
@@ -108,5 +107,7 @@ def main():
 
 n = int(input("Enter no of articles : "))
 while n>0:
-    main()
+    #main()
     n-=1
+
+#mailSender("Shreyansh God", "shreyansh.bajpai.cd.ece23@itbhu.ac.in", "iitbhu.ac.in", "Hello shreyansh , this is a computer generated mail")
