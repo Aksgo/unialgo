@@ -7,7 +7,7 @@
 <body>
     <div class="container">
         <h1>UniAlgo</h1>
-        <h2>📢 News</h2>
+        <h2>📢 News <i> -> Latest work</i></h2>
         <i>🚧 Adding a separate webpage to enter data into main website</i>
         <h2>🌐 Overview</h2>
         <p><b>UniAlgo</b> is a platform designed to help users understand <b>competitive programming (CP) Algorithms</b>. It features a curated collection of unique CP concepts, algorithms, and articles that take time and effort to master.</p>
