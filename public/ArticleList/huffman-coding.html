@@ -1,152 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+      CP - Article
+    </title>
+    <link href="ArticleDataStyle.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik"
+      rel="stylesheet"
+    />
+    <link href="../asset/logo.png" rel="icon" type="image" />
+    <link rel="stylesheet" href="../sidebar.css" />
+    <script src="../sidebar.js"></script>
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>
-    CP - Article
-  </title>
-  <link href="ArticleDataStyle.css" rel="stylesheet" type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet" />
-  <link href="../asset/logo.png" rel="icon" type="image" />
-  <link rel="stylesheet" href="../sidebar.css">
-  <script src="../sidebar.js"></script>
-</head>
+  <body>
+    <header>
+      <div class="centered">
+        <a href="../index.html">
+          <div class="name">
+            UniAlgo
+          </div>
+          <div class="logo">
+            <img src="../asset/logo.png" />
+          </div>
+        </a>
+      </div>
+    </header>
 
-<body>
+    <button id="sidebar-toggle" onclick="toggleSidebar()">Show Articles</button>
+    <div class="sidebar" id="sidebar">
+      <br />
+      <br />
+      <h3>All Articles</h3>
+      <ul class="article-list">
+        <li><a href="./huffman-coding.html">How Huffman Coding works?</a></li>
+        <li>
+          <a href="./time-complexity-bfs.html"
+            >Time Complexity of Depth First Search</a
+          >
+        </li>
+        <li>
+          <a href="./binary-lifting.html"
+            >How does Binary Lifting utilize power of 2 jumps?</a
+          >
+        </li>
+        <li>
+          <a href="./dijkstra-algorithm.html">How Dijkstra's Algorithm Works</a>
+        </li>
+      </ul>
+    </div>
 
-  <header>
-    <div class="centered">
-      <a href="../index.html">
-        <div class="name">
-          UniAlgo
+    <div class="article">
+      <div class="title">
+        How Huffman Coding works?
+        <hr id="line" />
+      </div>
+
+      <div>
+        <button id="back-link" onclick="location.href='../article.html'">
+          Back to Articles
+        </button>
+      </div>
+
+      <div class="content">
+        <!-- to be filled via generator -->
+        <h2>The Stick-Merging Analogy</h2>
+        <p>
+          Imagine you have several wood pieces of different lengths—say,
+          <strong>1, 4, 9,</strong> and <strong>11</strong>. You want to combine
+          them into one long stick with the least total merging cost. Each merge
+          costs the sum of the two sticks being combined. If you merge larger
+          sticks too early, the large values get added repeatedly, increasing
+          the overall cost.
+        </p>
+        <h3>Example 1:</h3>
+        <ul>
+          <li>Merge 4 and 9 first: cost = 4 + 9 = 13</li>
+          <li>
+            Then merge 13 (from previous merge) with 1: cost = 13 + 1 = 14
+          </li>
+          <li>
+            Finally, merge the resulting stick (length 14) with 11: cost = 14 +
+            11 = 25
+          </li>
+          <li><strong>Total Cost:</strong> 13 + 14 + 25 = 52</li>
+        </ul>
+        <h3>Example 2 (Better Approach):</h3>
+        <ul>
+          <li>
+            Merge the two smallest sticks first: merge 1 and 4 to get 5; cost =
+            1 + 4 = 5
+          </li>
+          <li>
+            Then merge the next smallest: merge 5 (result) and 9 to get 14; cost
+            = 5 + 9 = 14
+          </li>
+          <li>Finally, merge 14 with 11; cost = 14 + 11 = 25</li>
+          <li><strong>Total Cost:</strong> 5 + 14 + 25 = 44</li>
+        </ul>
+        <p>
+          <strong>Key Insight:</strong> By always merging the two smallest
+          sticks available, you minimize the immediate cost at each step. This
+          prevents larger numbers from being added repeatedly later in the
+          process.
+        </p>
+      </div>
+
+      <div class="content">
+        <h2>Connection to Huffman Coding</h2>
+        <p>
+          Huffman Coding uses a very similar strategy for data compression.
+          Instead of wood pieces, you start with characters and their
+          frequencies. The goal is to build a binary tree that minimizes the
+          total weighted path length, which directly relates to the length of
+          the final encoded string.
+        </p>
+        <h3>Main Points:</h3>
+        <ul>
+          <li>
+            <strong>Frequency as Length:</strong> Think of the frequency of each
+            character as the “length” of a wood piece. More frequent characters
+            have smaller “lengths” (or weights) to keep the overall cost low.
+          </li>
+          <li>
+            <strong>Greedy Strategy:</strong> At each step, choose the two
+            characters (or nodes) with the smallest frequencies. Merge them to
+            create a new node with a frequency equal to the sum of the two.
+          </li>
+          <li>
+            <strong>Building the Tree:</strong> This process is repeated until
+            all characters are merged into a single tree. The tree structure
+            ensures that no character's bit representation is a prefix of any
+            other, which is crucial for decoding the compressed data uniquely.
+          </li>
+          <li>
+            <strong>Resulting Code:</strong> The path from the root of the tree
+            to each leaf (character) gives its unique binary code. Characters
+            with higher frequencies tend to have shorter codes, reducing the
+            overall size of the encoded message.
+          </li>
+        </ul>
+      </div>
+
+      <div class="content">
+        <h2>Why This Works</h2>
+        <ul>
+          <li>
+            <strong>Efficiency:</strong> Merging the smallest elements first
+            minimizes the repeated addition of large numbers (or frequencies).
+            This approach is optimal for both stick merging and Huffman Coding.
+          </li>
+          <li>
+            <strong>Non-Prefix Property:</strong> In the Huffman tree, no code
+            is a prefix of another. This is because each merge creates a new
+            internal node, ensuring that every final code (assigned to a leaf)
+            can be uniquely identified when reading the encoded string.
+          </li>
+        </ul>
+      </div>
+
+      <div class="content">
+        <h2>Summary</h2>
+        <p>
+          Huffman Coding is a practical application of a greedy algorithm. It:
+        </p>
+        <ul>
+          <li>Begins by considering each character’s frequency.</li>
+          <li>Repeatedly merges the two smallest elements.</li>
+          <li>
+            Builds a binary tree that assigns shorter codes to more frequent
+            characters.
+          </li>
+          <li>
+            Guarantees that no code is a prefix of another, enabling unambiguous
+            decoding.
+          </li>
+        </ul>
+        <p>
+          This method, analogous to merging the smallest sticks first to reduce
+          overall merging cost, ensures that the final compressed representation
+          of data is as efficient as possible.
+        </p>
+      </div>
+
+      <div class="author">
+        Written by: UniAlgo Owner
+      </div>
+
+      <div class="faq-section">
+        <div class="faq-title">
+          Frequently Asked Questions
         </div>
-        <div class="logo">
-          <img src="../asset/logo.png" />
+        <!-- FAQ Toggle Button -->
+        <button id="faq-toggle">
+          Show FAQs
+        </button>
+        <div class="faq-content">
+          <!-- FAQ content will be inserted here via generator -->
         </div>
-      </a>
-    </div>
-  </header>
-
-  <button id="sidebar-toggle" onclick="toggleSidebar()">Show Articles</button>
-  <div class="sidebar" id="sidebar">
-    <br>
-    <br>
-    <h3>All Articles</h3>
-    <ul class="article-list">
-      <li><a href="./huffman-coding.html">How Huffman Coding works?</a></li>
-      <li><a href="./time-complexity-bfs.html">Time Complexity of Depth First Search</a></li>
-      <li><a href="./binary-lifting.html">How does Binary Lifting utilize power of 2 jumps?</a></li>
-      <li><a href="./dijkstra-algorithm.html">How Dijkstra's Algorithm Works</a></li>
-    </ul>
-  </div>
-
-  <div class="article">
-    <div class="title">
-      How Huffman Coding works?
-      <hr id="line" />
-    </div>
-
-    <div>
-      <button id="back-link" onclick="location.href='../article.html'">
-        Back to Articles
-      </button>
-    </div>
-
-    <div class="content">
-      <!-- to be filled via generator -->
-      <p>
-        Suppose there is a problem in which you have wood pieces of different length (a1,a2,a3,...,an) and you want to
-        merge to make a new stick. But there is a constraint, that is in each operation the cost of merging is the sum
-        of lengths of 2 sticks and you need to minimize to overall cost of merging.
-      </p>
-      <p>
-        So we need an to optimally take the sticks according to their lengths. Suppose we are given a=1, a2=4, a3=9,
-        a4=11. Now, let's take a2 and a3 and merge them into one so their sum = 4+9=13 , and cost = 13. Then let us take
-        a1 , since previous sticks were merged to form a stick of length 13, let us take the previous stick and a1 = 1,
-        so new sum = 1+13=14, and cost += 14 means cost = 13 + 14 = 27. Then we are left with a4 so new stick length sum
-        = 14+11 = 25. And total cost = becomes 27 + 25 = 52.
-      </p>
-      <p>
-        But instead if we had taken first a1 and a2 , then a1+a2=5, then cost = 5. Then going in sorted order we sum the
-        next two smallest length which are currently 5 and 9, so length = 14, and cost = 5+15 = 19. Now we are left with
-        two sticks of length 14 and 11 , so summing them the length becomes 25 and cost = 25 + 19 = 44.
-      </p>
-      <p>
-        So, if we observe that the greater the number we take the earlier the cost increases. Because every time we add
-        new length to current length, the big element would repeat every time. So this is the intuition behind taking
-        the smallest elements first which ensures that we are minimizing the immediate cost of each merge operation.
-      </p>
-      <p>
-        Now this is actually the concept behind actual Huffman Coding which is a way to compress a string into a segment
-        of 0s and 1s and of the smallest length so that there would be less chance of compressed string to exceed the
-        integer or long range.
-      </p>
-      <p>
-        Can you find how? A hint is to find the bits representation for each unique character, and note none of the
-        character's bit representation should be a prefix of another !
-      </p>
-    </div>
-
-    <div class="author">
-      Written by: UniAlgo Owner
-    </div>
-
-    <div class="faq-section">
-      <div class="faq-title">
-        Frequently Asked Questions
       </div>
-      <!-- FAQ Toggle Button -->
-      <button id="faq-toggle">
-        Show FAQs
-      </button>
-      <div class="faq-content">
-        <!-- FAQ content will be inserted here via generator -->
+
+      <div class="comment-section">
+        <div class="comments-title">
+          Comments
+        </div>
+        <div class="comments-content">
+          <!-- Comment content will be inserted here via generator -->
+        </div>
+        <div class="comment-form">
+          <form id="comment-form">
+            <input
+              class="comment-name"
+              id="name"
+              placeholder="Your Name"
+              type="text"
+            />
+            <textarea
+              class="comment-textarea"
+              id="comment"
+              placeholder="Your Comment"
+            ></textarea>
+            <button class="submit-comment" type="submit">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="more-articles-section">
+        More Articles You Might Like
+        <div class="more-articles-list" id="more-articles-list">
+          <!-- More articles will be auto inserted by the generator -->
+        </div>
       </div>
     </div>
 
-    <div class="comment-section">
-      <div class="comments-title">
-        Comments
-      </div>
-      <div class="comments-content">
-        <!-- Comment content will be inserted here via generator -->
-      </div>
-      <div class="comment-form">
-        <form id="comment-form">
-          <input class="comment-name" id="name" placeholder="Your Name" type="text" />
-          <textarea class="comment-textarea" id="comment" placeholder="Your Comment"></textarea>
-          <button class="submit-comment" type="submit">
-            Submit
-          </button>
-        </form>
-      </div>
-    </div>
-
-    <div class="more-articles-section">
-      More Articles You Might Like
-      <div class="more-articles-list" id="more-articles-list">
-        <!-- More articles will be auto inserted by the generator -->
-      </div>
-    </div>
-
-  </div>
-
-  <!-- JavaScript for Toggle -->
-  <script>
-    document.getElementById('faq-toggle').addEventListener('click', function () {
-      const faqContent = document.getElementById('faq-content');
-      if (faqContent.style.display === "none" || faqContent.style.display === "") {
-        faqContent.style.display = "block";
-        this.textContent = "Hide FAQs";
-      } else {
-        faqContent.style.display = "none";
-        this.textContent = "Show FAQs";
-      }
-    });
-  </script>
-  
-</body>
-
+    <!-- JavaScript for Toggle -->
+    <script>
+      document
+        .getElementById("faq-toggle")
+        .addEventListener("click", function () {
+          const faqContent = document.getElementById("faq-content");
+          if (
+            faqContent.style.display === "none" ||
+            faqContent.style.display === ""
+          ) {
+            faqContent.style.display = "block";
+            this.textContent = "Hide FAQs";
+          } else {
+            faqContent.style.display = "none";
+            this.textContent = "Show FAQs";
+          }
+        });
+    </script>
+  </body>
 </html>
